@@ -1,11 +1,8 @@
 #include "Display.hpp"
 
 void Display::showMessage(hwlib::string message){
+    terminal.clear();
+    terminal.cursor_set(hwlib::xy(0,0));
     terminal << message;
-    oled.flush();
-}
-
-void Display::clear(){
-    oled.clear();
-    oled.flush();
+    terminal.flush();
 }
