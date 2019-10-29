@@ -3,8 +3,15 @@
 #include "../rtos/rtos.hpp"
 #include "Buzzer.hpp"
 
+///@file
+///\brief
+/// Buzzer task class
+///\details
+/// This task uses Rtos to switch tasks. It can use its own Buzzer to make different sounds calling the makeSound member function. 
 class BuzzerTask : public rtos::task<>{
 public:
+    ///\brief
+    /// public class with sounds. When the memberfunction makeSound is called, you need to give an entry from this enumerator as its paramater.
     enum class sounds{startEndSound,hitSound};
 
     ///\brief
@@ -18,6 +25,9 @@ public:
     buzzer()
     {};
 
+    ///\brief
+    /// Member function that set a flag and writes a pool. The parameter needs to be of the enumerator sounds. When this function is called, this task
+    /// will start to make the specified sound while still being able to switch between tasks
     void makeSound(sounds sound);
 
     void main() override{
@@ -73,7 +83,6 @@ public:
                         buzzer.soundOn();
                         hwlib::wait_ms(100);
                         buzzer.soundOff();
-                        hwlib::wait_ms(100);
                     }
                     state = states::idle;
                     break;
