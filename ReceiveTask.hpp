@@ -15,14 +15,14 @@
 ///This rtos::task checks the incoming IR signals and translates it to IR messages.
 class ReceiveTask : public rtos::task<>{
 private:
-	GameTask gameTask;
-	RecIRMsgControl recIRMsgControl;
-	IrDetector irDetector;
-	rtos::timer timerMsg;
-	rtos::timer interruptTimer;
-	uint16_t message;
-	enum states = {isLow, isHigh};
-	states state = isLow;
+	GameTask gameTask;					//<The GameTask 'uber' object, to write the received message to
+	RecIRMsgControl recIRMsgControl;	//<The IR Receiver control object, to check and compose the messages
+	IrDetector irDetector;				//<The IR detector boundary object
+	rtos::timer timerMsg;				//<The timer object that lets the system know that it's taken too long for a new bit and the next bit received should be for a new message
+	rtos::timer interruptTimer;			//<The timer that interrupts the wait for timerMsg
+	uint16_t message;					//<The correct, composed message to be sent to gameTask
+	enum states = {isLow, isHigh};		//<The 2 states this task can be in, used to calculate pauses which get translated to bits
+	states state = isLow;				//<System starts at the isLow state
 public:
 	///\brief
 	///The ReceiveTask constructor takes no parameters and initializes all of its objects itself.
@@ -95,7 +95,7 @@ public:
 				case isHigh:
 				{
 					timerMsg.set(4'000);
-					interruptTimer.set(150);
+					interruptTimer.set(50);
 
 					auto event = wait(timerMsg + interruptTimer);
 					if(event == timerMsg){
