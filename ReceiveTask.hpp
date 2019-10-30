@@ -8,7 +8,11 @@
 #include "RecIRMsgControl.hpp"
 #include "IrDetector.hpp"
 
-
+///@file
+///\brief
+///The IR receiver task
+///\details
+///This rtos::task checks the incoming IR signals and translates it to IR messages.
 class ReceiveTask : public rtos::task<>{
 private:
 	GameTask gameTask;
@@ -20,6 +24,8 @@ private:
 	enum states = {isLow, isHigh};
 	states state = isLow;
 public:
+	///\brief
+	///The ReceiveTask constructor takes no parameters and initializes all of its objects itself.
 	ReceiveTask():
 		task("Receive Task"),
 		gameTask(),
@@ -29,6 +35,12 @@ public:
 		interruptTimer(this, "Interrupt Timer")
 	{};
 
+	///\brief
+	///The ReceiveTask body.
+	///\details
+	///It checks incoming IR signals, translates it to bits.
+	///Bits gets translated to a message and if the message is composed, it's checked with the lastMessage received.
+	///These messages get written to the message channel.
 	void main() override{
 		int beginPause = -1;
 		int eindPause = -1;
