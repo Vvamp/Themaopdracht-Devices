@@ -92,10 +92,10 @@ public:
     }
 
 private:
-    rtos::flag buzzerFlag;
-    rtos::pool<sounds> buzzerPool; 
-    Buzzer buzzer;
-    enum class states{idle, makeSound};
-    states state = states::idle;
+    rtos::flag buzzerFlag; //< flag that is to be set when someone writes in the pool
+    rtos::pool<sounds> buzzerPool; //< pool that holds which sound has to be played
+    Buzzer buzzer; //< the boundary buzzer object
+    enum class states{idle, makeSound}; //< enumerator that holds the sounds, one of these sounds need to be given as a paraamater to the makeSound function
+    states state = states::idle; //< this is the state on which the task switches
 }
 #ifndef //BUZZERTASK_HPP

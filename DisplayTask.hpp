@@ -10,11 +10,11 @@
 /// This class is the RTOS task which uses a display, flag and pool to write to an oled screen.
 class DisplayTask : public rtos::task<>{
 private:
-    rtos::flag displayFlag;
-    rtos::pool<hwlib::string> displayPool;
-    Display display;
-    enum class states{idle,write};
-    states state = states::idle;
+    rtos::flag displayFlag; //< flag to let the display know there is new information available in the pool
+    rtos::pool<hwlib::string> displayPool; //< pool which holds strings 
+    Display display; //< its own display class object
+    enum class states{idle,write};//< enumerator that holds the states in which the rtos task can be in
+    states state = states::idle;//< the state on which the task switches
 public:
     /// \details
     /// constructor

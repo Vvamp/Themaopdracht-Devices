@@ -8,7 +8,7 @@
 /// this class implements the functionality that is needed to make sounds with a buzzer.
 class Buzzer{
 private:
-    hwlib::target::pin_out buzzerPin;
+    hwlib::target::pin_out buzzerPin;//<pin on which the buzzer is connected
 public:
 
     ///\brief
