@@ -6,10 +6,10 @@
 #include "Player.hpp"
 #include "RunGameControl.hpp"
 #include "TransferHitsControl.hpp"
-#include "DisplayTask.hpp"
-#include "SendTask.hpp"
-#include "ReceiveTask.hpp"
-#include "KeyboardListener.hpp"
+// #include "DisplayTask.hpp"
+// #include "SendTask.hpp"
+// #include "ReceiveTask.hpp"
+// #include "KeyboardListener.hpp"
 
 ///@file
 ///\brief

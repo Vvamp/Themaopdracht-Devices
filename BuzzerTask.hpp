@@ -1,13 +1,14 @@
 #ifndef BUZZERTASK_HPP
 #define BUZZERTASK_HPP
-#include "../rtos/rtos.hpp"
+// #include "../rtos/rtos.hpp"
+#include "rtos.hpp"
 #include "Buzzer.hpp"
 
 ///@file
 ///\brief
 /// Buzzer task class
 ///\details
-/// This task uses Rtos to switch tasks. It can use its own Buzzer to make different sounds calling the makeSound member function. 
+/// This task uses Rtos to switch tasks. It can use its own Buzzer to make different sounds calling the makeSound member function.
 class BuzzerTask : public rtos::task<>{
 public:
     ///\brief

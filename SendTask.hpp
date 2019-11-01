@@ -1,25 +1,27 @@
 #ifndef SENDTASK_HPP
 #define SENDTASK_HPP
-#include "../hwlib/library/hwlib.hpp"
-#include "../rtos/rtos.hpp"
+// #include "../hwlib/library/hwlib.hpp"
+#include "hwlib.hpp"
+// #include "../rtos/rtos.hpp"
+#include "rtos.hpp"
 #include "IrDiode.hpp"
 ///@file
 ///\brief
 /// Send task class
 ///\details
 /// Class that inherits from rtos task. It waits for the comflag to be set, it will then read the command pool and send the command through its IR sender.
-/// the command needs to be 16 bits. 
+/// the command needs to be 16 bits.
 class SendTask : public rtos::task<>{
 private:
     rtos::flag comFlag;//< flag that need to be set when something is written in the pool
     rtos::pool<uint16_t> comPool; //< pool in which commands can be written
 
-    IrDiode irDiode; //< object from the IR diode class. 
+    IrDiode irDiode; //< object from the IR diode class.
 
     uint16_t shortWait = 800; //< the wait short wait time between turning on and off the IR sender
     uint16_t = 1600; //< the long wait time between turning on and off the IR sender
     uint16_t message = 0; //< variable in which the message is set when the pool is read
-    uint8_t counter = 0; //< counter that is used to count 
+    uint8_t counter = 0; //< counter that is used to count
 
     enum class states{idle,setBit,send0,send1};//<enumerator that holds the names on which the task switches
     states state = states::idle;//< member variable on which the task switches
@@ -28,7 +30,7 @@ public:
     ///\brief
     /// constructor
     ///\details
-    /// the constructor only needs a hwlib pin out to be able to function. 
+    /// the constructor only needs a hwlib pin out to be able to function.
     SendTask(hwlib::target::pin_out& p):
     task("Send task"),
     comFlag(this,"send command flag"),

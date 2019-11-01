@@ -1,6 +1,7 @@
 #ifndef BUZZER_HPP
 #define BUZZER_HPP
-#include "../hwlib/library/hwlib.hpp"
+// #include "../hwlib/library/hwlib.hpp"
+#include "hwlib.hpp"
 /// @file
 ///\brief
 /// Buzzer boundary class

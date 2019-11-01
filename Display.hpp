@@ -1,12 +1,13 @@
 #ifndef DISPLAY_HPP
 #define DISPLAY_HPP
-#include "../hwlib/library/hwlib.hpp"
+// #include "../hwlib/library/hwlib.hpp"
+#include "hwlib.hpp"
 
 /// @file
 /// \brief
 /// display class
 /// \details
-/// this is the boundary object which implements the functions to actually write to the display. 
+/// this is the boundary object which implements the functions to actually write to the display.
 
 class Display{
 private:
@@ -18,17 +19,17 @@ private:
     hwlib::terminal_from terminal;//< the terminal that holds both the font and the oled
 public:
     ///\brief
-    /// constructor 
+    /// constructor
     ///\details
     /// It constructs its own arduino pins, font,
     /// oled and terminal you can call it using Display(), no parameters needed.
-    Display() : 
+    Display() :
     scl(hwlib::target::pins::scl),
     sda(hwlib::target::pins::sda),
     font(),
     mainBus(scl,sda),
     oled(mainBus),
-    terminal(oled,font) 
+    terminal(oled,font)
     {};
     ///\brief
     /// function to show the message. It writes its paramater on the screen.
