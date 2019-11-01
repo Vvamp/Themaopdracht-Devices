@@ -9,10 +9,10 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := Buzzer.cpp BuzzerTask.cpp Display.cpp DisplayTask.cpp GameTask.cpp IrDetector.cpp IrDiode.cpp Player.cpp RecIRMsgControl.cpp RunGameControl.cpp SendTask.cpp TransferHitsControl.cpp 
+SOURCES := Buzzer.cpp BuzzerTask.cpp Display.cpp DisplayTask.cpp GameTask.cpp IrDetector.cpp IrDiode.cpp Player.cpp RecIRMsgControl.cpp RunGameControl.cpp SendTask.cpp TransferHitsControl.cpp Keyboard.cpp
 
 # header files in this project
-HEADERS := Buzzer.hpp BuzzerTask.hpp Display.hpp DisplayTask.hpp GameTask.hpp IrDetector.hpp IrDiode.hpp Player.hpp ReceiveTask.hpp RecIRMsgControl.hpp RunGameControl.hpp SendTask.hpp TransferHitsControl.hpp
+HEADERS := Buzzer.hpp BuzzerTask.hpp Display.hpp DisplayTask.hpp GameTask.hpp IrDetector.hpp IrDiode.hpp Player.hpp ReceiveTask.hpp RecIRMsgControl.hpp RunGameControl.hpp SendTask.hpp TransferHitsControl.hpp Keyboard.hpp KeyboardListener.hpp HardwareInputTask.hpp
 
 # other places to look for files for this project
 SEARCH  :=

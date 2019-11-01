@@ -18,7 +18,7 @@
 ///The class inherits from the rtos::task and KeyboardListener classes.
 ///It expects the Player, RunGameControl, and TransferHitsControl by value.
 ///Furthermore it expects the DisplayTask and SendTask by reference.
-class GameTask : public rtos::task, KeyboardListener {
+class GameTask : public rtos::task<>, KeyboardListener {
 private:
 	Player player;
 	RunGameControl runGameControl;
@@ -39,16 +39,14 @@ private:
 public:
 	GameTask(
 		Player playerInput,
-		RunGameControl runGameControlInput,
-		TransferHitsControl transferHitsControlInput,
 		DisplayTask & displayTaskInput,
 		SendTask & sendTaskInput
 	):
 		player(playerInput),
-		runGameControl(runGameControlInput),
-		transferHitsControl(transferHitsControlInput),
 		displayTask(displayTaskInput),
 		sendTask(sendTaskInput),
+		runGameControl(runGameControlInput(player,sendTask)),
+		transferHitsControl(transferHitsControlInput(player)),
 		clock1S(this, second, "1 second clock"),
 		invincibleTimer(this, "Invicibility Timer"),
 		rateOfFireTimer(this, "Rate of Fire Timer")

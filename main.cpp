@@ -9,6 +9,8 @@
 
 int main(){
 
+	hwlib::wait_ms(500);
+
 	Weapon subGroot = Weapon("Sub Groot", 6, 200'000, 40, 6'000'000);
 	Weapon subKlein = Weapon("Sub Klein", 7, 250'000, 20, 4'000'000);
 	Weapon volAuto = Weapon("Vol Auto", 8, 330'000, 30, 5'000'000);
@@ -20,16 +22,23 @@ int main(){
 	Weapon rpg = Weapon("RPG", 5000, 8'000'000, 1, 8'000'000);
 	Weapons allWeapons({subGroot,subKlein,volAuto,semi,pistol,lmg,sniper,grenadeLauncher,rpg});
 
-	auto iRPin = hwlib::target:pin_out(hwlib::target::pins::d11);
+	auto iRDPin = hwlib::target:pin_out(hwlib::target::pins::d11);
+	// auto iRRPin = hwlib::target::pin_out(hwlib::target::pins::d12);
 
 	BuzzerTask buzzerTask = BuzzerTask();
 	DisplayTask displayTask =DisplayTask();
-	SendTask sendTask = SendTask(iRPin);
+	SendTask sendTask = SendTask(iRDPin);
 	ReceiveTask receiveTask = ReceiveTask();
-
 	HardwareInputTask hardwareInputTask = HardwareInputTask();
 
-	GameTask gameTask = GameTask();
+	GameTask gameTask = GameTask(
+		Player(allWeapons),
+		displayTask,
+		sendTask
+	);
+
+
+
 
 	return 0;
 }
