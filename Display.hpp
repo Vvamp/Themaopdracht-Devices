@@ -11,8 +11,8 @@
 
 class Display{
 private:
-    hwlib::target::pin_oc scl; //< scl pin for the i2c bus
-    hwlib::target::pin_oc sda; //< sda pin for the i2c bus
+    hwlib::target::pin_oc& scl; //< scl pin for the i2c bus
+    hwlib::target::pin_oc& sda; //< sda pin for the i2c bus
     hwlib::font_default_16x16 font;//< the font that is written on the display
     hwlib::i2c_bus_bit_banged_scl_sda mainBus;//< i2c bus that needs both the pins
     hwlib::glcd_oled oled; //< the oled screen on which information is displayed
@@ -21,11 +21,10 @@ public:
     ///\brief
     /// constructor
     ///\details
-    /// It constructs its own arduino pins, font,
-    /// oled and terminal you can call it using Display(), no parameters needed.
-    Display() :
-    scl(hwlib::target::pins::scl),
-    sda(hwlib::target::pins::sda),
+    /// It constructs its own font, oled and terminal you can call it using Display(), two paramaters needed, the SDA en SCL pin.
+    Display(hwlib::target::pin_oc& scl, hwlib::target::pin_oc& sda) :
+    scl(scl),
+    sda(sda),
     font(),
     mainBus(scl,sda),
     oled(mainBus),

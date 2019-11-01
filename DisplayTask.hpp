@@ -21,12 +21,12 @@ public:
     /// \details
     /// constructor
     /// \brief
-    ///constructor for the display task
-    DisplayTask():
+    ///constructor for the display task, it needs a hwlib pin_oc sda and scl pin to construct
+    DisplayTask(hwlib::target::pin_oc & sda, hwlib::target::pin_oc & scl):
     task("Display task"),
     displayFlag(this,"display flag"),
     displayPool(this,"display pool"),
-    display()
+    display(sda,scl)
     {};
     /// \brief
     ///function to set the display flag

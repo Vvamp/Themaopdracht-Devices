@@ -18,12 +18,12 @@ public:
     ///\brief
     /// constructor for the BuzzerTask
     ///\details
-    /// this constructor does not need any paramaters
-    BuzzerTask() :
+    /// this constructor needs a reference to a hwlib pin_out
+    BuzzerTask(hwlib::target::pin_out& buzzerPin) :
     task("buzzer task"),
     buzzerFlag(this,"buzzer flag"),
     buzzerPool(this,"buzzer pool"),
-    buzzer()
+    buzzer(buzzerPin)
     {};
 
     ///\brief
