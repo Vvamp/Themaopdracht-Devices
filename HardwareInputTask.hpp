@@ -16,9 +16,9 @@ private:
 public:
 	///\brief
 	///The default constructor. Initializes the timer, rtos task and the keyboard.
-	HardwareInputTask(): 
+	HardwareInputTask(hwlib::port_oc_from & out_port, hwlib::port_in_from & in_port): 
 		task("Hardware Input Task"),
-		keyboard(),
+		keyboard(out_port, in_port),
 		period(this, "Period Timer")
 	{};
 

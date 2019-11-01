@@ -40,20 +40,7 @@ public:
 	///These are put into their corresponding objects(a0 - a3 become pin_oc's, a4-a7 become pin_ins).
 	///The pin_oc's get put into the out_port and the pin_in's get put into the in_port. 
 	///Finally, the matrix made from the out_port and in_port it used to initialize the keypad, along with the keyset '123A456B789C*0#D' 
-	Keyboard() :
-		out0(hwlib::target::pins::a0),	
-		out1(hwlib::target::pins::a1),
-		out2(hwlib::target::pins::a2),
-		out3(hwlib::target::pins::a3),
-
-		in0(hwlib::target::pins::a4),
-		in1(hwlib::target::pins::a5),
-		in2(hwlib::target::pins::a6),
-		in3(hwlib::target::pins::a7),
-
-		out_port(out0, out1, out2, out3),
-		in_port(in0, in1, in2, in3),
-
+	Keyboard(hwlib::port_oc_from out_port, hwlib::port_in_from in_port) :
 		matrix(out_port, in_port),
 		keypadIn(matrix, "123A456B789C*0#D")
 	{};
