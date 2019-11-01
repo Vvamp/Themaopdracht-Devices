@@ -40,11 +40,22 @@ struct Weapons {
 ///a array with the maximum amount of hits a player can take before dying.
 template<int N1 = 5000, int N2 = 6>
 class Player {
+private:
 	Weapons weapons;
-	size_t playerID;
-	size_t weaponIndex;
+	size_t playerID = 1;
+	size_t weaponIndex = 1;
 	size_t score = 5000;
-	int assailants[N1/N2];
+	int assailants[N1/N2] = {0};
+public:
+	///\brief
+	///The constructor of the Player class
+	///\details
+	///The Player class constructor only expects a Weapons struct.
+	Player(
+		Weapons WeaponsInput
+	):
+		weapons(WeaponsInput)
+	{};
 
 	///\brief
 	///The setPlayerID sets the playerID with the chosen ID.

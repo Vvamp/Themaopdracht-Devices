@@ -1,4 +1,4 @@
-#include "player.hpp"
+#include "Player.hpp"
 
 size_t Weapons::getMin(){
 	size_t min = 99;
