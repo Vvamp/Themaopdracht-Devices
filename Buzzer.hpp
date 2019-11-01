@@ -9,15 +9,16 @@
 /// this class implements the functionality that is needed to make sounds with a buzzer.
 class Buzzer{
 private:
-    hwlib::target::pin_out buzzerPin;//<pin on which the buzzer is connected
+    hwlib::target::pin_out& buzzerPin;//<pin on which the buzzer is connected
 public:
 
     ///\brief
     /// constructor for the buzzer class
     ///\details
-    /// this constructor needs no paramaters, it constructs its own pin (d10)
+    /// this constructor needs a reference to a hwlib::pin_out
     Buzzer():
-    buzzerPin(hwlib::target::pins::d10)
+    buzzerPin(hwlib::target::pin_out& buzzerPin) :
+    buzzerPin(buzzerPin)
     {};
 
     ///\brief
