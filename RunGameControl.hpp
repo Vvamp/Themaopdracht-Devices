@@ -2,6 +2,8 @@
 #define RunGameControl_hpp
 
 #include "hwlib.hpp"
+#include "Player.hpp"
+#include "SendTask.hpp"
 
 class RunGameControl : public KeyboardListener {
 private:

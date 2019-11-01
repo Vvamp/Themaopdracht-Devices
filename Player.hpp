@@ -2,6 +2,7 @@
 #define Player_hpp
 
 #include "hwlib.hpp"
+
 ///@file
 ///\brief
 ///Weapon struct that contains information about a weapon.
