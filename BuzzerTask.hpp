@@ -36,7 +36,7 @@ public:
                 case states::idle:{
                     auto ev = wait(buzzerFlag);
                     if (ev == buzzerFlag){
-                        auto sound = buzzerPool.read();
+                        sound = buzzerPool.read();
                         state = states::makeSound;
                         break;
                     }
@@ -97,5 +97,6 @@ private:
     Buzzer buzzer; //< the boundary buzzer object
     enum class states{idle, makeSound}; //< enumerator that holds the sounds, one of these sounds need to be given as a paraamater to the makeSound function
     states state = states::idle; //< this is the state on which the task switches
+    sounds sound = sounds::startEndSound; //< sound variable that the task uses to read out the pool and store it in.
 }
 #ifndef //BUZZERTASK_HPP

@@ -48,10 +48,13 @@ public:
     /// this function fills in the XOR of bit 2 and 7 of the command, and places it in the 12th bit, it than takes the XOR of bit 3 and 8 and places
     /// it in bit 13, and so on. only after this is done, the command is valid to be sent.
     void checkSum();
-
+    ///\brief
+    /// main function that overrides the RTOS main, in which different states are defined and used.
     void main() override{
         while(1){
             switch (state){
+                //wait until  the command flag is set, and then read out the command pool. After that he does the checksum function on the message to make it
+                //correct.
                 case states::idle:{
                     auto ev = wait(comFlag);
                     if (ev == comFlag){
@@ -63,7 +66,8 @@ public:
                     }
                     break;
                 }
-
+                // read the MSB, if its high, send a 1, if its low send a 0. After that, shift the whole message one place to the left, to make sure a new
+                // bit is read at the next iteration. If 16 bits have been read, go back to idle state. 
                 case states::setBit:{
                     uint8_t bit = message >> 15;
                     message <<= 1;
