@@ -26,11 +26,11 @@ private:
 public:
 	///\brief
 	///The ReceiveTask constructor takes no parameters and initializes all of its objects itself.
-	ReceiveTask():
+	ReceiveTask(hwlib::target::pin_in & irReceiverPin):
 		task("Receive Task"),
 		gameTask(),
 		recIRMsgControl(),
-		irDetector(),
+		irDetector(irReceiverPin),
 		timerMsg(this, "Message Timer"),
 		interruptTimer(this, "Interrupt Timer")
 	{};
