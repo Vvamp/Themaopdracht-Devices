@@ -250,7 +250,7 @@ public:
 				//In this state the user will send the time to the players.
 				//When the user presses the * button he will move to SEND_START
 				case initGameStates::SEND_TIME:{
-					hwlib::string<128> msg = "#: send time\n*: send start (end)";
+					hwlib::string<64> msg = "#: send time\n*: send start (end)";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					hwlib::wait_ms(100);
@@ -258,9 +258,17 @@ public:
 					auto btnID = buttonChannel.read();
 					if(btnID == btnStar){
 						initSubState = initGameStates::SEND_START;
+						hwlib::string<64> msg = "send start...";
+						displayTask.writeDisplayPool(msg);
+						displayTask.setDisplayFlag();
+						hwlib::wait_ms(500);
 					} else if(btnID == btnHashtag){
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
+						hwlib::string<64> msg = "send time...";
+						displayTask.writeDisplayPool(msg);
+						displayTask.setDisplayFlag();
+						hwlib::wait_ms(500);
 					}
 					break;
 				}
