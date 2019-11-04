@@ -115,7 +115,6 @@ public:
 					hwlib::string<20> msg = "A: choose player\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					auto event = wait(buttonChannel + receiveChannel);
 					if (event == buttonChannel){
 						int btnID = buttonChannel.read();
@@ -145,7 +144,6 @@ public:
 					hwlib::string<20> msg = "number 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					int btnID = buttonChannel.read();
 					if(btnID == Buttons::btn0){
@@ -163,7 +161,6 @@ public:
 					hwlib::string<20> msg = "B: choose weapon\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if( btnID == Buttons::btnB){
@@ -177,7 +174,6 @@ public:
 					hwlib::string<20> msg = "weapon 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
@@ -203,7 +199,6 @@ public:
 					hwlib::string<20> msg = "Press C to set\ntime";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == Buttons::btnC){
@@ -220,7 +215,6 @@ public:
 					msg += commandString;
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					static size_t itterator = 1;
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
@@ -253,7 +247,6 @@ public:
 					hwlib::string<64> msg = "#: send time\n*: send start (end)";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == btnStar){
@@ -261,14 +254,14 @@ public:
 						hwlib::string<64> msg = "send start...";
 						displayTask.writeDisplayPool(msg);
 						displayTask.setDisplayFlag();
-						hwlib::wait_ms(500);
+						hwlib::wait_ms(100);
 					} else if(btnID == btnHashtag){
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
 						hwlib::string<64> msg = "send time...";
 						displayTask.writeDisplayPool(msg);
 						displayTask.setDisplayFlag();
-						hwlib::wait_ms(500);
+						hwlib::wait_ms(100);
 					}
 					break;
 				}
@@ -304,7 +297,6 @@ public:
 					hwlib::string<20> msg = "starting...\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
 					buzzerTask.makeSound(BuzzerTask::sounds::startEndSound);
 					startTimer.set(3'000'000);
 					wait(startTimer);
