@@ -37,6 +37,7 @@ private:
 	rtos::flag gameOverFlag;
 	const uint16_t commandStart = 0x00;
 	uint16_t commandTime = 0x00;
+	hwlib::string<16> commandString;
 	size_t second = 1'000'000;
 	size_t startBit = 0b1000'0000'0000'0000;
 public:
@@ -199,7 +200,8 @@ public:
 				//We also gave the leader the option to press the * button
 				//to set the time to one minute for demo purposes.
 				case initGameStates::GET_TIME:{
-				 	hwlib::string<32> msg = "Tijd:"
+				 	hwlib::string<32> msg = "Tijd:";
+					msg += commandString;
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					hwlib::wait_ms(100);
@@ -208,9 +210,17 @@ public:
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9 && itterator == 1){
 						commandTime += btnID * 10;
+
+						char toChar = char(btnID + 48);
+						commandString += toChar;
+
 						itterator++;
 					} else if (btnID <= 9 && itterator == 2){
 						commandTime += btnID;
+
+						char toChar = char(btnID + 48);
+						commandString += toChar;
+
 						itterator++;
 					} else if (btnID == Buttons::btnStar){
 						commandTime = 1;
