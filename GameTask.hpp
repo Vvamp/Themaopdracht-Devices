@@ -9,8 +9,9 @@
 #include "DisplayTask.hpp"
 #include "SendTask.hpp"
 #include "BuzzerTask.hpp"
-// #include "ReceiveTask.hpp"
+#include "Keyboard.hpp"
 #include "KeyboardListener.hpp"
+// #include "ReceiveTask.hpp"
 
 ///@file
 ///\brief
@@ -43,7 +44,8 @@ public:
 		Player<> playerInput,
 		DisplayTask & displayTaskInput,
 		SendTask & sendTaskInput,
-		BuzzerTask & buzzerTaskInput
+		BuzzerTask & buzzerTaskInput,
+		Keyboard<> & keyboardInput
 	):
 		player(playerInput),
 		displayTask(displayTaskInput),
@@ -59,7 +61,9 @@ public:
 		receiveChannel(this,"Channel for messages"),
 		gameOverFlag(this,"Signals Game Over")
 
-	{}
+	{
+		keyboardInput.addKeyboardListener(this);
+	}
 
 	///\brief
 	///The buttonPressed function calls the writeButtonChannel.

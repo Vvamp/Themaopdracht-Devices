@@ -10,6 +10,15 @@
 ///This Weapon struct contains the name, damage, rateOfFire,
 ///magazine and reloadTime of a weapon.
 struct Weapon {
+	// Weapon(
+	// 	hwlib::string<32> nameInput,
+	// 	size_t damageInput,
+	// 	size_t rateOfFireInput,
+	// 	size_t magazineInput,
+	// 	size_t reloadTime
+	// ):
+	// 	name(nameInput)
+	// {}
 	hwlib::string<32> name;
 	size_t damage;
 	size_t rateOfFire;
@@ -117,13 +126,13 @@ public:
 
 	///\brief
 	///The getAssailants function returns the array of assailants of the player.
-	int getAssailants(){
+	int* getAssailants(){
 		return assailants;
 	};
 
 	///\brief
 	///The getAssailantsAmount function returns how many people have hit the player.
-	size_t getAssalantsAmount(){
+	size_t getAssailantsAmount(){
 		size_t amount=0;
 		for (auto assailant : assailants){
 			if (assailant == 0){
