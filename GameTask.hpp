@@ -32,7 +32,7 @@ private:
 	rtos::timer invincibilityTimer;
 	rtos::timer rateOfFireTimer;
 	rtos::timer startTimer;
-	rtos::channel<int, 1> buttonChannel;
+	rtos::channel<int, 128> buttonChannel;
 	rtos::channel<uint16_t, 128> receiveChannel;
 	rtos::flag gameOverFlag;
 	const uint16_t commandStart = 0x00;
@@ -117,13 +117,7 @@ public:
 					hwlib::cout << "button pressed event\n";
 					if (event == buttonChannel){
 						int btnID = buttonChannel.read();
-						if (btnID == 0){
-							hwlib::cout << "Was 0 \n";
-						}else if (btnID == Buttons::btn0){
-							hwlib::cout << "was btn0\n";
-						}else{	
-							hwlib::cout << btnID << '\n';
-						}
+			
 						if(btnID == Buttons::btnA){
 							regSubState = regGameParamStates::PLAYER_INPUT;
 						}else{

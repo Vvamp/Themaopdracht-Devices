@@ -27,7 +27,10 @@ public:
     displayFlag(this,"display flag"),
     displayPool("display pool"),
     display(sda,scl)
-    {};
+    {
+		hwlib::string<2> x = "\f";
+        display.showMessage(x);
+	};
     /// \brief
     ///function to set the display flag
     void setDisplayFlag();
