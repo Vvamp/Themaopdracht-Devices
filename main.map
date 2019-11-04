@@ -2509,8 +2509,8 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
                 0x0000000000004306       0x32 GameTask.o
                                           0x1 (size before relaxing)
  .rodata._ZN8GameTask4mainEv.str1.1
-                0x0000000000004306       0x8c GameTask.o
- *fill*         0x0000000000004392        0x2 
+                0x0000000000004306       0x8b GameTask.o
+ *fill*         0x0000000000004391        0x3 
  .rodata._ZTV8GameTask
                 0x0000000000004394       0x24 GameTask.o
                 0x0000000000004394                vtable for GameTask
