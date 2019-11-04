@@ -80,9 +80,9 @@ public:
                         //short beep 3
                         while (counter < 2000){
                         buzzer.soundOn();
-                        hwlib::wait_us(500000);
+                        hwlib::wait_us(300000);
                         buzzer.soundOff();
-                        hwlib::wait_us(500000);
+                        hwlib::wait_us(300000);
                         counter++;
                         }
                        
@@ -92,9 +92,9 @@ public:
                         uint16_t counter = 0;
                         while (counter < 500)
                         buzzer.soundOn();
-                        hwlib::wait_ms(1);
+                        hwlib::wait_ms(2);
                         buzzer.soundOff();
-                        hwlib::wait_ms(1);
+                        hwlib::wait_ms(2);
                         counter++;
                     }
                     state = states::idle;
