@@ -16,9 +16,10 @@ public:
     ///\brief
     /// TiltSensor constructor
     /// \details
-    /// The TiltSensor constuctor needs no parameters.
-    TiltSensor():
-        tiltSensor( hwlib::target::pins:d13 )
+    /// The TiltSensor constuctor needs a hwlib::pin_in.
+    /// this pin is used for the tilt sensor
+    TiltSensor( hwlib::pin_in & tiltSensor ):
+        tiltSensor( tiltSensor )
     {};
 
     /// \brief

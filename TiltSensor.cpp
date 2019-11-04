@@ -2,7 +2,8 @@
 
 size_t TiltSensor::getTilt(){
 
-    size_t tiltPosition = 1;
+    tiltSensor.refresh();
+    size_t tiltPosition = tiltSensor.read();
 
     return tiltPosition;
 
