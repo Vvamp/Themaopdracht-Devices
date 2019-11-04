@@ -130,6 +130,10 @@ public:
 							if (msg !=0x00)	{
 								runGameControl.setGameTime(msg);
 							} else if (msg == 0x00 && runGameControl.getTime()){
+								hwlib::string<20> msg = "time recieved\n";
+								displayTask.writeDisplayPool(msg);
+								displayTask.setDisplayFlag();
+								hwlib::wait_ms(100);
 								mainState = mainStates::RUN_GAME;
 							}
 						}

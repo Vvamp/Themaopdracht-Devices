@@ -27,7 +27,7 @@ int main(){
 
 	auto buzzerPin = hwlib::target::pin_out(hwlib::target::pins::d10);
 
-	auto iRDPin = hwlib::target::pin_out(hwlib::target::pins::d11);
+	auto iRDPin = hwlib::target::d2_36kHz();
 	auto iRRPin = hwlib::target::pin_in(hwlib::target::pins::d12);
 
 	auto sda = hwlib::target::pin_oc(hwlib::target::pins::sda);

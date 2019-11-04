@@ -31,7 +31,7 @@ public:
     /// constructor
     ///\details
     /// the constructor only needs a hwlib pin out to be able to function.
-    SendTask(hwlib::target::pin_out& p):
+    SendTask(hwlib::target::d2_36kHz& p):
     task(100,"Send task"),
     comFlag(this,"send command flag"),
     comPool("command pool"),

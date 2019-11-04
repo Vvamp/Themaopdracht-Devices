@@ -13,7 +13,7 @@ public:
     /// constructor
     ///\details
     ///this constructor only needs a reference to a hwlib::pin_out in his parameters to compile. The constructor also sets the pin low during start up
-    IrDiode(hwlib::target::pin_out& diodePin):
+    IrDiode(hwlib::target::d2_36kHz& diodePin):
     diodePin(diodePin){
         diodePin.write(0);
         diodePin.flush();
