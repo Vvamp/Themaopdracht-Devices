@@ -32,7 +32,7 @@ public:
     void makeSound(sounds sound);
 
     void main() override{
-            hwlib::cout << "buzzertask main\n"; 
+            hwlib::cout << "buzzertask main\n";
         while(1){
             switch(state){
                 case states::idle:{
@@ -44,47 +44,58 @@ public:
                     }
                 }
                 case states::makeSound:{
+                    uint16_t counter = 0;
                     if (sound == sounds::startEndSound)
                     {
                         //long first beep
+                        while (counter < 2000){
                         buzzer.soundOn();
-                        hwlib::wait_ms(1000);
+                        hwlib::wait_ms(1);
                         buzzer.soundOff();
-                        hwlib::wait_ms(333);
-
+                        hwlib::wait_ms(1);
+                        counter++;
+                        }
+                        counter = 0;
+                        hwlib::wait_ms(500);
                         //short beep 1
+                        while (counter < 2000){
                         buzzer.soundOn();
-                        hwlib::wait_ms(333);
+                        hwlib::wait_us(500000);
                         buzzer.soundOff();
-                        hwlib::wait_ms(333);
-
+                        hwlib::wait_us(500000);
+                        counter++;
+                        }
+                        counter = 0;
+                        hwlib::wait_ms(500);
                         //short beep 2
+                        while (counter < 2000){
                         buzzer.soundOn();
-                        hwlib::wait_ms(333);
+                        hwlib::wait_us(500000);
                         buzzer.soundOff();
-                        hwlib::wait_ms(333);
-
+                        hwlib::wait_us(500000);
+                        counter++;
+                        }
+                        counter = 0;
+                        hwlib::wait_ms(500);
                         //short beep 3
+                        while (counter < 2000){
                         buzzer.soundOn();
-                        hwlib::wait_ms(333);
+                        hwlib::wait_us(500000);
                         buzzer.soundOff();
-                        hwlib::wait_ms(333);
+                        hwlib::wait_us(500000);
+                        counter++;
+                        }
+                       
                     }
                     else if (sound == sounds::hitSound)
                     {
+                        uint16_t counter = 0;
+                        while (counter < 500)
                         buzzer.soundOn();
-                        hwlib::wait_ms(100);
+                        hwlib::wait_ms(1);
                         buzzer.soundOff();
-                        hwlib::wait_ms(100);
-
-                        buzzer.soundOn();
-                        hwlib::wait_ms(100);
-                        buzzer.soundOff();
-                        hwlib::wait_ms(100);
-
-                        buzzer.soundOn();
-                        hwlib::wait_ms(100);
-                        buzzer.soundOff();
+                        hwlib::wait_ms(1);
+                        counter++;
                     }
                     state = states::idle;
                     break;
