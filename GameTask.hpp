@@ -112,6 +112,10 @@ public:
 				//If the settings are set the user will have to wait for
 				//the time and start commands from the leader.
 				case regGameParamStates::IDLE:{
+					hwlib::string<20> msg = "A: choose player\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					auto event = wait(buttonChannel + receiveChannel);
 					if (event == buttonChannel){
 						int btnID = buttonChannel.read();
@@ -138,6 +142,10 @@ public:
 				//the game leader. Otherwise he will be send to WAIT_ON_B
 				//to start the process of choosing a weapon.
 				case regGameParamStates::PLAYER_INPUT:{
+					hwlib::string<20> msg = "number 1/9\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					int btnID = buttonChannel.read();
 					if(btnID == Buttons::btn0){
@@ -152,6 +160,10 @@ public:
 				//In this state the user has to press the B button to
 				//move to the WEAPON_INPUT state.
 				case regGameParamStates::WAIT_ON_B:{
+					hwlib::string<20> msg = "B: choose weapon\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if( btnID == Buttons::btnB){
@@ -162,6 +174,10 @@ public:
 				//In this state the user has to choose a weapon and will be moved
 				//to the IDLE state to wait for the game leader's commands.
 				case regGameParamStates::WEAPON_INPUT:{
+					hwlib::string<20> msg = "weapon 1/9\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
@@ -277,6 +293,10 @@ public:
 				//There will be a sound during the countdown and after
 				//3 seconds the user will move to the PLAYING state.
 				case runGameStates::STARTUP:{
+					hwlib::string<20> msg = "starting...\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					buzzerTask.makeSound(BuzzerTask::sounds::startEndSound);
 					startTimer.set(3'000'000);
 					wait(startTimer);
