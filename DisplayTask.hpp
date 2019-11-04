@@ -44,9 +44,7 @@ public:
     void showMessage();
 
     void main() override{
-        hwlib::cout << "Displaytask main\n";
-        hwlib::string<4> x = "piet";
-        display.showMessage(x);
+            hwlib::cout << "nu in displaytaak\n";
         while(1){
             switch(state){
 

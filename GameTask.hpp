@@ -198,7 +198,7 @@ public:
 				//settings the time. Once the C button is pressed the user
 				//moves to the GET_TIME state.
 				case initGameStates::IDLE:{
-					hwlib::string<2> msg = "/f";
+					hwlib::string<1> msg = "\f";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					wait(buttonChannel);
