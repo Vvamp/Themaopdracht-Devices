@@ -47,7 +47,6 @@ public:
     void showMessage();
 
     void main() override{
-            hwlib::cout << "nu in displaytaak\n";
         while(1){
             switch(state){
 

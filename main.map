@@ -1,0 +1,3031 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o)
+                              TransferHitsControl.o (__aeabi_ldivmod)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+                              TransferHitsControl.o (__aeabi_uldivmod)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o) (__udivmoddi4)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+                              DisplayTask.o (memcpy)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+                              TransferHitsControl.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+__dso_handle        0x4               bmptk_cortex.o
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc Buzzer.o
+ .text          0x0000000000000000        0x0 Buzzer.o
+ .data          0x0000000000000000        0x0 Buzzer.o
+ .bss           0x0000000000000000        0x0 Buzzer.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c Buzzer.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 Buzzer.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 Buzzer.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 Buzzer.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc Buzzer.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 Buzzer.o
+ .group         0x0000000000000000        0xc BuzzerTask.o
+ .text          0x0000000000000000        0x0 BuzzerTask.o
+ .data          0x0000000000000000        0x0 BuzzerTask.o
+ .bss           0x0000000000000000        0x0 BuzzerTask.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c BuzzerTask.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 BuzzerTask.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c BuzzerTask.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 BuzzerTask.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 BuzzerTask.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 BuzzerTask.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 BuzzerTask.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 BuzzerTask.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 BuzzerTask.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 BuzzerTask.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 BuzzerTask.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 BuzzerTask.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 BuzzerTask.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 BuzzerTask.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 BuzzerTask.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc BuzzerTask.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 BuzzerTask.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 BuzzerTask.o
+ .group         0x0000000000000000        0xc Display.o
+ .text          0x0000000000000000        0x0 Display.o
+ .data          0x0000000000000000        0x0 Display.o
+ .bss           0x0000000000000000        0x0 Display.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c Display.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 Display.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c Display.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 Display.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 Display.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 Display.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 Display.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 Display.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 Display.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 Display.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 Display.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 Display.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 Display.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 Display.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x2f Display.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc Display.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 Display.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 Display.o
+ .group         0x0000000000000000        0xc DisplayTask.o
+ .text          0x0000000000000000        0x0 DisplayTask.o
+ .data          0x0000000000000000        0x0 DisplayTask.o
+ .bss           0x0000000000000000        0x0 DisplayTask.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c DisplayTask.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 DisplayTask.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c DisplayTask.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 DisplayTask.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 DisplayTask.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 DisplayTask.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 DisplayTask.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 DisplayTask.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 DisplayTask.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 DisplayTask.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 DisplayTask.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 DisplayTask.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 DisplayTask.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 DisplayTask.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 DisplayTask.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc DisplayTask.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 DisplayTask.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 DisplayTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0xc GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .group         0x0000000000000000        0x8 GameTask.o
+ .text          0x0000000000000000        0x0 GameTask.o
+ .data          0x0000000000000000        0x0 GameTask.o
+ .bss           0x0000000000000000        0x0 GameTask.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c GameTask.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 GameTask.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c GameTask.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 GameTask.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 GameTask.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 GameTask.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 GameTask.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 GameTask.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 GameTask.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 GameTask.o
+ .text._ZN8GameTask19writeReceiveChannelEj
+                0x0000000000000000       0x38 GameTask.o
+ .text._ZN8GameTask15setGameOverFlagEv
+                0x0000000000000000        0xa GameTask.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 GameTask.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 GameTask.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 GameTask.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 GameTask.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 GameTask.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc GameTask.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 GameTask.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 GameTask.o
+ .group         0x0000000000000000        0xc IrDetector.o
+ .text          0x0000000000000000        0x0 IrDetector.o
+ .data          0x0000000000000000        0x0 IrDetector.o
+ .bss           0x0000000000000000        0x0 IrDetector.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c IrDetector.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 IrDetector.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c IrDetector.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 IrDetector.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 IrDetector.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 IrDetector.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 IrDetector.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 IrDetector.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 IrDetector.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 IrDetector.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 IrDetector.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 IrDetector.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 IrDetector.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 IrDetector.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 IrDetector.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc IrDetector.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 IrDetector.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 IrDetector.o
+ .group         0x0000000000000000        0xc IrDiode.o
+ .text          0x0000000000000000        0x0 IrDiode.o
+ .data          0x0000000000000000        0x0 IrDiode.o
+ .bss           0x0000000000000000        0x0 IrDiode.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c IrDiode.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 IrDiode.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c IrDiode.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 IrDiode.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 IrDiode.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 IrDiode.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 IrDiode.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 IrDiode.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 IrDiode.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 IrDiode.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 IrDiode.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 IrDiode.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 IrDiode.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 IrDiode.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 IrDiode.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc IrDiode.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 IrDiode.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 IrDiode.o
+ .group         0x0000000000000000        0xc RecIRMsgControl.o
+ .text          0x0000000000000000        0x0 RecIRMsgControl.o
+ .data          0x0000000000000000        0x0 RecIRMsgControl.o
+ .bss           0x0000000000000000        0x0 RecIRMsgControl.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c RecIRMsgControl.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 RecIRMsgControl.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c RecIRMsgControl.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 RecIRMsgControl.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 RecIRMsgControl.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 RecIRMsgControl.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 RecIRMsgControl.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 RecIRMsgControl.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 RecIRMsgControl.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 RecIRMsgControl.o
+ .text._ZN15RecIRMsgControl3XOREv
+                0x0000000000000000        0x6 RecIRMsgControl.o
+ .text._ZN15RecIRMsgControl12checkMessageERt
+                0x0000000000000000       0x28 RecIRMsgControl.o
+ .text._ZN15RecIRMsgControl3CMPEv
+                0x0000000000000000        0xc RecIRMsgControl.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 RecIRMsgControl.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 RecIRMsgControl.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 RecIRMsgControl.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 RecIRMsgControl.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 RecIRMsgControl.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc RecIRMsgControl.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 RecIRMsgControl.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 RecIRMsgControl.o
+ .group         0x0000000000000000        0xc RunGameControl.o
+ .group         0x0000000000000000        0x8 RunGameControl.o
+ .group         0x0000000000000000        0x8 RunGameControl.o
+ .text          0x0000000000000000        0x0 RunGameControl.o
+ .data          0x0000000000000000        0x0 RunGameControl.o
+ .bss           0x0000000000000000        0x0 RunGameControl.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c RunGameControl.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 RunGameControl.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c RunGameControl.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 RunGameControl.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 RunGameControl.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 RunGameControl.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 RunGameControl.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 RunGameControl.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 RunGameControl.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 RunGameControl.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 RunGameControl.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 RunGameControl.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 RunGameControl.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 RunGameControl.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 RunGameControl.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc RunGameControl.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 RunGameControl.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 RunGameControl.o
+ .group         0x0000000000000000        0xc SendTask.o
+ .text          0x0000000000000000        0x0 SendTask.o
+ .data          0x0000000000000000        0x0 SendTask.o
+ .bss           0x0000000000000000        0x0 SendTask.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c SendTask.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 SendTask.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c SendTask.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 SendTask.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 SendTask.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 SendTask.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 SendTask.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 SendTask.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 SendTask.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 SendTask.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 SendTask.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 SendTask.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 SendTask.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 SendTask.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 SendTask.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc SendTask.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 SendTask.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 SendTask.o
+ .group         0x0000000000000000        0x8 TransferHitsControl.o
+ .group         0x0000000000000000        0xc TransferHitsControl.o
+ .group         0x0000000000000000        0xc TransferHitsControl.o
+ .group         0x0000000000000000        0xc TransferHitsControl.o
+ .group         0x0000000000000000        0xc TransferHitsControl.o
+ .text          0x0000000000000000        0x0 TransferHitsControl.o
+ .data          0x0000000000000000        0x0 TransferHitsControl.o
+ .bss           0x0000000000000000        0x0 TransferHitsControl.o
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x0000000000000000       0x66 TransferHitsControl.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c TransferHitsControl.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 TransferHitsControl.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c TransferHitsControl.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 TransferHitsControl.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 TransferHitsControl.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 TransferHitsControl.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 TransferHitsControl.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 TransferHitsControl.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 TransferHitsControl.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 TransferHitsControl.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 TransferHitsControl.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 TransferHitsControl.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 TransferHitsControl.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 TransferHitsControl.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 TransferHitsControl.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc TransferHitsControl.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 TransferHitsControl.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 TransferHitsControl.o
+ .data          0x0000000000000000        0x0 switch_to.o
+ .bss           0x0000000000000000        0x0 switch_to.o
+ .group         0x0000000000000000        0xc coroutine.o
+ .text          0x0000000000000000        0x0 coroutine.o
+ .data          0x0000000000000000        0x0 coroutine.o
+ .bss           0x0000000000000000        0x0 coroutine.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c coroutine.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 coroutine.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c coroutine.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 coroutine.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 coroutine.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 coroutine.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 coroutine.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 coroutine.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 coroutine.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 coroutine.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 coroutine.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 coroutine.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 coroutine.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 coroutine.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 coroutine.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc coroutine.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 coroutine.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 coroutine.o
+ .group         0x0000000000000000        0x8 rtos.o
+ .group         0x0000000000000000        0x8 rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .group         0x0000000000000000        0xc rtos.o
+ .text          0x0000000000000000        0x0 rtos.o
+ .data          0x0000000000000000        0x0 rtos.o
+ .bss           0x0000000000000000        0x0 rtos.o
+ .text._ZN5hwlib7ostream7reverse10add_prefixERKS0_.part.2
+                0x0000000000000000       0x4c rtos.o
+ .text._ZN5hwlib7ostreamlsEc
+                0x0000000000000000        0xe rtos.o
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x0000000000000000       0x66 rtos.o
+ .text._ZN5hwliblsERNS_7ostreamEi
+                0x0000000000000000       0x92 rtos.o
+ .text._ZN5hwliblsERNS_7ostreamEx
+                0x0000000000000000       0xc4 rtos.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c rtos.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 rtos.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c rtos.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 rtos.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 rtos.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 rtos.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 rtos.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 rtos.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 rtos.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 rtos.o
+ .text._ZNK4rtos5eventneERKS0_
+                0x0000000000000000       0x3c rtos.o
+ .text._ZNK4rtos5eventneERKNS_8waitableE
+                0x0000000000000000       0x1c rtos.o
+ .text._ZNK4rtos5event5printERN5hwlib7ostreamE
+                0x0000000000000000       0x30 rtos.o
+ .text._ZN4rtos5timer5startEm
+                0x0000000000000000        0xe rtos.o
+ .text._ZN4rtos5mutex4waitEv
+                0x0000000000000000       0x30 rtos.o
+ .text._ZN4rtos5mutex6signalEv
+                0x0000000000000000       0x50 rtos.o
+ .text._ZN4rtos5mutexD2Ev
+                0x0000000000000000       0x28 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos4flagE
+                0x0000000000000000       0x12 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos5eventE
+                0x0000000000000000       0x10 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos5timerE
+                0x0000000000000000       0x12 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos5clockE
+                0x0000000000000000       0x12 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos12channel_baseE
+                0x0000000000000000       0x12 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos5mutexE
+                0x0000000000000000       0x12 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos12mailbox_baseE
+                0x0000000000000000       0x12 rtos.o
+ .text._ZlsRN5hwlib7ostreamERKN4rtos9pool_baseE
+                0x0000000000000000       0x12 rtos.o
+ .text._ZNK4rtos9task_base4nameEv
+                0x0000000000000000        0x4 rtos.o
+ .text._ZN4rtos3addEPNS_5mutexE
+                0x0000000000000000       0x10 rtos.o
+ .text._ZN4rtos5mutexC2EPKc
+                0x0000000000000000       0x1c rtos.o
+ .text._ZN4rtos3addEPNS_12mailbox_baseE
+                0x0000000000000000       0x10 rtos.o
+ .text._ZN4rtos12mailbox_baseC2EPKc
+                0x0000000000000000       0x1e rtos.o
+ .text._ZN4rtos19do_statistics_clearEv
+                0x0000000000000000       0x18 rtos.o
+ .text._ZN4rtos18display_statisticsEv
+                0x0000000000000000       0x28 rtos.o
+ .text._ZN5hwlib7wait_nsEi
+                0x0000000000000000       0x10 rtos.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 rtos.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 rtos.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 rtos.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 rtos.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 rtos.o
+ .rodata._ZN4rtos5mutex6signalEv.str1.1
+                0x0000000000000000       0x21 rtos.o
+ .rodata._ZN4rtos5mutexD2Ev.str1.1
+                0x0000000000000000       0x18 rtos.o
+ .rodata._ZNK4rtos5event5printERN5hwlib7ostreamE.str1.1
+                0x0000000000000000        0xf rtos.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc rtos.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 rtos.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 rtos.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0x8 hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .group         0x0000000000000000        0xc hwlib.o
+ .text          0x0000000000000000        0x0 hwlib.o
+ .data          0x0000000000000000        0x0 hwlib.o
+ .bss           0x0000000000000000        0x0 hwlib.o
+ .text._ZN5hwlib18pin_in_out_dummy_t5writeEb
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib18pin_in_out_dummy_t4readEv
+                0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib18pin_in_out_dummy_t19direction_set_inputEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib18pin_in_out_dummy_t20direction_set_outputEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib18pin_in_out_dummy_t5flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib18pin_in_out_dummy_t7refreshEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib18pin_in_out_dummy_t15direction_flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib15pin_out_dummy_t5writeEb
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib15pin_out_dummy_t5flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib17pin_out_from_oc_t5writeEb
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17pin_out_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib18pin_out_from_out_t5writeEb
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib18pin_out_from_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21pin_out_from_in_out_t5writeEb
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21pin_out_from_in_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_in_from_oc_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_in_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_in_from_in_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_in_from_in_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_in_from_in_out_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_in_from_in_out_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_in_out_from_oc_t19direction_set_inputEv
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwlib20pin_in_out_from_oc_t20direction_set_outputEv
+                0x0000000000000000        0x6 hwlib.o
+ .text._ZN5hwlib20pin_in_out_from_oc_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_in_out_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_in_out_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_in_out_from_oc_t15direction_flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_in_out_from_in_out_t19direction_set_inputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_in_out_from_in_out_t20direction_set_outputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_in_out_from_in_out_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_in_out_from_in_out_t5writeEb
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_in_out_from_in_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_in_out_from_in_out_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_in_out_from_in_out_t15direction_flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_oc_from_oc_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_oc_from_oc_t5writeEb
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_oc_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib16pin_oc_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_oc_from_in_out_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_oc_from_in_out_t5flushEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib20pin_oc_from_in_out_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21pin_invert_from_out_t5writeEb
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib21pin_invert_from_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_invert_from_in_t4readEv
+                0x0000000000000000       0x12 hwlib.o
+ .text._ZN5hwlib20pin_invert_from_in_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_invert_from_in_out_t4readEv
+                0x0000000000000000       0x12 hwlib.o
+ .text._ZN5hwlib24pin_invert_from_in_out_t5writeEb
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib24pin_invert_from_in_out_t19direction_set_inputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_invert_from_in_out_t20direction_set_outputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_invert_from_in_out_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_invert_from_in_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24pin_invert_from_in_out_t15direction_flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_invert_from_oc_t4readEv
+                0x0000000000000000       0x12 hwlib.o
+ .text._ZN5hwlib20pin_invert_from_oc_t5writeEb
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib20pin_invert_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_invert_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib18all_from_pin_out_t5writeEb
+                0x0000000000000000       0x1e hwlib.o
+ .text._ZN5hwlib18all_from_pin_out_t5flushEv
+                0x0000000000000000       0x1a hwlib.o
+ .text._ZN5hwlib24pin_direct_from_in_out_t5writeEb
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib24pin_direct_from_in_out_t4readEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib24pin_direct_from_in_out_t19direction_set_inputEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib24pin_direct_from_in_out_t20direction_set_outputEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib24pin_direct_from_in_out_t5flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib24pin_direct_from_in_out_t7refreshEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib24pin_direct_from_in_out_t15direction_flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib20pin_direct_from_in_t4readEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib20pin_direct_from_in_t7refreshEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib21pin_direct_from_out_t5writeEb
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib21pin_direct_from_out_t5flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib20pin_direct_from_oc_t5writeEb
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib20pin_direct_from_oc_t4readEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib20pin_direct_from_oc_t5flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib20pin_direct_from_oc_t7refreshEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib18port_out_from_oc_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib18port_out_from_oc_t5writeEj
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib18port_out_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib19port_out_from_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib19port_out_from_out_t5writeEj
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib19port_out_from_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib22port_out_from_in_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib22port_out_from_in_out_t5writeEj
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib22port_out_from_in_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_in_from_oc_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_in_from_oc_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_in_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_in_from_in_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_in_from_in_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_in_from_in_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_from_in_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_from_in_out_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_from_in_out_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t19direction_set_inputEv
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t20direction_set_outputEv
+                0x0000000000000000        0x6 hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t15direction_flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t19direction_set_inputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t20direction_set_outputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t5writeEj
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_in_out_from_in_out_t15direction_flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_oc_from_oc_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_oc_from_oc_t4readEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_oc_from_oc_t5writeEj
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_oc_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib17port_oc_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t14number_of_pinsEv
+                0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t19direction_set_inputEv
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t20direction_set_outputEv
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t15direction_flushEv
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t4readEv
+                0x0000000000000000       0x2a hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t7refreshEv
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t5writeEj
+                0x0000000000000000       0x28 hwlib.o
+ .text._ZN5hwlib23port_in_out_from_pins_t5flushEv
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN5hwlib20port_out_from_pins_t14number_of_pinsEv
+                0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib20port_out_from_pins_t5writeEj
+                0x0000000000000000       0x28 hwlib.o
+ .text._ZN5hwlib20port_out_from_pins_t5flushEv
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN5hwlib23port_out_from_pins_oc_t14number_of_pinsEv
+                0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib23port_out_from_pins_oc_t5writeEj
+                0x0000000000000000       0x28 hwlib.o
+ .text._ZN5hwlib23port_out_from_pins_oc_t5flushEv
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t19direction_set_inputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t20direction_set_outputEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t4readEv
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t5writeEj
+                0x0000000000000000        0xa hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_invert_from_in_out_t15direction_flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_invert_from_in_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_invert_from_in_t4readEv
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwlib21port_invert_from_in_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib22port_invert_from_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib22port_invert_from_out_t5writeEj
+                0x0000000000000000        0xa hwlib.o
+ .text._ZN5hwlib22port_invert_from_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_invert_from_oc_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_invert_from_oc_t4readEv
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwlib21port_invert_from_oc_t7refreshEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib21port_invert_from_oc_t5writeEj
+                0x0000000000000000        0xa hwlib.o
+ .text._ZN5hwlib21port_invert_from_oc_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib19all_from_port_out_t5writeEb
+                0x0000000000000000       0x12 hwlib.o
+ .text._ZN5hwlib19all_from_port_out_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t5writeEj
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t4readEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t19direction_set_inputEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t20direction_set_outputEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t5flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t7refreshEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib25port_direct_from_in_out_t15direction_flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib22port_direct_from_out_t14number_of_pinsEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib22port_direct_from_out_t5writeEj
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib22port_direct_from_out_t5flushEv
+                0x0000000000000000        0x2 hwlib.o
+ .text._ZN5hwlib13window_part_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib15window_invert_t5flushEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib20pin_in_out_from_oc_t5writeEb
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwlib20pin_oc_from_in_out_t5writeEb
+                0x0000000000000000       0x26 hwlib.o
+ .text._ZN5hwlib21port_in_out_from_oc_t5writeEj
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwlib4randEv
+                0x0000000000000000       0x1c hwlib.o
+ .text._ZN5hwlib9random_inEjj
+                0x0000000000000000       0x1a hwlib.o
+ .text._ZN5hwlib9random_inERKNS_2xyE
+                0x0000000000000000       0x24 hwlib.o
+ .text._ZN5hwlib21pin_out_from_in_out_tC2ERNS_10pin_in_outE
+                0x0000000000000000       0x24 hwlib.o
+ .text._ZN5hwlib12pin_out_fromERNS_6pin_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib12pin_out_fromERNS_7pin_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib12pin_out_fromERNS_10pin_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib11pin_in_fromERNS_6pin_inE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib11pin_in_fromERNS_10pin_in_outE
+                0x0000000000000000       0x24 hwlib.o
+ .text._ZN5hwlib11pin_in_fromERNS_6pin_ocE
+                0x0000000000000000       0x28 hwlib.o
+ .text._ZN5hwlib15pin_in_out_fromERNS_6pin_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib15pin_in_out_fromERNS_10pin_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib11pin_oc_fromERNS_6pin_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib11pin_oc_fromERNS_10pin_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6invertERNS_7pin_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6invertERNS_6pin_inE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6invertERNS_10pin_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6invertERNS_6pin_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib3allERNS_7pin_outES1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_
+                0x0000000000000000       0x48 hwlib.o
+ .text._ZN5hwlib6directERNS_7pin_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6directERNS_6pin_inE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6directERNS_10pin_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6directERNS_6pin_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib22port_out_from_in_out_tC2ERNS_11port_in_outE
+                0x0000000000000000       0x24 hwlib.o
+ .text._ZN5hwlib13port_out_fromERNS_7port_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib13port_out_fromERNS_8port_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib13port_out_fromERNS_11port_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib12port_in_fromERNS_7port_inE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib12port_in_fromERNS_11port_in_outE
+                0x0000000000000000       0x24 hwlib.o
+ .text._ZN5hwlib12port_in_fromERNS_7port_ocE
+                0x0000000000000000       0x28 hwlib.o
+ .text._ZN5hwlib16port_in_out_fromERNS_7port_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib16port_in_out_fromERNS_11port_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib12port_oc_fromERNS_7port_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib16port_in_out_fromERNS_10pin_in_outES1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_
+                0x0000000000000000       0x68 hwlib.o
+ .text._ZN5hwlib13port_out_fromERNS_6pin_ocES1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_
+                0x0000000000000000       0x68 hwlib.o
+ .text._ZN5hwlib13port_out_fromERNS_7pin_outES1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_
+                0x0000000000000000       0x68 hwlib.o
+ .text._ZN5hwlib6invertERNS_8port_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6invertERNS_7port_inE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6invertERNS_11port_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6invertERNS_7port_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib3allERNS_8port_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6directERNS_8port_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6directERNS_7port_inE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6directERNS_11port_in_outE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib6directERNS_7port_ocE
+                0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib7ostreamlsEc
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x0000000000000000       0x66 hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamEi
+                0x0000000000000000       0xce hwlib.o
+ .text._ZN5hwlib6strlenEPKc
+                0x0000000000000000       0x10 hwlib.o
+ .text._ZN5hwlib8test_endEv
+                0x0000000000000000       0x58 hwlib.o
+ .text._ZNK5hwlib16image_mirror_y_t19read_implementationENS_2xyE
+                0x0000000000000000       0x44 hwlib.o
+ .text._ZNK5hwlib16image_mirror_x_t19read_implementationENS_2xyE
+                0x0000000000000000       0x46 hwlib.o
+ .text._ZNK5hwlib17image_transpose_t19read_implementationENS_2xyE
+                0x0000000000000000       0x3e hwlib.o
+ .text._ZNK5hwlib12image_part_t19read_implementationENS_2xyE
+                0x0000000000000000       0x4c hwlib.o
+ .text._ZN5hwlib4partERKNS_5imageENS_2xyES3_
+                0x0000000000000000       0x28 hwlib.o
+ .text._ZN5hwlib9transposeERKNS_5imageE
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib8mirror_xERKNS_5imageE
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib8mirror_yERKNS_5imageE
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib6window5writeENS_2xyENS_5colorE
+                0x0000000000000000       0x5c hwlib.o
+ .text._ZN5hwlib15window_invert_t20write_implementationENS_2xyENS_5colorE
+                0x0000000000000000       0x28 hwlib.o
+ .text._ZN5hwlib13window_part_t20write_implementationENS_2xyENS_5colorE
+                0x0000000000000000       0x2e hwlib.o
+ .text._ZN5hwlib6circle4drawERNS_6windowE
+                0x0000000000000000      0x174 hwlib.o
+ .text._ZN5hwlib4line4drawERNS_6windowE
+                0x0000000000000000       0xa2 hwlib.o
+ .text._ZN5hwlib4partERNS_6windowENS_2xyES2_
+                0x0000000000000000       0x5c hwlib.o
+ .text._ZN5hwlib6invertERNS_6windowE
+                0x0000000000000000       0x68 hwlib.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c hwlib.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c hwlib.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 hwlib.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 hwlib.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 hwlib.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 hwlib.o
+ .text._ZN3due19uart_char_availableEv
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN3due9uart_getcEv
+                0x0000000000000000       0x1c hwlib.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib19cin_using_uart_getc14char_availableEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib19cin_using_uart_getc4getcEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib9now_ticksEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib12ticks_per_usEv
+                0x0000000000000000        0x8 hwlib.o
+ .text._ZN5hwlib24uart_putc_bit_banged_pinEcRNS_7pin_outE
+                0x0000000000000000       0x5e hwlib.o
+ .text._ZN5hwlib12wait_ns_busyEi
+                0x0000000000000000       0x10 hwlib.o
+ .text._ZN5hwlib12wait_ms_busyEi
+                0x0000000000000000       0x16 hwlib.o
+ .text._ZN5hwlib7wait_usEi
+                0x0000000000000000       0x22 hwlib.o
+ .text._ZN5hwlib7wait_nsEi
+                0x0000000000000000       0x14 hwlib.o
+ .text._ZN5hwlib24uart_getc_bit_banged_pinERNS_6pin_inE
+                0x0000000000000000       0x72 hwlib.o
+ .text._ZN5hwlib7wait_msEi
+                0x0000000000000000       0x16 hwlib.o
+ .text._ZN5hwlib5blinkERNS_7pin_outEj
+                0x0000000000000000       0x38 hwlib.o
+ .text._ZN5hwlib5blinkERNS_10pin_in_outEj
+                0x0000000000000000       0x14 hwlib.o
+ .text._ZN5hwlib5blinkERNS_6pin_ocEj
+                0x0000000000000000       0x14 hwlib.o
+ .text._ZN5hwlib5blinkERNS_7pin_outEjj
+                0x0000000000000000       0x42 hwlib.o
+ .text._ZN5hwlib5blinkERNS_6pin_ocEjj
+                0x0000000000000000       0x18 hwlib.o
+ .text._ZN5hwlib5blinkERNS_10pin_in_outEjj
+                0x0000000000000000       0x1c hwlib.o
+ .text._ZN5hwlib4kittERNS_8port_outEj
+                0x0000000000000000       0x50 hwlib.o
+ .text._ZN5hwlib4kittERNS_11port_in_outEj
+                0x0000000000000000       0x14 hwlib.o
+ .text._ZN5hwlib4kittERNS_7port_ocEj
+                0x0000000000000000       0x14 hwlib.o
+ .text._ZN5hwlib5snakeERNS_8port_outEj
+                0x0000000000000000       0x30 hwlib.o
+ .text._ZN5hwlib5snakeERNS_11port_in_outEj
+                0x0000000000000000       0x14 hwlib.o
+ .text._ZN5hwlib5snakeERNS_7port_ocEj
+                0x0000000000000000       0x14 hwlib.o
+ .text._ZN5hwlib14scrolling_textERNS_8terminalEPKcjjj
+                0x0000000000000000       0x64 hwlib.o
+ .text._ZN5hwlib12dac_triangleERNS_3dacEj
+                0x0000000000000000       0x36 hwlib.o
+ .text._ZN5hwlib21graphics_random_linesERNS_6windowEjRKNS_5colorE
+                0x0000000000000000       0x88 hwlib.o
+ .text._ZN5hwlib23graphics_random_circlesERNS_6windowEjRKNS_5colorE
+                0x0000000000000000       0x90 hwlib.o
+ .rodata._ZTVN5hwlib18pin_in_out_dummy_tE
+                0x0000000000000000       0x24 hwlib.o
+ .rodata._ZTVN5hwlib15pin_out_dummy_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib17pin_out_from_oc_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib18pin_out_from_out_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib21pin_out_from_in_out_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib16pin_in_from_oc_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib16pin_in_from_in_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib20pin_in_from_in_out_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib20pin_in_out_from_oc_tE
+                0x0000000000000000       0x24 hwlib.o
+ .rodata._ZTVN5hwlib24pin_in_out_from_in_out_tE
+                0x0000000000000000       0x24 hwlib.o
+ .rodata._ZTVN5hwlib16pin_oc_from_oc_tE
+                0x0000000000000000       0x18 hwlib.o
+ .rodata._ZTVN5hwlib20pin_oc_from_in_out_tE
+                0x0000000000000000       0x18 hwlib.o
+ .rodata._ZTVN5hwlib21pin_invert_from_out_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib20pin_invert_from_in_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib24pin_invert_from_in_out_tE
+                0x0000000000000000       0x24 hwlib.o
+ .rodata._ZTVN5hwlib20pin_invert_from_oc_tE
+                0x0000000000000000       0x18 hwlib.o
+ .rodata._ZTVN5hwlib18all_from_pin_out_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib24pin_direct_from_in_out_tE
+                0x0000000000000000       0x24 hwlib.o
+ .rodata._ZTVN5hwlib20pin_direct_from_in_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib21pin_direct_from_out_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib20pin_direct_from_oc_tE
+                0x0000000000000000       0x18 hwlib.o
+ .rodata._ZTVN5hwlib18port_out_from_oc_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib19port_out_from_out_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib22port_out_from_in_out_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib17port_in_from_oc_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib17port_in_from_in_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib21port_in_from_in_out_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib21port_in_out_from_oc_tE
+                0x0000000000000000       0x28 hwlib.o
+ .rodata._ZTVN5hwlib25port_in_out_from_in_out_tE
+                0x0000000000000000       0x28 hwlib.o
+ .rodata._ZTVN5hwlib17port_oc_from_oc_tE
+                0x0000000000000000       0x1c hwlib.o
+ .rodata._ZTVN5hwlib23port_in_out_from_pins_tE
+                0x0000000000000000       0x28 hwlib.o
+ .rodata._ZTVN5hwlib20port_out_from_pins_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib23port_out_from_pins_oc_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib25port_invert_from_in_out_tE
+                0x0000000000000000       0x28 hwlib.o
+ .rodata._ZTVN5hwlib21port_invert_from_in_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib22port_invert_from_out_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib21port_invert_from_oc_tE
+                0x0000000000000000       0x1c hwlib.o
+ .rodata._ZTVN5hwlib19all_from_port_out_tE
+                0x0000000000000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib25port_direct_from_in_out_tE
+                0x0000000000000000       0x28 hwlib.o
+ .rodata._ZTVN5hwlib22port_direct_from_out_tE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib19cin_using_uart_getcE
+                0x0000000000000000       0x14 hwlib.o
+ .rodata._ZTVN5hwlib12image_part_tE
+                0x0000000000000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib17image_transpose_tE
+                0x0000000000000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib16image_mirror_x_tE
+                0x0000000000000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib16image_mirror_y_tE
+                0x0000000000000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib4lineE
+                0x0000000000000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib6circleE
+                0x0000000000000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib13window_part_tE
+                0x0000000000000000       0x18 hwlib.o
+ .rodata._ZTVN5hwlib15window_invert_tE
+                0x0000000000000000       0x18 hwlib.o
+ .bss._ZN5hwlib11string_base5dummyE
+                0x0000000000000000        0x1 hwlib.o
+ .bss._ZN5hwlib18_equal_calls_countE
+                0x0000000000000000        0x4 hwlib.o
+ .bss._ZN5hwlib18random_chain_valueE
+                0x0000000000000000        0x4 hwlib.o
+ .bss._ZN5hwlib21_equal_failures_countE
+                0x0000000000000000        0x4 hwlib.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 hwlib.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 hwlib.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 hwlib.o
+ .data._ZN5hwlib13pin_out_dummyE
+                0x0000000000000000        0x4 hwlib.o
+ .data._ZN5hwlib16pin_in_out_dummyE
+                0x0000000000000000        0x4 hwlib.o
+ .data._ZN5hwlib3cinE
+                0x0000000000000000        0x4 hwlib.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 hwlib.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 hwlib.o
+ .rodata._ZN5hwlib15font_16x16_dataE
+                0x0000000000000000      0xbe4 hwlib.o
+ .rodata._ZN5hwlib8test_endEv.str1.1
+                0x0000000000000000       0x54 hwlib.o
+ .rodata._ZN5hwlibL11unspecifiedE
+                0x0000000000000000        0x4 hwlib.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc hwlib.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 hwlib.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 hwlib.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
+ .text          0x0000000000000000        0x0 main.o
+ .data          0x0000000000000000        0x0 main.o
+ .bss           0x0000000000000000        0x0 main.o
+ .text._ZN5hwlib21port_direct_from_in_t14number_of_pinsEv
+                0x0000000000000000        0x8 main.o
+ .text._ZN5hwlib21port_direct_from_in_t4readEv
+                0x0000000000000000       0x18 main.o
+ .text._ZN5hwlib21port_direct_from_in_t7refreshEv
+                0x0000000000000000        0x2 main.o
+ .text._ZN5hwlib21port_direct_from_oc_t14number_of_pinsEv
+                0x0000000000000000        0x8 main.o
+ .text._ZN5hwlib21port_direct_from_oc_t5writeEj
+                0x0000000000000000       0x18 main.o
+ .text._ZN5hwlib21port_direct_from_oc_t4readEv
+                0x0000000000000000       0x18 main.o
+ .text._ZN5hwlib21port_direct_from_oc_t5flushEv
+                0x0000000000000000        0x2 main.o
+ .text._ZN5hwlib21port_direct_from_oc_t7refreshEv
+                0x0000000000000000        0x2 main.o
+ .text._ZN5hwlib7istream11getc_nowaitEv
+                0x0000000000000000       0x1a main.o
+ .text._ZN5hwlib8terminal25cursor_set_implementationENS_2xyE
+                0x0000000000000000        0xc main.o
+ .text._ZN5hwlib8terminal5flushEv
+                0x0000000000000000        0x2 main.o
+ .text._ZN5hwlib8terminal5clearEv
+                0x0000000000000000       0x50 main.o
+ .text._ZN4rtos8callback6cancelEv
+                0x0000000000000000        0xa main.o
+ .text._ZN4rtos8waitable5clearEv
+                0x0000000000000000        0xa main.o
+ .text._ZN5hwlib6window5clearENS_5colorE
+                0x0000000000000000       0x56 main.o
+ .text._ZN5hwlib6window20clear_implementationENS_5colorE
+                0x0000000000000000       0x7e main.o
+ .text._ZN5hwlib7ostream6fillerEi
+                0x0000000000000000       0x1a main.o
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x0000000000000000       0x54 main.o
+ .text._ZN5hwlib11string_base7iterateC2EPKc
+                0x0000000000000000       0x14 main.o
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000000       0x7c main.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000000000000000       0x20 main.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x0000000000000000       0x1c main.o
+ .text._ZN3due11ad_seq_infoEm
+                0x0000000000000000       0x20 main.o
+ .text._ZN3due14port_registersEm
+                0x0000000000000000       0x54 main.o
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000000        0x6 main.o
+ .text._ZN3due9now_ticksEv
+                0x0000000000000000       0x80 main.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 main.o
+ .text._ZN5hwlib19uart_char_availableEv
+                0x0000000000000000        0x4 main.o
+ .text._ZN5hwlib9uart_getcEv
+                0x0000000000000000        0x4 main.o
+ .text._ZN4rtos9pool_baseD2Ev
+                0x0000000000000000       0x28 main.o
+ .text._ZN4rtos12channel_baseD2Ev
+                0x0000000000000000       0x30 main.o
+ .rodata._ZTVN5hwlib21port_direct_from_in_tE
+                0x0000000000000000       0x14 main.o
+ .rodata._ZTVN5hwlib21port_direct_from_oc_tE
+                0x0000000000000000       0x1c main.o
+ .rodata._ZTVN4rtos8callbackE
+                0x0000000000000000       0x10 main.o
+ .rodata._ZTVN4rtos12channel_baseE
+                0x0000000000000000        0xc main.o
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000000000000        0x8 main.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000000000000        0x4 main.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x0000000000000000        0x1 main.o
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000000000000        0x4 main.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000000000       0x44 main.o
+ .rodata._ZN4rtos12channel_baseD2Ev.str1.1
+                0x0000000000000000       0x1a main.o
+ .rodata._ZN4rtos9pool_baseD2Ev.str1.1
+                0x0000000000000000       0x17 main.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x0000000000000000        0xc main.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x0000000000000000       0x70 main.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000000000       0xa4 main.o
+ .text          0x0000000000000000        0x0 bmptk_cortex.o
+ .data          0x0000000000000000        0x0 bmptk_cortex.o
+ .bss           0x0000000000000000        0x0 bmptk_cortex.o
+ .text.__aeabi_idiv0
+                0x0000000000000000        0x4 bmptk_cortex.o
+ COMMON         0x0000000000000000        0x4 bmptk_cortex.o
+ .text          0x0000000000000000        0x0 bmptk_heap_bmptk.o
+ .data          0x0000000000000000        0x0 bmptk_heap_bmptk.o
+ .bss           0x0000000000000000        0x0 bmptk_heap_bmptk.o
+ .text.free     0x0000000000000000        0x4 bmptk_heap_bmptk.o
+ .text          0x0000000000000000        0x0 bmptk_fixed_size_stack.o
+ .data          0x0000000000000000        0x0 bmptk_fixed_size_stack.o
+ .bss           0x0000000000000000        0x0 bmptk_fixed_size_stack.o
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0000000000000000 0x0000000000080000 xr
+ram              0x0000000020000000 0x0000000000018000 xrw
+nul              0x0000000020018000 0x0000000000000000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a
+LOAD Buzzer.o
+LOAD BuzzerTask.o
+LOAD Display.o
+LOAD DisplayTask.o
+LOAD GameTask.o
+LOAD IrDetector.o
+LOAD IrDiode.o
+LOAD RecIRMsgControl.o
+LOAD RunGameControl.o
+LOAD SendTask.o
+LOAD TransferHitsControl.o
+LOAD switch_to.o
+LOAD coroutine.o
+LOAD rtos.o
+LOAD hwlib.o
+LOAD main.o
+LOAD bmptk_cortex.o
+LOAD bmptk_heap_bmptk.o
+LOAD bmptk_fixed_size_stack.o
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a
+                0x0000000000000000                __rom_start = ORIGIN (rom)
+                0x0000000000080000                __rom_size = LENGTH (rom)
+                0x0000000000080000                __rom_end = (__rom_start + __rom_size)
+                0x0000000020000000                __ram_start = ORIGIN (ram)
+                0x0000000000018000                __ram_size = LENGTH (ram)
+                0x0000000020018000                __ram_end = (__ram_start + __ram_size)
+                [!provide]                        PROVIDE (__rom_start = __rom_start)
+                [!provide]                        PROVIDE (__rom_size = __rom_size)
+                [!provide]                        PROVIDE (__rom_end = __rom_end)
+                [!provide]                        PROVIDE (__ram_start = __ram_start)
+                [!provide]                        PROVIDE (__ram_size = __ram_size)
+                [!provide]                        PROVIDE (__ram_end = __ram_end)
+
+.text           0x0000000000000000     0x559c
+                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000000000                __text_start = .
+                [!provide]                        PROVIDE (__text_start = __text_start)
+                0x0000000000000000                . = ALIGN (0x4)
+ *(.vectors)
+ .vectors       0x0000000000000000       0x20 bmptk_cortex.o
+                0x0000000000000000                __vectors
+                0x0000000000000020                . = ALIGN (0x4)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000020       0x7c Buzzer.o
+                0x0000000000000020                sam3xa::SystemInit()
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x000000000000009c       0x20 Buzzer.o
+                0x000000000000009c                due::pin_info(due::pins)
+ .text._ZN3due14port_registersEm
+                0x00000000000000bc       0x54 Buzzer.o
+                0x00000000000000bc                due::port_registers(unsigned long)
+ .text._ZN3due12ticks_per_usEv
+                0x0000000000000110        0x6 Buzzer.o
+                0x0000000000000110                due::ticks_per_us()
+ *fill*         0x0000000000000116        0x2 
+ .text._ZN3due9now_ticksEv
+                0x0000000000000118       0x80 Buzzer.o
+                0x0000000000000118                due::now_ticks()
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000198        0x4 Buzzer.o
+                0x0000000000000198                hwlib::uart_putc(char)
+ .text._ZN6Buzzer7soundOnEv
+                0x000000000000019c       0x1a Buzzer.o
+                0x000000000000019c                Buzzer::soundOn()
+ .text._ZN6Buzzer8soundOffEv
+                0x00000000000001b6       0x1a Buzzer.o
+                0x00000000000001b6                Buzzer::soundOff()
+ .text._ZN10BuzzerTask9makeSoundENS_6soundsE
+                0x00000000000001d0       0x16 BuzzerTask.o
+                0x00000000000001d0                BuzzerTask::makeSound(BuzzerTask::sounds)
+ *fill*         0x00000000000001e6        0x2 
+ .text._ZN7Display11showMessageERKN5hwlib11string_baseE
+                0x00000000000001e8       0x80 Display.o
+                0x00000000000001e8                Display::showMessage(hwlib::string_base const&)
+ .text._ZN11DisplayTask14setDisplayFlagEv
+                0x0000000000000268        0xa DisplayTask.o
+                0x0000000000000268                DisplayTask::setDisplayFlag()
+ .text._ZN11DisplayTask11showMessageEv
+                0x0000000000000272       0x2a DisplayTask.o
+                0x0000000000000272                DisplayTask::showMessage()
+ .text._ZN5hwlib7ostream6fillerEi
+                0x000000000000029c       0x1a GameTask.o
+                0x000000000000029c                hwlib::ostream::filler(int)
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x00000000000002b6       0x54 GameTask.o
+                0x00000000000002b6                hwlib::operator<<(hwlib::ostream&, char const*)
+ *fill*         0x000000000000030a        0x2 
+ .text._ZN4rtos7channelIiLi128EE4readEv.part.9
+                0x000000000000030c       0x28 GameTask.o
+ .text._ZN5hwlib11string_base7iterateC2EPKc
+                0x0000000000000334       0x14 GameTask.o
+                0x0000000000000334                hwlib::string_base::iterate::iterate(char const*)
+                0x0000000000000334                hwlib::string_base::iterate::iterate(char const*)
+ .text._ZN4rtos8waitable3setEv
+                0x0000000000000348        0xa GameTask.o
+                0x0000000000000348                rtos::waitable::set()
+ .text._ZN8GameTask13buttonPressedEi
+                0x0000000000000352       0x38 GameTask.o
+                0x0000000000000352                GameTask::buttonPressed(int)
+                0x0000000000000352                GameTask::writeButtonChannel(int)
+ .text._ZThn4228_N8GameTask13buttonPressedEi
+                0x000000000000038a        0xc GameTask.o
+                0x000000000000038a                non-virtual thunk to GameTask::buttonPressed(int)
+ .text._ZN4rtos9task_base4waitERKNS_8waitableE
+                0x0000000000000396       0x10 GameTask.o
+                0x0000000000000396                rtos::task_base::wait(rtos::waitable const&)
+ .text._ZN4rtos7channelIiLi128EE4readEv
+                0x00000000000003a6       0x4c GameTask.o
+                0x00000000000003a6                rtos::channel<int, 128>::read()
+ .text._ZN4rtos7channelItLi128EE4readEv
+                0x00000000000003f2       0x4c GameTask.o
+                0x00000000000003f2                rtos::channel<unsigned short, 128>::read()
+ *fill*         0x000000000000043e        0x2 
+ .text._ZN5hwlib6stringILj200EEC2Ev
+                0x0000000000000440       0x40 GameTask.o
+                0x0000000000000440                hwlib::string<200u>::string()
+                0x0000000000000440                hwlib::string<200u>::string()
+ .text._ZN5hwlib11string_baseaSINS_6stringILj128EEEEERS0_RKT_
+                0x0000000000000480       0x28 GameTask.o
+                0x0000000000000480                hwlib::string_base& hwlib::string_base::operator=<hwlib::string<128u> >(hwlib::string<128u> const&)
+ .text._ZN11DisplayTask16writeDisplayPoolILj200EEEvRN5hwlib6stringIXT_EEE
+                0x00000000000004a8       0x5a GameTask.o
+                0x00000000000004a8                void DisplayTask::writeDisplayPool<200u>(hwlib::string<200u>&)
+ *fill*         0x0000000000000502        0x2 
+ .text.startup._ZN8GameTask4mainEv
+                0x0000000000000504      0x6b8 GameTask.o
+                0x0000000000000504                GameTask::main()
+ .text._ZN10IrDetector3getEv
+                0x0000000000000bbc       0x10 IrDetector.o
+                0x0000000000000bbc                IrDetector::get()
+ .text._ZN7IrDiode7setHighEv
+                0x0000000000000bcc       0x1a IrDiode.o
+                0x0000000000000bcc                IrDiode::setHigh()
+ .text._ZN7IrDiode6setLowEv
+                0x0000000000000be6       0x1a IrDiode.o
+                0x0000000000000be6                IrDiode::setLow()
+ .text._ZN15RecIRMsgControl6recBitEbb
+                0x0000000000000c00       0x22 RecIRMsgControl.o
+                0x0000000000000c00                RecIRMsgControl::recBit(bool, bool)
+ .text._ZN14RunGameControl11setGameTimeEj
+                0x0000000000000c22        0x4 RunGameControl.o
+                0x0000000000000c22                RunGameControl::setGameTime(unsigned int)
+ .text._ZN14RunGameControl10reduceTimeEv
+                0x0000000000000c26        0xe RunGameControl.o
+                0x0000000000000c26                RunGameControl::reduceTime()
+ .text._ZN14RunGameControl7getTimeEv
+                0x0000000000000c34        0x4 RunGameControl.o
+                0x0000000000000c34                RunGameControl::getTime()
+ .text._ZN5hwlib11string_basepLINS_6stringILj32EEEEERS0_RKT_
+                0x0000000000000c38       0x24 RunGameControl.o
+                0x0000000000000c38                hwlib::string_base& hwlib::string_base::operator+=<hwlib::string<32u> >(hwlib::string<32u> const&)
+ .text._ZN5hwlib11string_baseC2IPKcEEjPcRKT_
+                0x0000000000000c5c       0x32 RunGameControl.o
+                0x0000000000000c5c                hwlib::string_base::string_base<char const*>(unsigned int, char*, char const* const&)
+                0x0000000000000c5c                hwlib::string_base::string_base<char const*>(unsigned int, char*, char const* const&)
+ *fill*         0x0000000000000c8e        0x2 
+ .text._ZN14RunGameControl9toDisplayERN5hwlib6stringILj200EEE
+                0x0000000000000c90       0x7c RunGameControl.o
+                0x0000000000000c90                RunGameControl::toDisplay(hwlib::string<200u>&)
+ .text._ZN8SendTask10setComFlagEv
+                0x0000000000000d0c        0xa SendTask.o
+                0x0000000000000d0c                SendTask::setComFlag()
+ .text._ZN8SendTask12writeComPoolEt
+                0x0000000000000d16        0xe SendTask.o
+                0x0000000000000d16                SendTask::writeComPool(unsigned short)
+ .text._ZN8SendTask8checkSumEv
+                0x0000000000000d24        0x2 SendTask.o
+                0x0000000000000d24                SendTask::checkSum()
+ .text._ZN5hwlib7ostream7reverse10add_prefixERKS0_.part.2
+                0x0000000000000d26       0x4c TransferHitsControl.o
+ .text._ZN5hwlib7ostreamlsEc
+                0x0000000000000d72        0xe TransferHitsControl.o
+                0x0000000000000d72                hwlib::ostream::operator<<(char)
+ .text._ZN5hwliblsERNS_7ostreamEi
+                0x0000000000000d80       0x92 TransferHitsControl.o
+                0x0000000000000d80                hwlib::operator<<(hwlib::ostream&, int)
+ .text._ZN5hwliblsERNS_7ostreamEx
+                0x0000000000000e12       0xc4 TransferHitsControl.o
+                0x0000000000000e12                hwlib::operator<<(hwlib::ostream&, long long)
+ *fill*         0x0000000000000ed6        0x2 
+ .text._ZN19TransferHitsControl12exportPlayerEv
+                0x0000000000000ed8       0xf0 TransferHitsControl.o
+                0x0000000000000ed8                TransferHitsControl::exportPlayer()
+ .text          0x0000000000000fc8       0x24 switch_to.o
+                0x0000000000000fc8                switch_from_to
+ .text._ZN4rtos8callback6cancelEv
+                0x0000000000000fec        0xa rtos.o
+                0x0000000000000fec                rtos::callback::cancel()
+ .text._ZN5hwliblsERNS_7ostreamEj
+                0x0000000000000ff6        0xc rtos.o
+                0x0000000000000ff6                hwlib::operator<<(hwlib::ostream&, unsigned int)
+ .text._Z6strlenPKc
+                0x0000000000001002       0x10 rtos.o
+                0x0000000000001002                strlen(char const*)
+ .text._Z6strcpyPcPKc
+                0x0000000000001012       0x14 rtos.o
+                0x0000000000001012                strcpy(char*, char const*)
+ .text._Z15string_allocatePKc
+                0x0000000000001026       0x26 rtos.o
+                0x0000000000001026                string_allocate(char const*)
+ .text._Z12nr_from_maskj
+                0x000000000000104c       0x1a rtos.o
+                0x000000000000104c                nr_from_mask(unsigned int)
+ *fill*         0x0000000000001066        0x2 
+ .text._Z15task_trampolinev
+                0x0000000000001068       0x34 rtos.o
+                0x0000000000001068                task_trampoline()
+ .text._ZN4rtos9task_base7releaseEv
+                0x000000000000109c       0x24 rtos.o
+                0x000000000000109c                rtos::task_base::release()
+ .text._ZN4rtos9task_base7suspendEv
+                0x00000000000010c0        0x8 rtos.o
+                0x00000000000010c0                rtos::task_base::suspend()
+ .text._ZN4rtos9task_base6resumeEv
+                0x00000000000010c8        0x8 rtos.o
+                0x00000000000010c8                rtos::task_base::resume()
+ .text._ZN4rtos9task_base7unblockEv
+                0x00000000000010d0       0x14 rtos.o
+                0x00000000000010d0                rtos::task_base::unblock()
+ .text._ZN4rtos9task_base5blockEv
+                0x00000000000010e4       0x70 rtos.o
+                0x00000000000010e4                rtos::task_base::block()
+ .text._ZNK4rtos9task_base5printERN5hwlib7ostreamEb
+                0x0000000000001154      0x154 rtos.o
+                0x0000000000001154                rtos::task_base::print(hwlib::ostream&, bool) const
+ .text._ZNK4rtos5eventeqERKS0_
+                0x00000000000012a8       0x3c rtos.o
+                0x00000000000012a8                rtos::event::operator==(rtos::event const&) const
+ .text._ZNK4rtos5eventeqERKNS_8waitableE
+                0x00000000000012e4       0x1c rtos.o
+                0x00000000000012e4                rtos::event::operator==(rtos::waitable const&) const
+ .text._ZNK4rtos5eventplERKS0_
+                0x0000000000001300       0x3c rtos.o
+                0x0000000000001300                rtos::event::operator+(rtos::event const&) const
+ .text._ZNK4rtos4flag5printERN5hwlib7ostreamEb
+                0x000000000000133c       0xcc rtos.o
+                0x000000000000133c                rtos::flag::print(hwlib::ostream&, bool) const
+ .text._ZN4rtos5timer3setEm
+                0x0000000000001408        0xe rtos.o
+                0x0000000000001408                rtos::timer::set(unsigned long)
+ *fill*         0x0000000000001416        0x2 
+ .text._ZNK4rtos5timer5printERN5hwlib7ostreamEb
+                0x0000000000001418       0xd0 rtos.o
+                0x0000000000001418                rtos::timer::print(hwlib::ostream&, bool) const
+ .text._ZNK4rtos5clock5printERN5hwlib7ostreamEb
+                0x00000000000014e8       0xd4 rtos.o
+                0x00000000000014e8                rtos::clock::print(hwlib::ostream&, bool) const
+ .text._ZN4rtos12waitable_set17waitable_allocateEv
+                0x00000000000015bc       0x38 rtos.o
+                0x00000000000015bc                rtos::waitable_set::waitable_allocate()
+ .text._ZN4rtos8waitableC2EPNS_9task_baseEPKc
+                0x00000000000015f4       0x2c rtos.o
+                0x00000000000015f4                rtos::waitable::waitable(rtos::task_base*, char const*)
+                0x00000000000015f4                rtos::waitable::waitable(rtos::task_base*, char const*)
+ .text._ZN4rtos12waitable_set3setERKNS_8waitableE
+                0x0000000000001620       0x14 rtos.o
+                0x0000000000001620                rtos::waitable_set::set(rtos::waitable const&)
+ .text._ZN4rtos5clock7time_upEv
+                0x0000000000001634       0x38 rtos.o
+                0x0000000000001634                rtos::clock::time_up()
+ .text._ZThn16_N4rtos5clock7time_upEv
+                0x000000000000166c        0x8 rtos.o
+                0x000000000000166c                non-virtual thunk to rtos::clock::time_up()
+ .text._ZN4rtos5timer7time_upEv
+                0x0000000000001674       0x10 rtos.o
+                0x0000000000001674                rtos::timer::time_up()
+                0x000000000000167e                non-virtual thunk to rtos::timer::time_up()
+ .text._ZN4rtos4flag3setEv
+                0x0000000000001684       0x10 rtos.o
+                0x0000000000001684                rtos::flag::set()
+ .text._ZN4rtos12waitable_set5clearERKNS_8waitableE
+                0x0000000000001694        0xc rtos.o
+                0x0000000000001694                rtos::waitable_set::clear(rtos::waitable const&)
+ .text._ZN4rtos8waitable5clearEv
+                0x00000000000016a0        0xa rtos.o
+                0x00000000000016a0                rtos::waitable::clear()
+ .text._ZN4rtos5timer6cancelEv
+                0x00000000000016aa       0x16 rtos.o
+                0x00000000000016aa                rtos::timer::cancel()
+ .text._ZThn16_N4rtos5timer6cancelEv
+                0x00000000000016c0        0x8 rtos.o
+                0x00000000000016c0                non-virtual thunk to rtos::timer::cancel()
+ .text._ZN4rtos5clock5clearEv
+                0x00000000000016c8        0x8 rtos.o
+                0x00000000000016c8                rtos::clock::clear()
+ .text._ZN4rtos12waitable_set4waitEj
+                0x00000000000016d0       0x64 rtos.o
+                0x00000000000016d0                rtos::waitable_set::wait(unsigned int)
+ .text._ZNK4rtos5mutex5printERN5hwlib7ostreamEb
+                0x0000000000001734       0xec rtos.o
+                0x0000000000001734                rtos::mutex::print(hwlib::ostream&, bool) const
+ .text._ZNK4rtos12channel_base5printERN5hwlib7ostreamEb
+                0x0000000000001820       0xe0 rtos.o
+                0x0000000000001820                rtos::channel_base::print(hwlib::ostream&, bool) const
+ .text._ZNK4rtos9pool_base5printERN5hwlib7ostreamEb
+                0x0000000000001900       0x78 rtos.o
+                0x0000000000001900                rtos::pool_base::print(hwlib::ostream&, bool) const
+ .text._ZNK4rtos12mailbox_base5printERN5hwlib7ostreamEb
+                0x0000000000001978       0xc4 rtos.o
+                0x0000000000001978                rtos::mailbox_base::print(hwlib::ostream&, bool) const
+ .text._ZlsRN5hwlib7ostreamERKN4rtos9task_baseE
+                0x0000000000001a3c       0x12 rtos.o
+                0x0000000000001a3c                operator<<(hwlib::ostream&, rtos::task_base const&)
+ *fill*         0x0000000000001a4e        0x2 
+ .text._ZN4rtos3addEPNS_4flagE
+                0x0000000000001a50       0x10 rtos.o
+                0x0000000000001a50                rtos::add(rtos::flag*)
+ .text._ZN4rtos4flagC2EPNS_9task_baseEPKc
+                0x0000000000001a60       0x20 rtos.o
+                0x0000000000001a60                rtos::flag::flag(rtos::task_base*, char const*)
+                0x0000000000001a60                rtos::flag::flag(rtos::task_base*, char const*)
+ .text._ZN4rtos3addEPNS_5timerE
+                0x0000000000001a80       0x10 rtos.o
+                0x0000000000001a80                rtos::add(rtos::timer*)
+ .text._ZN4rtos3addEPNS_5clockE
+                0x0000000000001a90       0x10 rtos.o
+                0x0000000000001a90                rtos::add(rtos::clock*)
+ .text._ZN4rtos3addEPNS_12channel_baseE
+                0x0000000000001aa0       0x10 rtos.o
+                0x0000000000001aa0                rtos::add(rtos::channel_base*)
+ .text._ZN4rtos12channel_baseC2EPNS_9task_baseEPKc
+                0x0000000000001ab0       0x30 rtos.o
+                0x0000000000001ab0                rtos::channel_base::channel_base(rtos::task_base*, char const*)
+                0x0000000000001ab0                rtos::channel_base::channel_base(rtos::task_base*, char const*)
+ .text._ZN4rtos3addEPNS_9pool_baseE
+                0x0000000000001ae0       0x10 rtos.o
+                0x0000000000001ae0                rtos::add(rtos::pool_base*)
+ .text._ZN4rtos9pool_baseC2EPKc
+                0x0000000000001af0       0x1a rtos.o
+                0x0000000000001af0                rtos::pool_base::pool_base(char const*)
+                0x0000000000001af0                rtos::pool_base::pool_base(char const*)
+ *fill*         0x0000000000001b0a        0x2 
+ .text._ZN4rtos5printERN5hwlib7ostreamE
+                0x0000000000001b0c      0x1b4 rtos.o
+                0x0000000000001b0c                rtos::print(hwlib::ostream&)
+ .text._ZN4rtos4beatEv
+                0x0000000000001cc0      0x148 rtos.o
+                0x0000000000001cc0                rtos::beat()
+ .text._ZN4rtos3runEv
+                0x0000000000001e08       0x3c rtos.o
+                0x0000000000001e08                rtos::run()
+ .text._ZN4rtos3addEPNS_8callbackE
+                0x0000000000001e44       0x10 rtos.o
+                0x0000000000001e44                rtos::add(rtos::callback*)
+ .text._ZN4rtos8callbackC2EPKc
+                0x0000000000001e54       0x28 rtos.o
+                0x0000000000001e54                rtos::callback::callback(char const*)
+                0x0000000000001e54                rtos::callback::callback(char const*)
+ .text._ZN4rtos5timerC2EPNS_9task_baseEPKc
+                0x0000000000001e7c       0x34 rtos.o
+                0x0000000000001e7c                rtos::timer::timer(rtos::task_base*, char const*)
+                0x0000000000001e7c                rtos::timer::timer(rtos::task_base*, char const*)
+ .text._ZN4rtos5clockC2EPNS_9task_baseEmPKc
+                0x0000000000001eb0       0x3c rtos.o
+                0x0000000000001eb0                rtos::clock::clock(rtos::task_base*, unsigned long, char const*)
+                0x0000000000001eb0                rtos::clock::clock(rtos::task_base*, unsigned long, char const*)
+ .text._ZN4rtos3addEPNS_9task_baseE
+                0x0000000000001eec       0x74 rtos.o
+                0x0000000000001eec                rtos::add(rtos::task_base*)
+ .text._ZN4rtos9task_baseC2ER9coroutineILl0EEjPKc
+                0x0000000000001f60       0x4c rtos.o
+                0x0000000000001f60                rtos::task_base::task_base(coroutine<0l>&, unsigned int, char const*)
+                0x0000000000001f60                rtos::task_base::task_base(coroutine<0l>&, unsigned int, char const*)
+ .text._ZN5hwlib7wait_usEi
+                0x0000000000001fac       0x3c rtos.o
+                0x0000000000001fac                hwlib::wait_us(int)
+ .text._ZN5hwlib7wait_msEi
+                0x0000000000001fe8       0x16 rtos.o
+                0x0000000000001fe8                hwlib::wait_ms(int)
+ .text._ZN5hwlib14pin_in_dummy_t4readEv
+                0x0000000000001ffe        0x4 hwlib.o
+                0x0000000000001ffe                hwlib::pin_in_dummy_t::read()
+ .text._ZN5hwlib14pin_in_dummy_t7refreshEv
+                0x0000000000002002        0x2 hwlib.o
+                0x0000000000002002                hwlib::pin_in_dummy_t::refresh()
+ .text._ZN5hwlib14pin_oc_dummy_t5writeEb
+                0x0000000000002004        0x2 hwlib.o
+                0x0000000000002004                hwlib::pin_oc_dummy_t::write(bool)
+ .text._ZN5hwlib14pin_oc_dummy_t4readEv
+                0x0000000000002006        0x4 hwlib.o
+                0x0000000000002006                hwlib::pin_oc_dummy_t::read()
+ .text._ZN5hwlib14pin_oc_dummy_t5flushEv
+                0x000000000000200a        0x2 hwlib.o
+                0x000000000000200a                hwlib::pin_oc_dummy_t::flush()
+ .text._ZN5hwlib14pin_oc_dummy_t7refreshEv
+                0x000000000000200c        0x2 hwlib.o
+                0x000000000000200c                hwlib::pin_oc_dummy_t::refresh()
+ .text._ZN5hwlib19port_in_from_pins_t14number_of_pinsEv
+                0x000000000000200e        0x4 hwlib.o
+                0x000000000000200e                hwlib::port_in_from_pins_t::number_of_pins()
+ .text._ZN5hwlib19port_in_from_pins_t4readEv
+                0x0000000000002012       0x2a hwlib.o
+                0x0000000000002012                hwlib::port_in_from_pins_t::read()
+ .text._ZN5hwlib19port_in_from_pins_t7refreshEv
+                0x000000000000203c       0x20 hwlib.o
+                0x000000000000203c                hwlib::port_in_from_pins_t::refresh()
+ .text._ZN5hwlib19port_oc_from_pins_t14number_of_pinsEv
+                0x000000000000205c        0x4 hwlib.o
+                0x000000000000205c                hwlib::port_oc_from_pins_t::number_of_pins()
+ .text._ZN5hwlib19port_oc_from_pins_t4readEv
+                0x0000000000002060       0x2a hwlib.o
+                0x0000000000002060                hwlib::port_oc_from_pins_t::read()
+ .text._ZN5hwlib19port_oc_from_pins_t5writeEj
+                0x000000000000208a       0x28 hwlib.o
+                0x000000000000208a                hwlib::port_oc_from_pins_t::write(unsigned int)
+ .text._ZN5hwlib19port_oc_from_pins_t7refreshEv
+                0x00000000000020b2       0x20 hwlib.o
+                0x00000000000020b2                hwlib::port_oc_from_pins_t::refresh()
+ .text._ZN5hwlib19port_oc_from_pins_t5flushEv
+                0x00000000000020d2       0x20 hwlib.o
+                0x00000000000020d2                hwlib::port_oc_from_pins_t::flush()
+ .text._ZN5hwlib21port_direct_from_in_t14number_of_pinsEv
+                0x00000000000020f2        0x8 hwlib.o
+                0x00000000000020f2                hwlib::port_direct_from_in_t::number_of_pins()
+ .text._ZN5hwlib21port_direct_from_in_t4readEv
+                0x00000000000020fa       0x18 hwlib.o
+                0x00000000000020fa                hwlib::port_direct_from_in_t::read()
+ .text._ZN5hwlib21port_direct_from_in_t7refreshEv
+                0x0000000000002112        0x2 hwlib.o
+                0x0000000000002112                hwlib::port_direct_from_in_t::refresh()
+ .text._ZN5hwlib21port_direct_from_oc_t14number_of_pinsEv
+                0x0000000000002114        0x8 hwlib.o
+                0x0000000000002114                hwlib::port_direct_from_oc_t::number_of_pins()
+ .text._ZN5hwlib21port_direct_from_oc_t5writeEj
+                0x000000000000211c       0x18 hwlib.o
+                0x000000000000211c                hwlib::port_direct_from_oc_t::write(unsigned int)
+ .text._ZN5hwlib21port_direct_from_oc_t4readEv
+                0x0000000000002134       0x18 hwlib.o
+                0x0000000000002134                hwlib::port_direct_from_oc_t::read()
+ .text._ZN5hwlib21port_direct_from_oc_t5flushEv
+                0x000000000000214c        0x2 hwlib.o
+                0x000000000000214c                hwlib::port_direct_from_oc_t::flush()
+ .text._ZN5hwlib21port_direct_from_oc_t7refreshEv
+                0x000000000000214e        0x2 hwlib.o
+                0x000000000000214e                hwlib::port_direct_from_oc_t::refresh()
+ .text._ZN5hwlib7istream11getc_nowaitEv
+                0x0000000000002150       0x1a hwlib.o
+                0x0000000000002150                hwlib::istream::getc_nowait()
+ .text._ZN5hwlib20cout_using_uart_putc5flushEv
+                0x000000000000216a        0x2 hwlib.o
+                0x000000000000216a                hwlib::cout_using_uart_putc::flush()
+ .text._ZNK5hwlib9image_8x819read_implementationENS_2xyE
+                0x000000000000216c       0x44 hwlib.o
+                0x000000000000216c                hwlib::image_8x8::read_implementation(hwlib::xy) const
+ .text._ZN5hwlib6window20clear_implementationENS_5colorE
+                0x00000000000021b0       0x72 hwlib.o
+                0x00000000000021b0                hwlib::window::clear_implementation(hwlib::color)
+ .text._ZN5hwlib6window5clearENS_5colorE
+                0x0000000000002222       0x56 hwlib.o
+                0x0000000000002222                hwlib::window::clear(hwlib::color)
+ .text._ZN5hwlib5panicEPKcj
+                0x0000000000002278        0x2 hwlib.o
+                0x0000000000002278                hwlib::panic(char const*, unsigned int)
+ *fill*         0x000000000000227a        0x2 
+ .text._ZN5hwlib10background18do_background_workEv
+                0x000000000000227c       0x3c hwlib.o
+                0x000000000000227c                hwlib::background::do_background_work()
+ .text._ZN5hwlib3allENS_2xyE
+                0x00000000000022b8       0x16 hwlib.o
+                0x00000000000022b8                hwlib::all(hwlib::xy)
+ .text._ZNK5hwlib5colorngEv
+                0x00000000000022ce       0x2e hwlib.o
+                0x00000000000022ce                hwlib::color::operator-() const
+ .text._ZN5hwlib12port_in_fromERNS_6pin_inES1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_
+                0x00000000000022fc       0x68 hwlib.o
+                0x00000000000022fc                hwlib::port_in_from(hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&, hwlib::pin_in&)
+ .text._ZN5hwlib12port_oc_fromERNS_6pin_ocES1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_S1_
+                0x0000000000002364       0x68 hwlib.o
+                0x0000000000002364                hwlib::port_oc_from(hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&, hwlib::pin_oc&)
+ .text._ZNK5hwlib5image4readENS_2xyE
+                0x00000000000023cc       0x3a hwlib.o
+                0x00000000000023cc                hwlib::image::read(hwlib::xy) const
+ .text._ZNK5hwlib14image_invert_t19read_implementationENS_2xyE
+                0x0000000000002406       0x64 hwlib.o
+                0x0000000000002406                hwlib::image_invert_t::read_implementation(hwlib::xy) const
+ *fill*         0x000000000000246a        0x2 
+ .text._ZN5hwlib6invertERKNS_5imageE
+                0x000000000000246c       0x18 hwlib.o
+                0x000000000000246c                hwlib::invert(hwlib::image const&)
+ .text._ZN3due9uart_initEv
+                0x0000000000002484       0x60 hwlib.o
+                0x0000000000002484                due::uart_init()
+ .text._ZN3due9uart_putcEc
+                0x00000000000024e4       0x20 hwlib.o
+                0x00000000000024e4                due::uart_putc(char)
+ .text._ZN5hwlib20cout_using_uart_putc4putcEc
+                0x0000000000002504        0xa hwlib.o
+                0x0000000000002504                hwlib::cout_using_uart_putc::putc(char)
+ .text._ZN5hwlib6now_usEv
+                0x000000000000250e       0x1c hwlib.o
+                0x000000000000250e                hwlib::now_us()
+ .text._ZN5hwlib12wait_us_busyEi
+                0x000000000000252a       0x1c hwlib.o
+                0x000000000000252a                hwlib::wait_us_busy(int)
+ .text._ZN5hwlib8terminal10cursor_setENS_2xyE
+                0x0000000000002546       0x28 main.o
+                0x0000000000002546                hwlib::terminal::cursor_set(hwlib::xy)
+ .text._ZN5hwlib14i2c_primitives8read_ackEv
+                0x000000000000256e       0x10 main.o
+                0x000000000000256e                hwlib::i2c_primitives::read_ack()
+ .text._ZN5hwlib14i2c_primitives9write_ackEv
+                0x000000000000257e        0x8 main.o
+                0x000000000000257e                hwlib::i2c_primitives::write_ack()
+ .text._ZN5hwlib14i2c_primitives10write_nackEv
+                0x0000000000002586        0x8 main.o
+                0x0000000000002586                hwlib::i2c_primitives::write_nack()
+ .text._ZN5hwlib14i2c_primitives5writeEh
+                0x000000000000258e       0x1c main.o
+                0x000000000000258e                hwlib::i2c_primitives::write(unsigned char)
+ .text._ZN5hwlib14i2c_primitives5writeEPKhj
+                0x00000000000025aa       0x24 main.o
+                0x00000000000025aa                hwlib::i2c_primitives::write(unsigned char const*, unsigned int)
+ .text._ZN5hwlib14i2c_primitives9read_byteEv
+                0x00000000000025ce       0x20 main.o
+                0x00000000000025ce                hwlib::i2c_primitives::read_byte()
+ .text._ZN5hwlib14i2c_primitives4readEbPhj
+                0x00000000000025ee       0x36 main.o
+                0x00000000000025ee                hwlib::i2c_primitives::read(bool, unsigned char*, unsigned int)
+ .text._ZN5hwlib13terminal_from25cursor_set_implementationENS_2xyE
+                0x0000000000002624       0x28 main.o
+                0x0000000000002624                hwlib::terminal_from::cursor_set_implementation(hwlib::xy)
+ .text._ZN5hwlib13terminal_from5clearEv
+                0x000000000000264c       0x30 main.o
+                0x000000000000264c                hwlib::terminal_from::clear()
+ .text._ZN5hwlib13terminal_from5flushEv
+                0x000000000000267c        0x8 main.o
+                0x000000000000267c                hwlib::terminal_from::flush()
+ .text._ZNK5hwlib16font_default_8x8ixEc
+                0x0000000000002684       0x14 main.o
+                0x0000000000002684                hwlib::font_default_8x8::operator[](char) const
+ .text._ZN5hwlib29glcd_oled_i2c_128x64_buffered20write_implementationENS_2xyENS_5colorE
+                0x0000000000002698       0x64 main.o
+                0x0000000000002698                hwlib::glcd_oled_i2c_128x64_buffered::write_implementation(hwlib::xy, hwlib::color)
+ .text._ZN3due6pin_in4readEv
+                0x00000000000026fc       0x10 main.o
+                0x00000000000026fc                due::pin_in::read()
+ .text._ZN3due6pin_in7refreshEv
+                0x000000000000270c        0x2 main.o
+                0x000000000000270c                due::pin_in::refresh()
+ .text._ZN3due7pin_out5writeEb
+                0x000000000000270e        0xe main.o
+                0x000000000000270e                due::pin_out::write(bool)
+ .text._ZN3due7pin_out5flushEv
+                0x000000000000271c        0x2 main.o
+                0x000000000000271c                due::pin_out::flush()
+ .text._ZN3due6pin_oc4readEv
+                0x000000000000271e       0x10 main.o
+                0x000000000000271e                due::pin_oc::read()
+ .text._ZN3due6pin_oc5writeEb
+                0x000000000000272e       0x10 main.o
+                0x000000000000272e                due::pin_oc::write(bool)
+ .text._ZN3due6pin_oc5flushEv
+                0x000000000000273e        0x2 main.o
+                0x000000000000273e                due::pin_oc::flush()
+ .text._ZN3due6pin_oc7refreshEv
+                0x0000000000002740        0x2 main.o
+                0x0000000000002740                due::pin_oc::refresh()
+ .text._ZN5hwlib6keypadILi16EE4getcEv
+                0x0000000000002742       0x24 main.o
+                0x0000000000002742                hwlib::keypad<16>::getc()
+ .text.startup._ZN11DisplayTask4mainEv
+                0x0000000000002766       0x42 main.o
+                0x0000000000002766                DisplayTask::main()
+ .text._ZN4rtos7channelIiLi128EE5clearEv
+                0x00000000000027a8       0x10 main.o
+                0x00000000000027a8                rtos::channel<int, 128>::clear()
+ .text._ZN4rtos7channelItLi128EE5clearEv
+                0x00000000000027b8       0x10 main.o
+                0x00000000000027b8                rtos::channel<unsigned short, 128>::clear()
+ .text._ZN5hwlib8terminal4putcEc
+                0x00000000000027c8       0xde main.o
+                0x00000000000027c8                hwlib::terminal::putc(char)
+ .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda16wait_half_periodEv.isra.7
+                0x00000000000028a6        0x6 main.o
+ .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda11write_startEv
+                0x00000000000028ac       0x34 main.o
+                0x00000000000028ac                hwlib::i2c_bus_bit_banged_scl_sda::write_start()
+ .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda10write_stopEv
+                0x00000000000028e0       0x60 main.o
+                0x00000000000028e0                hwlib::i2c_bus_bit_banged_scl_sda::write_stop()
+ .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda9write_bitEb
+                0x0000000000002940       0x52 main.o
+                0x0000000000002940                hwlib::i2c_bus_bit_banged_scl_sda::write_bit(bool)
+ .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda8read_bitEv
+                0x0000000000002992       0x68 main.o
+                0x0000000000002992                hwlib::i2c_bus_bit_banged_scl_sda::read_bit()
+ .text.startup._ZN11ReceiveTask4mainEv
+                0x00000000000029fa       0xda main.o
+                0x00000000000029fa                ReceiveTask::main()
+ .text._ZN5hwlib13xy_iterator_tppEv
+                0x0000000000002ad4       0x18 main.o
+                0x0000000000002ad4                hwlib::xy_iterator_t::operator++()
+ .text._ZN5hwlib13terminal_from19putc_implementationEc
+                0x0000000000002aec      0x102 main.o
+                0x0000000000002aec                hwlib::terminal_from::putc_implementation(char)
+ *fill*         0x0000000000002bee        0x2 
+ .text.startup._ZN10BuzzerTask4mainEv
+                0x0000000000002bf0      0x140 main.o
+                0x0000000000002bf0                BuzzerTask::main()
+ .text.startup._ZN8SendTask4mainEv
+                0x0000000000002d30       0xd4 main.o
+                0x0000000000002d30                SendTask::main()
+ .text._ZN5hwlib21i2c_write_transactionC2ERNS_14i2c_primitivesEj
+                0x0000000000002e04       0x24 main.o
+                0x0000000000002e04                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
+                0x0000000000002e04                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
+ .text._ZN5hwlib21i2c_write_transaction5writeEPKhj
+                0x0000000000002e28        0x8 main.o
+                0x0000000000002e28                hwlib::i2c_write_transaction::write(unsigned char const*, unsigned int)
+ .text._ZN5hwlib21i2c_write_transactionD2Ev
+                0x0000000000002e30       0x18 main.o
+                0x0000000000002e30                hwlib::i2c_write_transaction::~i2c_write_transaction()
+                0x0000000000002e30                hwlib::i2c_write_transaction::~i2c_write_transaction()
+ .text._ZN5hwlib11ssd1306_i2c7commandENS_16ssd1306_commandsEhh
+                0x0000000000002e48       0x3c main.o
+                0x0000000000002e48                hwlib::ssd1306_i2c::command(hwlib::ssd1306_commands, unsigned char, unsigned char)
+ .text._ZN5hwlib29glcd_oled_i2c_128x64_buffered5flushEv
+                0x0000000000002e84       0x58 main.o
+                0x0000000000002e84                hwlib::glcd_oled_i2c_128x64_buffered::flush()
+ .text._ZN3due6pin_inC2ENS_4pinsE
+                0x0000000000002edc       0x34 main.o
+                0x0000000000002edc                due::pin_in::pin_in(due::pins)
+                0x0000000000002edc                due::pin_in::pin_in(due::pins)
+ .text._ZN3due7pin_outC2ENS_4pinsE
+                0x0000000000002f10       0x34 main.o
+                0x0000000000002f10                due::pin_out::pin_out(due::pins)
+                0x0000000000002f10                due::pin_out::pin_out(due::pins)
+ .text._ZN3due6pin_ocC2ENS_4pinsE
+                0x0000000000002f44       0x34 main.o
+                0x0000000000002f44                due::pin_oc::pin_oc(due::pins)
+                0x0000000000002f44                due::pin_oc::pin_oc(due::pins)
+ .text._ZN4rtos8callbackD2Ev
+                0x0000000000002f78       0x30 main.o
+                0x0000000000002f78                rtos::callback::~callback()
+                0x0000000000002f78                rtos::callback::~callback()
+ .text._ZN4rtos5timerD2Ev
+                0x0000000000002fa8       0x14 main.o
+                0x0000000000002fa8                rtos::timer::~timer()
+                0x0000000000002fa8                rtos::timer::~timer()
+ .text._ZN4rtos9task_baseD2Ev
+                0x0000000000002fbc       0x30 main.o
+                0x0000000000002fbc                rtos::task_base::~task_base()
+                0x0000000000002fbc                rtos::task_base::~task_base()
+ .text._ZN4rtos4taskILi4096EEC2EjPKc
+                0x0000000000002fec       0x54 main.o
+                0x0000000000002fec                rtos::task<4096>::task(unsigned int, char const*)
+                0x0000000000002fec                rtos::task<4096>::task(unsigned int, char const*)
+ .text._ZN11DisplayTaskC2ERN3due6pin_ocES2_
+                0x0000000000003040      0x23c main.o
+                0x0000000000003040                DisplayTask::DisplayTask(due::pin_oc&, due::pin_oc&)
+                0x0000000000003040                DisplayTask::DisplayTask(due::pin_oc&, due::pin_oc&)
+ .text._ZN5hwlib6stringILj32EEC2IA10_cEERKT_
+                0x000000000000327c       0x3a main.o
+                0x000000000000327c                hwlib::string<32u>::string<char [10]>(char const (&) [10])
+                0x000000000000327c                hwlib::string<32u>::string<char [10]>(char const (&) [10])
+ *fill*         0x00000000000032b6        0x2 
+ .text.startup.main
+                0x00000000000032b8      0x818 main.o
+                0x00000000000032b8                main
+ .text._ZN5hwlib6keypadILi16EE7pressedEv
+                0x0000000000003ad0       0x78 main.o
+                0x0000000000003ad0                hwlib::keypad<16>::pressed()
+ .text._ZN5hwlib6keypadILi16EE14char_availableEv
+                0x0000000000003b48       0x4a main.o
+                0x0000000000003b48                hwlib::keypad<16>::char_available()
+ .text._ZN8KeyboardILj1EE6updateEv
+                0x0000000000003b92       0x92 main.o
+                0x0000000000003b92                Keyboard<1u>::update()
+ .text.startup._ZN17HardwareInputTaskILj1EE4mainEv
+                0x0000000000003c24       0x48 main.o
+                0x0000000000003c24                HardwareInputTask<1u>::main()
+ .text.__startup
+                0x0000000000003c6c       0x48 bmptk_cortex.o
+                0x0000000000003c6c                __startup
+ .text.__cxa_pure_virtual
+                0x0000000000003cb4        0x2 bmptk_cortex.o
+                0x0000000000003cb4                __cxa_pure_virtual
+ *fill*         0x0000000000003cb6        0x2 
+ .text.malloc   0x0000000000003cb8       0x24 bmptk_heap_bmptk.o
+                0x0000000000003cb8                malloc
+ .text          0x0000000000003cdc       0xa0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o)
+                0x0000000000003cdc                __aeabi_ldivmod
+ .text          0x0000000000003d7c       0x30 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000003d7c                __aeabi_uldivmod
+ .text          0x0000000000003dac      0x2d0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+                0x0000000000003dac                __udivmoddi4
+ .text          0x000000000000407c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+                0x000000000000407c                __aeabi_ldiv0
+ .text          0x0000000000004080       0xec /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+                0x0000000000004080                memcpy
+ .text.memset   0x000000000000416c       0x94 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+                0x000000000000416c                memset
+                0x0000000000004200                . = ALIGN (0x4)
+ *(.glue_7t .glue_7)
+ .glue_7        0x0000000000004200        0x0 linker stubs
+ .glue_7t       0x0000000000004200        0x0 linker stubs
+                0x0000000000004200                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x0000000000004200       0x44 Buzzer.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000000000004244       0xa4 Buzzer.o
+ .rodata._ZN5hwlibL11unspecifiedE
+                0x00000000000042e8        0x4 Display.o
+ .rodata._ZN4rtos7channelIiLi128EE4readEv.part.9.str1.1
+                0x00000000000042ec       0x32 GameTask.o
+                                         0x34 (size before relaxing)
+ .rodata._ZN5hwlib6stringILj200EEC2Ev.str1.1
+                0x000000000000431e       0x32 GameTask.o
+                                          0x1 (size before relaxing)
+ .rodata._ZN8GameTask4mainEv.str1.1
+                0x000000000000431e       0x35 GameTask.o
+ *fill*         0x0000000000004353        0x1 
+ .rodata._ZTV8GameTask
+                0x0000000000004354       0x24 GameTask.o
+                0x0000000000004354                vtable for GameTask
+ .rodata._ZN14RunGameControl9toDisplayERN5hwlib6stringILj200EEE.str1.1
+                0x0000000000004378       0x20 RunGameControl.o
+ .rodata._ZN19TransferHitsControl12exportPlayerEv.str1.1
+                0x0000000000004398       0x52 TransferHitsControl.o
+                                         0x56 (size before relaxing)
+ *fill*         0x00000000000043ea        0x2 
+ .rodata._ZTVN4rtos8waitableE
+                0x00000000000043ec        0xc rtos.o
+                0x00000000000043ec                vtable for rtos::waitable
+ .rodata._ZTVN4rtos4flagE
+                0x00000000000043f8        0xc rtos.o
+                0x00000000000043f8                vtable for rtos::flag
+ .rodata._ZTVN4rtos8callbackE
+                0x0000000000004404       0x10 rtos.o
+                0x0000000000004404                vtable for rtos::callback
+ .rodata._ZTVN4rtos12channel_baseE
+                0x0000000000004414        0xc rtos.o
+                0x0000000000004414                vtable for rtos::channel_base
+ .rodata._Z15task_trampolinev.str1.1
+                0x0000000000004420       0x2e rtos.o
+ .rodata._ZN4rtos12waitable_set17waitable_allocateEv.str1.1
+                0x000000000000444e       0x1b rtos.o
+ .rodata._ZN4rtos3addEPNS_9task_baseE.str1.1
+                0x0000000000004469       0x2e rtos.o
+ .rodata._ZN4rtos3runEv.str1.1
+                0x0000000000004497       0x11 rtos.o
+ .rodata._ZN4rtos4beatEv.str1.1
+                0x00000000000044a8       0x3e rtos.o
+ .rodata._ZN4rtos5printERN5hwlib7ostreamE.str1.1
+                0x00000000000044e6       0x83 rtos.o
+ .rodata._ZN4rtos9task_base5blockEv.str1.1
+                0x0000000000004569       0x37 rtos.o
+                                         0x4b (size before relaxing)
+ .rodata._ZN4rtos9task_baseC2ER9coroutineILl0EEjPKc.str1.1
+                0x00000000000045a0        0x8 rtos.o
+ .rodata._ZNK4rtos12channel_base5printERN5hwlib7ostreamEb.str1.1
+                0x00000000000045a8       0x23 rtos.o
+ .rodata._ZNK4rtos12mailbox_base5printERN5hwlib7ostreamEb.str1.1
+                0x00000000000045cb       0x1b rtos.o
+ .rodata._ZNK4rtos4flag5printERN5hwlib7ostreamEb.str1.1
+                0x00000000000045e6       0x1e rtos.o
+ .rodata._ZNK4rtos5clock5printERN5hwlib7ostreamEb.str1.1
+                0x0000000000004604       0x1d rtos.o
+ .rodata._ZNK4rtos5eventeqERKS0_.str1.1
+                0x0000000000004621       0x21 rtos.o
+ .rodata._ZNK4rtos5eventplERKS0_.str1.1
+                0x0000000000004642       0x1e rtos.o
+ .rodata._ZNK4rtos5mutex5printERN5hwlib7ostreamEb.str1.1
+                0x0000000000004660       0x29 rtos.o
+ .rodata._ZNK4rtos5timer5printERN5hwlib7ostreamEb.str1.1
+                0x0000000000004689       0x13 rtos.o
+ .rodata._ZNK4rtos9pool_base5printERN5hwlib7ostreamEb.str1.1
+                0x000000000000469c       0x10 rtos.o
+ .rodata._ZNK4rtos9task_base5printERN5hwlib7ostreamEb.str1.1
+                0x00000000000046ac       0x39 rtos.o
+ *fill*         0x00000000000046e5        0x3 
+ .rodata._ZTVN4rtos5clockE
+                0x00000000000046e8       0x20 rtos.o
+                0x00000000000046e8                vtable for rtos::clock
+ .rodata._ZTVN4rtos5timerE
+                0x0000000000004708       0x24 rtos.o
+                0x0000000000004708                vtable for rtos::timer
+ .rodata._ZTVN4rtos9task_baseE
+                0x000000000000472c       0x14 rtos.o
+                0x000000000000472c                vtable for rtos::task_base
+ .rodata._ZTVN5hwlib14pin_in_dummy_tE
+                0x0000000000004740       0x10 hwlib.o
+                0x0000000000004740                vtable for hwlib::pin_in_dummy_t
+ .rodata._ZTVN5hwlib14pin_oc_dummy_tE
+                0x0000000000004750       0x18 hwlib.o
+                0x0000000000004750                vtable for hwlib::pin_oc_dummy_t
+ .rodata._ZTVN5hwlib19port_in_from_pins_tE
+                0x0000000000004768       0x14 hwlib.o
+                0x0000000000004768                vtable for hwlib::port_in_from_pins_t
+ .rodata._ZTVN5hwlib19port_oc_from_pins_tE
+                0x000000000000477c       0x1c hwlib.o
+                0x000000000000477c                vtable for hwlib::port_oc_from_pins_t
+ .rodata._ZTVN5hwlib21port_direct_from_in_tE
+                0x0000000000004798       0x14 hwlib.o
+                0x0000000000004798                vtable for hwlib::port_direct_from_in_t
+ .rodata._ZTVN5hwlib21port_direct_from_oc_tE
+                0x00000000000047ac       0x1c hwlib.o
+                0x00000000000047ac                vtable for hwlib::port_direct_from_oc_t
+ .rodata._ZTVN5hwlib20cout_using_uart_putcE
+                0x00000000000047c8       0x10 hwlib.o
+                0x00000000000047c8                vtable for hwlib::cout_using_uart_putc
+ .rodata._ZTVN5hwlib9image_8x8E
+                0x00000000000047d8        0xc hwlib.o
+                0x00000000000047d8                vtable for hwlib::image_8x8
+ .rodata._ZTVN5hwlib14image_invert_tE
+                0x00000000000047e4        0xc hwlib.o
+                0x00000000000047e4                vtable for hwlib::image_invert_t
+ .rodata._ZN5hwlib16font_default_8x86imagesE
+                0x00000000000047f0      0xa00 hwlib.o
+                0x00000000000047f0                hwlib::font_default_8x8::images
+ .rodata._ZN5hwlibL5blackE
+                0x00000000000051f0        0x4 hwlib.o
+ .rodata._ZN5hwlibL5whiteE
+                0x00000000000051f4        0x4 hwlib.o
+ .rodata._ZTVN5hwlib26i2c_bus_bit_banged_scl_sdaE
+                0x00000000000051f8       0x34 main.o
+                0x00000000000051f8                vtable for hwlib::i2c_bus_bit_banged_scl_sda
+ .rodata._ZTVN5hwlib13terminal_fromE
+                0x000000000000522c       0x20 main.o
+                0x000000000000522c                vtable for hwlib::terminal_from
+ .rodata._ZTVN5hwlib16font_default_8x8E
+                0x000000000000524c        0xc main.o
+                0x000000000000524c                vtable for hwlib::font_default_8x8
+ .rodata._ZTVN5hwlib29glcd_oled_i2c_128x64_bufferedE
+                0x0000000000005258       0x18 main.o
+                0x0000000000005258                vtable for hwlib::glcd_oled_i2c_128x64_buffered
+ .rodata._ZTVN3due6pin_inE
+                0x0000000000005270       0x10 main.o
+                0x0000000000005270                vtable for due::pin_in
+ .rodata._ZTVN3due7pin_outE
+                0x0000000000005280       0x10 main.o
+                0x0000000000005280                vtable for due::pin_out
+ .rodata._ZTVN3due6pin_ocE
+                0x0000000000005290       0x18 main.o
+                0x0000000000005290                vtable for due::pin_oc
+ .rodata._ZTVN4rtos4taskILi4096EEE
+                0x00000000000052a8       0x14 main.o
+                0x00000000000052a8                vtable for rtos::task<4096>
+ .rodata._ZTV10BuzzerTask
+                0x00000000000052bc       0x14 main.o
+                0x00000000000052bc                vtable for BuzzerTask
+ .rodata._ZTV11DisplayTask
+                0x00000000000052d0       0x14 main.o
+                0x00000000000052d0                vtable for DisplayTask
+ .rodata._ZTV8SendTask
+                0x00000000000052e4       0x14 main.o
+                0x00000000000052e4                vtable for SendTask
+ .rodata._ZTVN5hwlib6keypadILi16EEE
+                0x00000000000052f8       0x14 main.o
+                0x00000000000052f8                vtable for hwlib::keypad<16>
+ .rodata._ZTVN4rtos7channelIiLi128EEE
+                0x000000000000530c        0xc main.o
+                0x000000000000530c                vtable for rtos::channel<int, 128>
+ .rodata._ZTVN4rtos7channelItLi128EEE
+                0x0000000000005318        0xc main.o
+                0x0000000000005318                vtable for rtos::channel<unsigned short, 128>
+ .rodata._ZTV11ReceiveTask
+                0x0000000000005324       0x14 main.o
+                0x0000000000005324                vtable for ReceiveTask
+ .rodata._ZTV17HardwareInputTaskILj1EE
+                0x0000000000005338       0x14 main.o
+                0x0000000000005338                vtable for HardwareInputTask<1u>
+ .rodata._ZN10BuzzerTask4mainEv.str1.1
+                0x000000000000534c       0x11 main.o
+ .rodata._ZN11DisplayTaskC2ERN3due6pin_ocES2_.str1.1
+                0x000000000000535d       0x29 main.o
+                                         0x2a (size before relaxing)
+ .rodata._ZN17HardwareInputTaskILj1EE4mainEv.str1.1
+                0x0000000000005386       0x19 main.o
+ .rodata._ZN4rtos8callbackD2Ev.str1.1
+                0x000000000000539f       0x21 main.o
+                                         0x35 (size before relaxing)
+ .rodata._ZN4rtos9task_baseD2Ev.str1.1
+                0x00000000000053c0       0x17 main.o
+ .rodata._ZN5hwlibL11unspecifiedE
+                0x00000000000053d7        0x4 main.o
+ .rodata._ZN5hwlibL22ssd1306_initializationE
+                0x00000000000053db       0x29 main.o
+ .rodata._ZN8SendTask4mainEv.str1.1
+                0x0000000000005404        0xf main.o
+ .rodata.main.str1.1
+                0x0000000000005413      0x187 main.o
+                0x000000000000559c                . = ALIGN (0x4)
+ *fill*         0x000000000000559a        0x2 
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000000000000559c                . = ALIGN (0x4)
+ *(.gcc_except_table)
+                0x000000000000559c                . = ALIGN (0x4)
+ *(.eh_frame_hdr)
+                0x000000000000559c                . = ALIGN (0x4)
+ *(.eh_frame)
+                0x000000000000559c                . = ALIGN (0x4)
+                0x000000000000559c                __text_end = .
+                [!provide]                        PROVIDE (__text_end = __text_end)
+
+.vfp11_veneer   0x000000000000559c        0x0
+ .vfp11_veneer  0x000000000000559c        0x0 linker stubs
+
+.v4_bx          0x000000000000559c        0x0
+ .v4_bx         0x000000000000559c        0x0 linker stubs
+
+.iplt           0x000000000000559c        0x0
+ .iplt          0x000000000000559c        0x0 Buzzer.o
+
+.IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
+ *(.init)
+ *(.preinit_array)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                0x000000000000559c                . = ALIGN (0x4)
+                0x000000000000559c                __exidx_start = .
+                [!provide]                        PROVIDE (__exidx_start = __exidx_start)
+
+.ARM.exidx      0x000000000000559c        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x000000000000559c        0x8 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+
+.rel.dyn        0x00000000000055a4        0x0
+ .rel.iplt      0x00000000000055a4        0x0 Buzzer.o
+                0x00000000000055a4                . = ALIGN (0x4)
+                0x00000000000055a4                __exidx_end = .
+                [!provide]                        PROVIDE (__exidx_end = __exidx_end)
+
+.bss            0x0000000020000000    0x14074
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __stack_start = .
+                [!provide]                        PROVIDE (__stack_start = __stack_start)
+                0x0000000020000000                . = ALIGN (0x4)
+ *(.bmptk_stack)
+ .bmptk_stack   0x0000000020000000    0x14000 bmptk_fixed_size_stack.o
+                0x0000000020000000                bmptk_stack
+                0x0000000020014000                . = ALIGN (0x8)
+                0x0000000020014000                __main_stack_end = .
+                [!provide]                        PROVIDE (__main_stack_end = __main_stack_end)
+                0x0000000020014000                . = ALIGN (0x4)
+                0x0000000020014000                __stack_end = .
+                [!provide]                        PROVIDE (__stack_end = __stack_end)
+                0x0000000020014000                . = ALIGN (0x4)
+                0x0000000020014000                __bss_start = .
+                [!provide]                        PROVIDE (__bss_start = __bss_start)
+                0x0000000020014000                . = ALIGN (0x4)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss._ZZN3due9now_ticksEvE4high
+                0x0000000020014000        0x8 Buzzer.o
+ .bss._ZZN3due9now_ticksEvE8last_low
+                0x0000000020014008        0x4 Buzzer.o
+ .bss._ZZN3due9now_ticksEvE9init_done
+                0x000000002001400c        0x1 Buzzer.o
+ *fill*         0x000000002001400d        0x3 
+ .bss._ZZN6PlayerILi5000ELi6EE9reportHitEjjE7counter
+                0x0000000020014010        0x4 GameTask.o
+                0x0000000020014010                Player<5000, 6>::reportHit(unsigned int, unsigned int)::counter
+ .bss._ZZN8GameTask4mainEvE10hitMessage
+                0x0000000020014014        0x2 GameTask.o
+                0x0000000020014014                GameTask::main()::hitMessage
+ *fill*         0x0000000020014016        0x2 
+ .bss._ZZN8GameTask4mainEvE11runSubState
+                0x0000000020014018        0x4 GameTask.o
+                0x0000000020014018                GameTask::main()::runSubState
+ .bss._ZZN8GameTask4mainEvE12initSubState
+                0x000000002001401c        0x4 GameTask.o
+                0x000000002001401c                GameTask::main()::initSubState
+ .bss._ZZN8GameTask4mainEvE11regSubState
+                0x0000000020014020        0x4 GameTask.o
+                0x0000000020014020                GameTask::main()::regSubState
+ .bss._ZZN8GameTask4mainEvE9mainState
+                0x0000000020014024        0x4 GameTask.o
+                0x0000000020014024                GameTask::main()::mainState
+ .bss._ZN17coroutine_context7main_spE
+                0x0000000020014028        0x4 coroutine.o
+                0x0000000020014028                coroutine_context::main_sp
+ .bss._ZN4rtos10must_clearE
+                0x000000002001402c        0x1 rtos.o
+                0x000000002001402c                rtos::must_clear
+ *fill*         0x000000002001402d        0x3 
+ .bss._ZN4rtos17rtos_current_taskE
+                0x0000000020014030        0x4 rtos.o
+                0x0000000020014030                rtos::rtos_current_task
+ .bss._ZN4rtos17scheduler_runningE
+                0x0000000020014034        0x1 rtos.o
+                0x0000000020014034                rtos::scheduler_running
+ *fill*         0x0000000020014035        0x3 
+ .bss._ZN4rtos5flagsE
+                0x0000000020014038        0x4 rtos.o
+                0x0000000020014038                rtos::flags
+ .bss._ZN4rtos5poolsE
+                0x000000002001403c        0x4 rtos.o
+                0x000000002001403c                rtos::pools
+ .bss._ZN4rtos6clocksE
+                0x0000000020014040        0x4 rtos.o
+                0x0000000020014040                rtos::clocks
+ .bss._ZN4rtos6timersE
+                0x0000000020014044        0x4 rtos.o
+                0x0000000020014044                rtos::timers
+ .bss._ZN4rtos7mutexesE
+                0x0000000020014048        0x4 rtos.o
+                0x0000000020014048                rtos::mutexes
+ .bss._ZN4rtos8channelsE
+                0x000000002001404c        0x4 rtos.o
+                0x000000002001404c                rtos::channels
+ .bss._ZN4rtos8taskListE
+                0x0000000020014050        0x4 rtos.o
+                0x0000000020014050                rtos::taskList
+ .bss._ZN4rtos9mailboxesE
+                0x0000000020014054        0x4 rtos.o
+                0x0000000020014054                rtos::mailboxes
+ .bss._ZN4rtos9timerListE
+                0x0000000020014058        0x4 rtos.o
+                0x0000000020014058                rtos::timerList
+ *fill*         0x000000002001405c        0x4 
+ .bss.last_run_time
+                0x0000000020014060        0x8 rtos.o
+                0x0000000020014060                last_run_time
+ .bss._ZN5hwlib10background5firstE
+                0x0000000020014068        0x4 hwlib.o
+                0x0000000020014068                hwlib::background::first
+ .bss._ZN5hwlib10background7currentE
+                0x000000002001406c        0x4 hwlib.o
+                0x000000002001406c                hwlib::background::current
+ .bss._ZN5hwlib10background7runningE
+                0x0000000020014070        0x1 hwlib.o
+                0x0000000020014070                hwlib::background::running
+ .bss._ZZN3due9uart_initEvE9init_done
+                0x0000000020014071        0x1 hwlib.o
+                0x0000000020014074                . = ALIGN (0x4)
+ *fill*         0x0000000020014072        0x2 
+ *(COMMON)
+                0x0000000020014074                . = ALIGN (0x4)
+                0x0000000020014074                __bss_end = .
+                [!provide]                        PROVIDE (__bss_end = __bss_end)
+
+.data           0x0000000020014074       0x34 load address 0x00000000000055a4
+                0x0000000020014074                . = ALIGN (0x4)
+                0x00000000000055a4                __data_init_start = LOADADDR (.data)
+                [!provide]                        PROVIDE (__data_init_start = __data_init_start)
+                0x0000000020014074                __data_start = .
+                [!provide]                        PROVIDE (__data_start = __data_start)
+                0x0000000020014074                . = ALIGN (0x4)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data._ZN6sam3xa15SystemCoreClockE
+                0x0000000020014074        0x4 Buzzer.o
+                0x0000000020014074                sam3xa::SystemCoreClock
+ .data._ZZN8GameTask4mainEvE9itterator
+                0x0000000020014078        0x4 GameTask.o
+                0x0000000020014078                GameTask::main()::itterator
+ .data._ZN17coroutine_context24current_coroutine_sp_ptrE
+                0x000000002001407c        0x4 coroutine.o
+                0x000000002001407c                coroutine_context::current_coroutine_sp_ptr
+ .data._ZN3due7hw_uartE
+                0x0000000020014080        0x4 hwlib.o
+                0x0000000020014080                due::hw_uart
+ .data._ZN5hwlib12pin_in_dummyE
+                0x0000000020014084        0x4 hwlib.o
+                0x0000000020014084                hwlib::pin_in_dummy
+ .data._ZN5hwlib12pin_oc_dummyE
+                0x0000000020014088        0x4 hwlib.o
+                0x0000000020014088                hwlib::pin_oc_dummy
+ .data._ZN5hwlib4coutE
+                0x000000002001408c       0x14 hwlib.o
+                0x000000002001408c                hwlib::cout
+ .data._first_free
+                0x00000000200140a0        0x4 bmptk_heap_bmptk.o
+                0x00000000200140a0                _first_free
+ .data._last_free
+                0x00000000200140a4        0x4 bmptk_heap_bmptk.o
+                0x00000000200140a4                _last_free
+                0x00000000200140a8                . = ALIGN (0x4)
+                0x00000000200140a8                __data_end = .
+                [!provide]                        PROVIDE (__data_end = __data_end)
+                0x00000000000055a4                __data_init_end = LOADADDR (.data)
+                [!provide]                        PROVIDE (__data_init_end = __data_init_end)
+                [!provide]                        PROVIDE (__data_size = (__data_end - __data_start))
+                [!provide]                        PROVIDE (__data_init_size = __data_size)
+                [!provide]                        PROVIDE (__data_init_end = (__data_init_start + __data_init_size))
+
+.igot.plt       0x00000000200140a8        0x0 load address 0x00000000000055d8
+ .igot.plt      0x00000000200140a8        0x0 Buzzer.o
+                0x00000000200140a8                . = ALIGN (0x4)
+                0x00000000200140a8                __heap_start = .
+                [!provide]                        PROVIDE (__heap_start = __heap_start)
+                0x00000000200140a8                . = ALIGN (0x4)
+                0x0000000020018000                __heap_end = __ram_end
+                [!provide]                        PROVIDE (__heap_end = __heap_end)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame    0x0000000000000000       0xdc
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x44 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x0000000000000044       0x2c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000000070       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000000000000a4       0x38 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+
+.comment        0x0000000000000000       0x7f
+ .comment       0x0000000000000000       0x7f Buzzer.o
+                                         0x80 (size before relaxing)
+ .comment       0x000000000000007f       0x80 BuzzerTask.o
+ .comment       0x000000000000007f       0x80 Display.o
+ .comment       0x000000000000007f       0x80 DisplayTask.o
+ .comment       0x000000000000007f       0x80 GameTask.o
+ .comment       0x000000000000007f       0x80 IrDetector.o
+ .comment       0x000000000000007f       0x80 IrDiode.o
+ .comment       0x000000000000007f       0x80 RecIRMsgControl.o
+ .comment       0x000000000000007f       0x80 RunGameControl.o
+ .comment       0x000000000000007f       0x80 SendTask.o
+ .comment       0x000000000000007f       0x80 TransferHitsControl.o
+ .comment       0x000000000000007f       0x80 coroutine.o
+ .comment       0x000000000000007f       0x80 rtos.o
+ .comment       0x000000000000007f       0x80 hwlib.o
+ .comment       0x000000000000007f       0x80 main.o
+ .comment       0x000000000000007f       0x80 bmptk_cortex.o
+ .comment       0x000000000000007f       0x80 bmptk_heap_bmptk.o
+ .comment       0x000000000000007f       0x80 bmptk_fixed_size_stack.o
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x0000000000000000       0x31
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x33 Buzzer.o
+ .ARM.attributes
+                0x0000000000000033       0x33 BuzzerTask.o
+ .ARM.attributes
+                0x0000000000000066       0x33 Display.o
+ .ARM.attributes
+                0x0000000000000099       0x33 DisplayTask.o
+ .ARM.attributes
+                0x00000000000000cc       0x33 GameTask.o
+ .ARM.attributes
+                0x00000000000000ff       0x33 IrDetector.o
+ .ARM.attributes
+                0x0000000000000132       0x33 IrDiode.o
+ .ARM.attributes
+                0x0000000000000165       0x33 RecIRMsgControl.o
+ .ARM.attributes
+                0x0000000000000198       0x33 RunGameControl.o
+ .ARM.attributes
+                0x00000000000001cb       0x33 SendTask.o
+ .ARM.attributes
+                0x00000000000001fe       0x33 TransferHitsControl.o
+ .ARM.attributes
+                0x0000000000000231       0x21 switch_to.o
+ .ARM.attributes
+                0x0000000000000252       0x33 coroutine.o
+ .ARM.attributes
+                0x0000000000000285       0x33 rtos.o
+ .ARM.attributes
+                0x00000000000002b8       0x33 hwlib.o
+ .ARM.attributes
+                0x00000000000002eb       0x33 main.o
+ .ARM.attributes
+                0x000000000000031e       0x33 bmptk_cortex.o
+ .ARM.attributes
+                0x0000000000000351       0x33 bmptk_heap_bmptk.o
+ .ARM.attributes
+                0x0000000000000384       0x33 bmptk_fixed_size_stack.o
+ .ARM.attributes
+                0x00000000000003b7       0x1d /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x00000000000003d4       0x1d /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000000000003f1       0x2d /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x000000000000041e       0x1d /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000000000000043b       0x1b /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x0000000000000456       0x2d /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+
+/DISCARD/
+ *(.note.GNU-stack)
+                [!provide]                        PROVIDE (__text_size = (__text_end - __text_start))
+                [!provide]                        PROVIDE (__exidx_size = (__exidx_end - __exidx_start))
+                [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
+                [!provide]                        PROVIDE (__stack_size = (__stack_end - __stack_start))
+                [!provide]                        PROVIDE (__heap_size = (__heap_end - __heap_start))
+OUTPUT(main.elf elf32-littlearm)

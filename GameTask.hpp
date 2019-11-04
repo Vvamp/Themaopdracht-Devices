@@ -97,7 +97,6 @@ public:
 		static regGameParamStates regSubState = regGameParamStates::IDLE;
 		static initGameStates initSubState = initGameStates::IDLE;
 		static runGameStates runSubState = runGameStates::STARTUP;
-		hwlib::cout << "GameTask main\n";
 		while(true){
 			switch (mainState){
 			//In this state the user can configure his player ID and
@@ -112,9 +111,7 @@ public:
 				//If the settings are set the user will have to wait for
 				//the time and start commands from the leader.
 				case regGameParamStates::IDLE:{
-					hwlib::cout << "RegParam in IDlE state\n";
 					auto event = wait(buttonChannel + receiveChannel);
-					hwlib::cout << "button pressed event\n";
 					if (event == buttonChannel){
 						int btnID = buttonChannel.read();
 			
@@ -140,9 +137,7 @@ public:
 				//the game leader. Otherwise he will be send to WAIT_ON_B
 				//to start the process of choosing a weapon.
 				case regGameParamStates::PLAYER_INPUT:{
-					hwlib::cout<<"regParam Player Input state\n";
 					wait(buttonChannel);
-					hwlib::cout << "regparam na de wait\n";
 					int btnID = buttonChannel.read();
 					if(btnID == Buttons::btn0){
 						regSubState = regGameParamStates::IDLE;
@@ -156,7 +151,6 @@ public:
 				//In this state the user has to press the B button to
 				//move to the WEAPON_INPUT state.
 				case regGameParamStates::WAIT_ON_B:{
-					hwlib::cout << "Waiting for B\n";
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if( btnID == Buttons::btnB){
@@ -167,8 +161,6 @@ public:
 				//In this state the user has to choose a weapon and will be moved
 				//to the IDLE state to wait for the game leader's commands.
 				case regGameParamStates::WEAPON_INPUT:{
-					hwlib::cout << "Waiting for weapon code(0-9)\n";
-
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
@@ -185,16 +177,16 @@ public:
 			//start sending the time to the players. After that the leader has
 			//to start sending the start signal to the players.
 			case mainStates::INIT_GAME:{
-					hwlib::cout << "Init game\n";
 
 				switch (initSubState){
 				//In this state the user has to press the C button to start
 				//settings the time. Once the C button is pressed the user
 				//moves to the GET_TIME state.
 				case initGameStates::IDLE:{
-					hwlib::string<1> msg = "\f";
+					hwlib::string<20> msg = "Press C to set\ntime";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == Buttons::btnC){
@@ -207,9 +199,10 @@ public:
 				//We also gave the leader the option to press the * button
 				//to set the time to one minute for demo purposes.
 				case initGameStates::GET_TIME:{
-				 	hwlib::string<64> msg = "Tijd : " + commandTime;
+				 	hwlib::string<32> msg = "Tijd:"
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					static size_t itterator = 1;
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
@@ -231,6 +224,10 @@ public:
 				//In this state the user will send the time to the players.
 				//When the user presses the * button he will move to SEND_START
 				case initGameStates::SEND_TIME:{
+					hwlib::string<128> msg = "#: send time\n*: send start (end)";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == btnStar){
