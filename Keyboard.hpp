@@ -41,12 +41,12 @@ public:
 	void update(){
 		// Get the character pressed on the keyboard, or '\0' if nothing is pressed.
 		char keyPressed = keypadIn.pressed();
+		// hwlib::cout << keyPressed <<"\n";
 
 		// If nothing was pressed, do nothing.
 		if(keyPressed == '\0'){
 			return;
 		}
-
 		KeyboardListener::Buttons buttonPressed;
 
 		// Store the corresponding Buttons enum value in buttonPressed.

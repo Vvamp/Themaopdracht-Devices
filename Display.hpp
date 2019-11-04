@@ -29,7 +29,8 @@ public:
     mainBus(scl,sda),
     oled(mainBus),
     terminal(oled,font)
-    {};
+    {
+    };
     ///\brief
     /// function to show the message. It writes its paramater on the screen.
     void showMessage(const hwlib::string_base& message);

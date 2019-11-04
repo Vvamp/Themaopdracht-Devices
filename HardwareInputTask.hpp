@@ -20,7 +20,7 @@ public:
 	HardwareInputTask(
 		Keyboard<> & keyboardInput
 	):
-		task("Hardware Input Task"),
+		task(50,"Hardware Input Task"),
 		keyboard(keyboardInput),
 		period(this, "Period Timer")
 	{};
@@ -28,10 +28,11 @@ public:
 	///\brief
 	///The task main, calls the keyboard update function every 100ms.
 	void main() override{
+		hwlib::cout << "Hardware InputTask main\n";
 		for(;;){
 			// Start the timer at 100ms, or 100.000us
 			period.set(100'000);
-
+			
 			// Call the update function
 			keyboard.update();
 

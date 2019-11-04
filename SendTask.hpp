@@ -32,7 +32,7 @@ public:
     ///\details
     /// the constructor only needs a hwlib pin out to be able to function.
     SendTask(hwlib::target::pin_out& p):
-    task("Send task"),
+    task(100,"Send task"),
     comFlag(this,"send command flag"),
     comPool("command pool"),
     irDiode(p)
@@ -52,6 +52,7 @@ public:
     void checkSum();
 
     void main() override{
+        hwlib::cout << "sendTask main\n";
         while(1){
             switch (state){
                 case states::idle:{

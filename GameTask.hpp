@@ -97,7 +97,7 @@ public:
 		static regGameParamStates regSubState = regGameParamStates::IDLE;
 		static initGameStates initSubState = initGameStates::IDLE;
 		static runGameStates runSubState = runGameStates::STARTUP;
-
+		hwlib::cout << "GameTask main\n";
 		while(true){
 			switch (mainState){
 			//In this state the user can configure his player ID and
@@ -112,9 +112,18 @@ public:
 				//If the settings are set the user will have to wait for
 				//the time and start commands from the leader.
 				case regGameParamStates::IDLE:{
+					hwlib::cout << "RegParam in IDlE state\n";
 					auto event = wait(buttonChannel + receiveChannel);
+					hwlib::cout << "button pressed event\n";
 					if (event == buttonChannel){
 						auto btnID = buttonChannel.read();
+						if (btnID == 0){
+							hwlib::cout << "Was 0 \n";
+						}else if (btnID == Buttons::btn0){
+							hwlib::cout << "was btn0\n";
+						}else{	
+							hwlib::cout << (char)btnID << '\n';
+						}
 						if(btnID == Buttons::btnA){
 							regSubState = regGameParamStates::PLAYER_INPUT;
 						}else{
@@ -137,9 +146,11 @@ public:
 				//the game leader. Otherwise he will be send to WAIT_ON_B
 				//to start the process of choosing a weapon.
 				case regGameParamStates::PLAYER_INPUT:{
+					hwlib::cout<<"regParam Player Input state\n";
 					wait(buttonChannel);
-					auto btnID = buttonChannel.read();
-					if(btnID == 0){
+					hwlib::cout << "regparam na de wait\n";
+					int btnID = buttonChannel.read();
+					if(btnID == Buttons::btn0){
 						regSubState = regGameParamStates::IDLE;
 						mainState = mainStates::INIT_GAME;
 					}else if(btnID <= 9){

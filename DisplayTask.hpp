@@ -23,7 +23,7 @@ public:
     /// \brief
     ///constructor for the display task, it needs a hwlib pin_oc sda and scl pin to construct
     DisplayTask(hwlib::target::pin_oc & sda, hwlib::target::pin_oc & scl):
-    task("Display task"),
+    task(150,"Display task"),
     displayFlag(this,"display flag"),
     displayPool("display pool"),
     display(sda,scl)
@@ -44,6 +44,9 @@ public:
     void showMessage();
 
     void main() override{
+        hwlib::cout << "Displaytask main\n";
+        hwlib::string<4> x = "piet";
+        display.showMessage(x);
         while(1){
             switch(state){
 

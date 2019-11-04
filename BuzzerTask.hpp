@@ -20,7 +20,7 @@ public:
     ///\details
     /// this constructor needs a reference to a hwlib pin_out
     BuzzerTask(hwlib::target::pin_out& buzzerPin) :
-    task("buzzer task"),
+    task(200,"buzzer task"),
     buzzerFlag(this,"buzzer flag"),
     buzzerPool("buzzer pool"),
     buzzer(buzzerPin)
@@ -32,6 +32,7 @@ public:
     void makeSound(sounds sound);
 
     void main() override{
+            hwlib::cout << "buzzertask main\n"; 
         while(1){
             switch(state){
                 case states::idle:{

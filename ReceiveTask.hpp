@@ -30,7 +30,7 @@ public:
 		hwlib::target::pin_in & irReceiverPin,
 		GameTask & gameTaskInput
 	):
-		task("Receive Task"),
+		task(10,"Receive Task"),
 		gameTask(gameTaskInput),
 		recIRMsgControl(),
 		irDetector(irReceiverPin),
