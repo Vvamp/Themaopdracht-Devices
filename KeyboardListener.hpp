@@ -36,7 +36,7 @@ public:
 
 	///\brief
 	///This virtual function gets called with the button called 'knopID'/
-	virtual void buttonPressed(Buttons knopID);
+	virtual void buttonPressed(int knopID);
 };
 
 #endif // KeyboardListener_hpp

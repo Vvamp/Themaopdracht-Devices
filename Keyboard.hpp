@@ -47,59 +47,59 @@ public:
 		if(keyPressed == '\0'){
 			return;
 		}
-		KeyboardListener::Buttons buttonPressed;
+		int buttonPressed;
 
 		// Store the corresponding Buttons enum value in buttonPressed.
 		switch(keyPressed){
-			case KeyboardListener::btn0:
-				buttonPressed=KeyboardListener::btn0;
+			case '0':
+				buttonPressed=0;
 			break;
-			case KeyboardListener::btn1:
-				buttonPressed=KeyboardListener::btn1;
+			case '1':
+				buttonPressed=1;
 			break;
-			case KeyboardListener::btn2:
-				buttonPressed=KeyboardListener::btn2;
+			case '2':
+				buttonPressed=2;
 			break;
-			case KeyboardListener::btn3:
-				buttonPressed=KeyboardListener::btn3;
+			case '3':
+				buttonPressed=3;
 			break;
-			case KeyboardListener::btn4:
-				buttonPressed=KeyboardListener::btn4;
+			case '4':
+				buttonPressed=4;
 			break;
-			case KeyboardListener::btn5:
-				buttonPressed=KeyboardListener::btn5;
+			case '5':
+				buttonPressed=5;
 			break;
-			case KeyboardListener::btn6:
-				buttonPressed=KeyboardListener::btn6;
+			case '6':
+				buttonPressed=6;
 			break;
-			case KeyboardListener::btn7:
-				buttonPressed=KeyboardListener::btn7;
+			case '7':
+				buttonPressed=7;
 			break;
-			case KeyboardListener::btn8:
-				buttonPressed=KeyboardListener::btn8;
+			case '8':
+				buttonPressed=8;
 			break;
-			case KeyboardListener::btn9:
-				buttonPressed=KeyboardListener::btn9;
-			break;
-
-			case KeyboardListener::btnA:
-				buttonPressed=KeyboardListener::btnA;
-			break;
-			case KeyboardListener::btnB:
-				buttonPressed=KeyboardListener::btnB;
-			break;
-			case KeyboardListener::btnC:
-				buttonPressed=KeyboardListener::btnC;
-			break;
-			case KeyboardListener::btnD:
-				buttonPressed=KeyboardListener::btnD;
+			case '9':
+				buttonPressed=9;
 			break;
 
-			case KeyboardListener::btnStar:
-				buttonPressed=KeyboardListener::btnStar;
+			case 'A':
+				buttonPressed=10;
 			break;
-			case KeyboardListener::btnHashtag:
-				buttonPressed=KeyboardListener::btnHashtag;
+			case 'B':
+				buttonPressed=11;
+			break;
+			case 'C':
+				buttonPressed=12;
+			break;
+			case 'D':
+				buttonPressed=13;
+			break;
+
+			case '*':
+				buttonPressed=14;
+			break;
+			case '#':
+				buttonPressed=15;
 			break;
 		}
 

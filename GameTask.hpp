@@ -32,7 +32,7 @@ private:
 	rtos::timer invincibilityTimer;
 	rtos::timer rateOfFireTimer;
 	rtos::timer startTimer;
-	rtos::channel<Buttons, 128> buttonChannel;
+	rtos::channel<int, 1> buttonChannel;
 	rtos::channel<uint16_t, 128> receiveChannel;
 	rtos::flag gameOverFlag;
 	const uint16_t commandStart = 0x00;
@@ -67,11 +67,11 @@ public:
 
 	///\brief
 	///The buttonPressed function calls the writeButtonChannel.
-	void buttonPressed(Buttons btnID) override;
+	void buttonPressed(int btnID) override;
 
 	///\brief
 	///The writeButtonChannel fills the buttonChannel with btnID's.
-	void writeButtonChannel(Buttons btnID);
+	void writeButtonChannel(int btnID);
 
 	///\brief
 	///The writeReceiveChannel fills the receiveChannel with a message.
@@ -116,13 +116,13 @@ public:
 					auto event = wait(buttonChannel + receiveChannel);
 					hwlib::cout << "button pressed event\n";
 					if (event == buttonChannel){
-						auto btnID = buttonChannel.read();
+						int btnID = buttonChannel.read();
 						if (btnID == 0){
 							hwlib::cout << "Was 0 \n";
 						}else if (btnID == Buttons::btn0){
 							hwlib::cout << "was btn0\n";
 						}else{	
-							hwlib::cout << (char)btnID << '\n';
+							hwlib::cout << btnID << '\n';
 						}
 						if(btnID == Buttons::btnA){
 							regSubState = regGameParamStates::PLAYER_INPUT;
@@ -162,6 +162,7 @@ public:
 				//In this state the user has to press the B button to
 				//move to the WEAPON_INPUT state.
 				case regGameParamStates::WAIT_ON_B:{
+					hwlib::cout << "Waiting for B\n";
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if( btnID == Buttons::btnB){
@@ -172,6 +173,8 @@ public:
 				//In this state the user has to choose a weapon and will be moved
 				//to the IDLE state to wait for the game leader's commands.
 				case regGameParamStates::WEAPON_INPUT:{
+					hwlib::cout << "Waiting for weapon code(0-9)\n";
+
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
@@ -188,6 +191,7 @@ public:
 			//start sending the time to the players. After that the leader has
 			//to start sending the start signal to the players.
 			case mainStates::INIT_GAME:{
+					hwlib::cout << "Init game\n";
 
 				switch (initSubState){
 				//In this state the user has to press the C button to start

@@ -1,10 +1,10 @@
 #include "GameTask.hpp"
 
-void GameTask::buttonPressed(Buttons btnID){
+void GameTask::buttonPressed(int btnID){
 	writeButtonChannel(btnID);
 };
 
-void GameTask::writeButtonChannel(Buttons btnID){
+void GameTask::writeButtonChannel(int btnID){
 	buttonChannel.write(btnID);
 };
 
