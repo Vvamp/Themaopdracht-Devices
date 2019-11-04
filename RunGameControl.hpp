@@ -4,15 +4,16 @@
 #include "hwlib.hpp"
 #include "Player.hpp"
 #include "SendTask.hpp"
+// #include "KeyboardListener.hpp"
 
-class RunGameControl : public KeyboardListener {
+class RunGameControl {
 private:
-	Player & player;
+	Player<> & player;
 	SendTask & sendTask;
 	size_t gameTime = 0x00;
 public:
 	RunGameControl(
-		Player & playerInput,
+		Player<> & playerInput,
 		SendTask & sendTaskInput
 	):
 		player(playerInput),
@@ -20,7 +21,7 @@ public:
 	{}
 
 	void setGameTime(size_t time);
-	hwlib::string toDisplay();
+	void toDisplay(hwlib::string<200> & msg);
 	bool reduceTime();
 	size_t getTime();
 };

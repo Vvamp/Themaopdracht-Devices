@@ -9,9 +9,9 @@
 ///This control objects composes the IR message and checks if it's valid.
 class RecIRMsgControl{
 private:
-	static uint16_t message = 0;	//<The current message being composed
-	static uint16_t lastMsg = 0;	//<The previously composed message
-	
+	uint16_t message = 0;	//<The current message being composed
+	uint16_t lastMsg = 0;	//<The previously composed message
+
 	///\brief
 	///Returns true if the current message's control bits are the way they should be
 	bool XOR();
@@ -21,12 +21,11 @@ private:
 	bool CMP();
 
 public:
-	///\brief 
-	///Default constructor for the RecIRMsgcontrol class. It takes no parameters.
-	RecIRMsgControl() :
-	{};
+	// ///\brief
+	// ///Default constructor for the RecIRMsgcontrol class. It takes no parameters.
+	// RecIRMsgControl():{};
 
-	///\brief 
+	///\brief
 	///Receive a bit and add it to the IR message that's currently being composed
 	///\details
 	///The bit parameter represents a bit: true is 1, false is 0.

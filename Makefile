@@ -9,7 +9,7 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := Buzzer.cpp BuzzerTask.cpp Display.cpp DisplayTask.cpp GameTask.cpp IrDetector.cpp IrDiode.cpp Player.cpp RecIRMsgControl.cpp RunGameControl.cpp SendTask.cpp TransferHitsControl.cpp Keyboard.cpp
+SOURCES := Buzzer.cpp BuzzerTask.cpp Display.cpp DisplayTask.cpp GameTask.cpp IrDetector.cpp IrDiode.cpp RecIRMsgControl.cpp RunGameControl.cpp SendTask.cpp TransferHitsControl.cpp Keyboard.cpp
 
 # header files in this project
 HEADERS := Buzzer.hpp BuzzerTask.hpp Display.hpp DisplayTask.hpp GameTask.hpp IrDetector.hpp IrDiode.hpp Player.hpp ReceiveTask.hpp RecIRMsgControl.hpp RunGameControl.hpp SendTask.hpp TransferHitsControl.hpp Keyboard.hpp KeyboardListener.hpp HardwareInputTask.hpp
@@ -19,5 +19,5 @@ SEARCH  :=
 
 # set REATIVE to the next higher directory
 # and defer to the Makefile.due there
-RELATIVE := $(RELATIVE)../v2cpse1-examples/
+RELATIVE := $(RELATIVE)../../v2cpse1-examples/
 include $(RELATIVE)Makefile.due

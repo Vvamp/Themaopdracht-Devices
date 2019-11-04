@@ -22,7 +22,7 @@ public:
     BuzzerTask(hwlib::target::pin_out& buzzerPin) :
     task("buzzer task"),
     buzzerFlag(this,"buzzer flag"),
-    buzzerPool(this,"buzzer pool"),
+    buzzerPool("buzzer pool"),
     buzzer(buzzerPin)
     {};
 
@@ -37,7 +37,7 @@ public:
                 case states::idle:{
                     auto ev = wait(buzzerFlag);
                     if (ev == buzzerFlag){
-                        auto sound = buzzerPool.read();
+                        sound = buzzerPool.read();
                         state = states::makeSound;
                         break;
                     }
@@ -93,10 +93,11 @@ public:
     }
 
 private:
+    sounds sound = sounds::startEndSound;
     rtos::flag buzzerFlag; //< flag that is to be set when someone writes in the pool
     rtos::pool<sounds> buzzerPool; //< pool that holds which sound has to be played
     Buzzer buzzer; //< the boundary buzzer object
     enum class states{idle, makeSound}; //< enumerator that holds the sounds, one of these sounds need to be given as a paraamater to the makeSound function
     states state = states::idle; //< this is the state on which the task switches
-}
-#ifndef //BUZZERTASK_HPP
+};
+#endif //BUZZERTASK_HPP

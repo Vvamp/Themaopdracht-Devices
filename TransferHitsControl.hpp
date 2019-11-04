@@ -2,7 +2,7 @@
 #define TRANSFERHITSCONTROL_HPP
 #include "hwlib.hpp"
 
-#include "player.hpp"
+#include "Player.hpp"
 /// @file
 /// \brief
 /// TransferHitsControl class
@@ -10,13 +10,13 @@
 /// This class is Transfers the player stats to a connected terminal
 class TransferHitsControl {
 private:
-    Player & player;
+    Player<> & player;
 
 public:
 
     /// \brief
     /// TransferHitsControl constructor
-    TransferHitsControl( Player & player ):
+    TransferHitsControl( Player<> & player ):
         player( player )
     {};
 

@@ -3,7 +3,7 @@
 
 /// @file
 ///\brief
-///The abstract keyboardlistener class. 
+///The abstract keyboardlistener class.
 ///\details
 ///Contains an enum of buttons, with their corresponding keycode values that the hwlib::keyboard object sends.
 class KeyboardListener{
@@ -28,9 +28,9 @@ public:
 		btnB = 'B',
 		btnC = 'C',
 		btnD = 'D',
-		
+
 		btnStar = '*',
-		btnHashtag = "#"
+		btnHashtag = '#'
 	};
 
 

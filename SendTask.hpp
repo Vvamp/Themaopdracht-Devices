@@ -19,7 +19,7 @@ private:
     IrDiode irDiode; //< object from the IR diode class.
 
     uint16_t shortWait = 800; //< the wait short wait time between turning on and off the IR sender
-    uint16_t = 1600; //< the long wait time between turning on and off the IR sender
+    uint16_t longWait = 1600; //< the long wait time between turning on and off the IR sender
     uint16_t message = 0; //< variable in which the message is set when the pool is read
     uint8_t counter = 0; //< counter that is used to count
 
@@ -34,7 +34,7 @@ public:
     SendTask(hwlib::target::pin_out& p):
     task("Send task"),
     comFlag(this,"send command flag"),
-    comPool(this,"command pool"),
+    comPool("command pool"),
     irDiode(p)
     {};
 

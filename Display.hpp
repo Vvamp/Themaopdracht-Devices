@@ -32,6 +32,6 @@ public:
     {};
     ///\brief
     /// function to show the message. It writes its paramater on the screen.
-    void showMessage(hwlib::string message);
+    void showMessage(const hwlib::string_base& message);
 };
 #endif // DISPLAY_HPP

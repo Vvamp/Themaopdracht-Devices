@@ -16,8 +16,7 @@ public:
     /// constructor for the buzzer class
     ///\details
     /// this constructor needs a reference to a hwlib::pin_out
-    Buzzer():
-    buzzerPin(hwlib::target::pin_out& buzzerPin) :
+    Buzzer(hwlib::target::pin_out& buzzerPin) :
     buzzerPin(buzzerPin)
     {};
 

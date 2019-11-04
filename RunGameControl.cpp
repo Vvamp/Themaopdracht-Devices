@@ -4,15 +4,15 @@ void RunGameControl::setGameTime(size_t time){
 	gameTime = time;
 };
 
-hwlib::string RunGameControl::toDisplay(){
-	hwlib::string msg = "Tijd : " + gameTime + "\n";
-	msg += "Player ID : " + player.getPlayerID() + "\n";
-	msg += "Score : " + player.getScore();
-	return msg;
+void RunGameControl::toDisplay(hwlib::string<200> & msg){
+	msg = "Tijd : " + gameTime + "\nPlayer ID : " +player.getPlayerID() + "\nScore : " + player.getScore();
 };
+
+hwlib::string
 
 bool RunGameControl::reduceTime(){
 	gameTime--;
+	return bool(gameTime);
 };
 
 size_t RunGameControl::getTime(){

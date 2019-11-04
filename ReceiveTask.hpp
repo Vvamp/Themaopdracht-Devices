@@ -4,9 +4,9 @@
 #include "hwlib.hpp"
 #include "rtos.hpp"
 
-#include "GameTask.hpp"
 #include "RecIRMsgControl.hpp"
 #include "IrDetector.hpp"
+#include "GameTask.hpp"
 
 ///@file
 ///\brief
@@ -21,7 +21,7 @@ private:
 	rtos::timer timerMsg;				//<The timer object that lets the system know that it's taken too long for a new bit and the next bit received should be for a new message
 	rtos::timer interruptTimer;			//<The timer that interrupts the wait for timerMsg
 	uint16_t message;					//<The correct, composed message to be sent to gameTask
-	enum states = {isLow, isHigh};		//<The 2 states this task can be in, used to calculate pauses which get translated to bits
+	enum states{isLow, isHigh};		//<The 2 states this task can be in, used to calculate pauses which get translated to bits
 	states state = isLow;				//<System starts at the isLow state
 public:
 	///\brief
@@ -56,7 +56,7 @@ public:
 
 					if(beginPause >= 0 && eindPause >= 0){
 						pause = eindPause - beginPause;
-						beginPause = -1; 
+						beginPause = -1;
 						eindPause = -1;
 						hwlib::wait_us(20);
 
@@ -84,7 +84,7 @@ public:
 						recIRMsgControl.recBit(false, true);
 						break;
 					}
-				
+
 					if(irDetector.get() == 1){
 						state = isHigh;
 						eindPause = hwlib::now_us();
@@ -102,7 +102,7 @@ public:
 						recIRMsgControl.recBit(false, true);
 						break;
 					}
-				
+
 					if(irDetector.get() == 0){
 						state = isLow;
 						eindPause = hwlib::now_us();

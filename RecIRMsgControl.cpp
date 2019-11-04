@@ -4,7 +4,7 @@ bool RecIRMsgControl::recBit(bool bit, bool resetMessage){
 	// If the resetMessage bit is set, reset the messages and return false
 	if(resetMessage){
 		message = 0;
-		lastMsg = 0; 
+		lastMsg = 0;
 		return false;
 	}
 
@@ -23,7 +23,7 @@ bool RecIRMsgControl::recBit(bool bit, bool resetMessage){
 }
 
 bool RecIRMsgControl::checkMessage(uint16_t & _message){
-	// Check if the messages are the same, if they aren't: set lastMsg to message and reset message. 
+	// Check if the messages are the same, if they aren't: set lastMsg to message and reset message.
 	// Since the messages weren't valid, return false
 	if(!CMP()){
 		lastMsg = message;
@@ -32,7 +32,7 @@ bool RecIRMsgControl::checkMessage(uint16_t & _message){
 	}
 
 	// Check if the control bits for the current message are correct,
-	// if it isn't set the lastMsg to message and reset message. 
+	// if it isn't set the lastMsg to message and reset message.
 	// Since the messages weren't valid, return false
 	if(!XOR()){
 		lastMsg = message;
@@ -49,21 +49,21 @@ bool RecIRMsgControl::checkMessage(uint16_t & _message){
 }
 
 bool RecIRMsgControl::XOR(){
-	// Check if bit 11 is the xor of bit 1 & bit 6, 
+	// Check if bit 11 is the xor of bit 1 & bit 6,
 	// Then check if bit 12 is the xor of bit 2 & bit 7... etc
 	// If one of those is incorrect, return false
 	// If they were all correct, return true
 	for(int i = 0; i < 5; i++){
-		uint8_t firstBit = message << 11+i; // clear bits left of the 12+i bit
+		uint8_t firstBit = message << (11+i); // clear bits left of the 12+i bit
 				firstBit = message >> 15;
 
-		uint8_t bitToCheck1 = message << 1+i; // clear bits left of the 2+i bit
+		uint8_t bitToCheck1 = message << (1+i); // clear bits left of the 2+i bit
 				bitToCheck1 = bitToCheck1 >> 15; // shift it right
 
-		uint8_t bitToCheck2 = message << 6+i; // clear bits left of the 7+i bit
+		uint8_t bitToCheck2 = message << (6+i); // clear bits left of the 7+i bit
 				bitToCheck2 = bitToCheck2 >> 15; // shift it right
 
-		if( !(firstBit ^ bitToCheck1 & bitToCheck2) ){
+		if( !(firstBit ^ (bitToCheck1 & bitToCheck2)) ){
 			return false;
 		}
 	}
@@ -71,5 +71,5 @@ bool RecIRMsgControl::XOR(){
 }
 
 bool RecIRMsgControl::CMP(){
-	(lastMsg == message) ? return true : return false;
+	return (lastMsg==message);
 }
