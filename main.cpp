@@ -68,6 +68,7 @@ int main(){
 	hwlib::cout << displayTask;
 	hwlib::cout << buzzerTask;
 	hwlib::cout << hardwareInputTask;
+	hwlib::cout << gameTask;
 	rtos::run();
 	return 0;
 }

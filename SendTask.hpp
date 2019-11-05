@@ -52,7 +52,6 @@ public:
     void checkSum();
 
     void main() override{
-        hwlib::cout << "sendTask main\n";
         while(1){
             switch (state){
                 case states::idle:{

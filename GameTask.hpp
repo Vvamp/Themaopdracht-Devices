@@ -48,6 +48,7 @@ public:
 		BuzzerTask & buzzerTaskInput,
 		Keyboard<> & keyboardInput
 	):
+		task(30,"GameTask"),
 		player(playerInput),
 		displayTask(displayTaskInput),
 		sendTask(sendTaskInput),
@@ -132,7 +133,7 @@ public:
 								displayTask.writeDisplayPool(msg);
 								displayTask.setDisplayFlag();
 								hwlib::wait_ms(100);
-								runGameControl.setGameTime(msg);
+								runGameControl.setGameTime(commandTime);
 							} else if (msg == 0x00 && runGameControl.getTime()){
 								mainState = mainStates::RUN_GAME;
 							}

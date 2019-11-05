@@ -32,7 +32,6 @@ public:
     void makeSound(sounds sound);
 
     void main() override{
-            hwlib::cout << "buzzertask main\n";
         while(1){
             switch(state){
                 case states::idle:{

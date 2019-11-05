@@ -107,6 +107,7 @@ public:
 		for(KeyboardListener* iListener : listeners){
 			iListener->buttonPressed(buttonPressed);
 		}
+		hwlib::wait_ms(100);
 	};
 
 	///\brief
