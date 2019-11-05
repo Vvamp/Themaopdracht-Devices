@@ -47,6 +47,7 @@ bool RecIRMsgControl::checkMessage(uint16_t & _message){
 	_message = message;
 	lastMsg = message;
 	message = 0;
+	hwlib::cout << "CORRECT MESSAGE!!!! Message: " << hwlib::bin << _message << "\n";
 	return true;
 }
 
