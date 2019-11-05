@@ -35,7 +35,7 @@ private:
 	rtos::channel<int, 128> buttonChannel;
 	rtos::channel<uint16_t, 128> receiveChannel;
 	rtos::flag gameOverFlag;
-	const uint16_t commandStart = 0x00;
+	const uint16_t commandStart = 0b1000000000000000;
 	uint16_t commandTime = 0x00;
 	hwlib::string<16> commandString;
 	size_t second = 1'000'000;
