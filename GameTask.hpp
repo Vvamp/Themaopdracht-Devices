@@ -39,7 +39,7 @@ private:
 	uint16_t commandTime = 0x00;
 	hwlib::string<16> commandString;
 	size_t second = 1'000'000;
-	size_t startBit = 0b1000'0000'0000'0000;
+	size_t startBit = 0b1100'0000'0000'0000;
 public:
 	GameTask(
 		Player<> playerInput,
@@ -241,7 +241,8 @@ public:
 						commandTime = 1;
 					} else if (btnID == Buttons::btnHashtag || itterator == 3){
 						itterator = 1;
-						commandTime *= 60;
+						//commandTime *= 60;
+						commandTime <<= 5;
 						initSubState = initGameStates::SEND_TIME;
 					}
 					break;
@@ -249,18 +250,22 @@ public:
 				//In this state the user will send the time to the players.
 				//When the user presses the * button he will move to SEND_START
 				case initGameStates::SEND_TIME:{
-					hwlib::string<64> msg = "#: send time\n*: send start (end)";
+					hwlib::string<64> msg = "#: send time\n*: send start";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
-					if(btnID == btnStar){
+					if(btnID == Buttons::btnStar){
 						initSubState = initGameStates::SEND_START;
 						hwlib::string<64> msg = "send start...";
 						displayTask.writeDisplayPool(msg);
 						displayTask.setDisplayFlag();
 						hwlib::wait_ms(100);
-					} else if(btnID == btnHashtag){
+					} else if(btnID == Buttons::btnHashtag){
+						commandTime |= startBit;
+						sendTask.writeComPool(commandTime);
+						sendTask.setComFlag();
+						//hwlib::wait_ms(1);
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
 						hwlib::string<64> msg = "send time...";

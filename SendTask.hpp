@@ -49,7 +49,7 @@ public:
     ///\details
     /// this function fills in the XOR of bit 2 and 7 of the command, and places it in the 12th bit, it than takes the XOR of bit 3 and 8 and places
     /// it in bit 13, and so on. only after this is done, the command is valid to be sent.
-    void checkSum();
+    void checkSum(uint16_t & _message);
 
     void main() override{
         while(1){
@@ -58,7 +58,7 @@ public:
                     auto ev = wait(comFlag);
                     if (ev == comFlag){
                         message = comPool.read();
-                        checkSum();
+                        checkSum(message);
                         counter = 0;
                         state = states::setBit;
                         break;
@@ -73,7 +73,7 @@ public:
                     if (counter == 16){
                         state = states::idle;
                         irDiode.setHigh();
-                        hwlib::wait_us(3000);
+                        hwlib::wait_us(5);
                         irDiode.setLow();
                         break;
                     }
