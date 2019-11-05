@@ -72,6 +72,9 @@ public:
                     counter++;
                     if (counter == 16){
                         state = states::idle;
+                        irDiode.setHigh();
+                        hwlib::wait_us(3000);
+                        irDiode.setLow();
                         break;
                     }
                     else{
