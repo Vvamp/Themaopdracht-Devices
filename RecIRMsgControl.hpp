@@ -20,6 +20,7 @@ private:
 	///Returns true if the lastMessage and the current message are the same
 	bool CMP();
 
+
 public:
 	// ///\brief
 	// ///Default constructor for the RecIRMsgcontrol class. It takes no parameters.

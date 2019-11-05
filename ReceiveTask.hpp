@@ -27,7 +27,7 @@ public:
 	///\brief
 	///The ReceiveTask constructor takes no parameters and initializes all of its objects itself.
 	ReceiveTask(
-		hwlib::target::pin_in & irReceiverPin,
+		hwlib::target::pin_in irReceiverPin,
 		GameTask & gameTaskInput
 	):
 		task(10,"Receive Task"),
@@ -49,37 +49,35 @@ public:
 		int eindPause = -1;
 		int pause = -1;
 		int bit = -1;
-
 		for(;;){
+			// hwlib::cout << "loop receive\n";
 			switch(state){
 				case isLow:
 				{
-					messageTimer.set(4'000);
-					interruptTimer.set(150);
+					interruptTimer.set(5);
 
 					if(beginPause >= 0 && eindPause >= 0){
 						pause = eindPause - beginPause;
 						beginPause = -1;
 						eindPause = -1;
-						hwlib::wait_us(20);
-
 					}
 
 					if(pause >= 0){
+
 						if(pause >= 700 && pause <= 900){bit=1;}else
 						if(pause >= 1500 && pause <= 1700){bit=0;}
 						pause=-1;
-						hwlib::wait_us(20);
 					}
 
 					if(bit>=0){
+						// A bit was received, start timer
+						messageTimer.set(4'000);
 						if(recIRMsgControl.recBit(bit)){
 							if(recIRMsgControl.checkMessage(message) == true){
 								gameTask.writeReceiveChannel(message);
 							}
 						}
 						bit=-1;
-						hwlib::wait_us(20);
 					}
 
 					auto event = wait(messageTimer + interruptTimer);
@@ -90,15 +88,16 @@ public:
 
 					if(irDetector.get() == 1){
 						state = isHigh;
-						eindPause = hwlib::now_us();
+						beginPause = hwlib::now_us();
 					}
 					break;
 				}
 
 				case isHigh:
 				{
-					messageTimer.set(4'000);
-					interruptTimer.set(50);
+				
+
+					interruptTimer.set(5);
 
 					auto event = wait(messageTimer + interruptTimer);
 					if(event == messageTimer){

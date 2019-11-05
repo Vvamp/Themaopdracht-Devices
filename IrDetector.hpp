@@ -15,7 +15,7 @@ private:
 public:
 	///\brief
 	///The IrDetector constructor, it takes no parameters and initializes the necessary members itself.
-	IrDetector(hwlib::target::pin_in & irReceiverPin) :
+	IrDetector(hwlib::target::pin_in irReceiverPin) :
 		detectorPin(irReceiverPin)
 	{};
 

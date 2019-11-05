@@ -8,6 +8,8 @@ bool RecIRMsgControl::recBit(bool bit, bool resetMessage){
 		return false;
 	}
 
+
+
 	// Shift a new bit into message and if the bit is supposed to be 1, set the bit to 1
 	message <<= 1;
 	if(bit){
