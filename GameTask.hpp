@@ -85,7 +85,7 @@ public:
 	void setGameOverFlag();
 
 	enum class mainStates {REG_GAME_PARAM, INIT_GAME, RUN_GAME};
-	enum class regGameParamStates {IDLE,PLAYER_INPUT,WAIT_ON_B, WEAPON_INPUT};
+	enum class regGameParamStates {IDLE,PLAYER_INPUT,WAIT_ON_B, WEAPON_INPUT, WAIT_ON_COMMAND};
 	enum class initGameStates {IDLE,GET_TIME,SEND_TIME,SEND_START};
 	enum class runGameStates {STARTUP, PLAYING, SHOOT, GET_SHOT, GAME_OVER, EXPORTING};
 
@@ -116,32 +116,14 @@ public:
 					hwlib::string<17> msg = "A: choose player\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					auto event = wait(buttonChannel + receiveChannel);
-					if (event == buttonChannel && !runGameControl.getTime()){
+					auto event = wait(buttonChannel);
+					if (event == buttonChannel){
 						int btnID = buttonChannel.read();
-			
 						if(btnID == Buttons::btnA){
 							regSubState = regGameParamStates::PLAYER_INPUT;
-						}else{
-							break;
 						}
-					} else if (event == receiveChannel){
-						if(player.getPlayerID()){
-							auto msg = receiveChannel.read();
-							if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
-								hwlib::string<14> msg = "time recieved\n";
-								displayTask.writeDisplayPool(msg);
-								displayTask.setDisplayFlag();
-								hwlib::wait_ms(100);
-								runGameControl.setGameTime(commandTime);
-							} else if (msg == startBit && runGameControl.getTime()){
-								mainState = mainStates::RUN_GAME;
-							}
-						}
-						break;
-					}else{
-						break;	
 					}
+					break;
 				}
 				//In this state the user chooses his player ID.
 				//If the player decides to choose player ID 0 he will me
@@ -187,7 +169,31 @@ public:
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
 						player.setWeapon( btnID );
-						regSubState = regGameParamStates::IDLE;
+						regSubState = regGameParamStates::WAIT_ON_COMMAND;
+					}
+					break;
+				}
+				case regGameParamStates::WAIT_ON_COMMAND:{
+					hwlib::string<18> msg = "Wait for commands\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					auto event = wait(receiveChannel);
+					if (event == receiveChannel){
+						auto msg = receiveChannel.read();
+						if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
+							hwlib::string<14> msg = "Time recieved\n";
+							displayTask.writeDisplayPool(msg);
+							displayTask.setDisplayFlag();
+							hwlib::wait_ms(100);
+							runGameControl.setGameTime(commandTime);
+						} else if (msg == startBit && runGameControl.getTime()){
+							hwlib::string<16> msg = "Start received\n";
+							displayTask.writeDisplayPool(msg);
+							displayTask.setDisplayFlag();
+							hwlib::wait_ms(100);
+							regSubState = regGameParamStates::IDLE;
+							mainState = mainStates::RUN_GAME;
+						}
 					}
 					break;
 				}
