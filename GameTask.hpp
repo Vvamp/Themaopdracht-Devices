@@ -108,31 +108,6 @@ public:
 			//by the game leader.
 			case mainStates::REG_GAME_PARAM:{
 				switch (regSubState){
-				case regGameParamStates::WAIT_ON_COMMAND:{
-					hwlib::string<18> msg = "Wait for commands\n";
-					displayTask.writeDisplayPool(msg);
-					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
-					auto event = wait(receiveChannel);
-					if (event == receiveChannel){
-						auto msg = receiveChannel.read();
-						if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
-							hwlib::string<14> msg = "Time recieved\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
-							hwlib::wait_ms(100);
-							runGameControl.setGameTime(commandTime);
-						} else if (msg == startBit && runGameControl.getTime()){
-							hwlib::string<16> msg = "Start received\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
-							hwlib::wait_ms(100);
-							regSubState = regGameParamStates::IDLE;
-							mainState = mainStates::RUN_GAME;
-						}
-					}
-					break;
-				}
 				//In this state the user will start configuring his settings
 				//once he has pressed the A button.
 				//If the settings are set the user will have to wait for
@@ -196,7 +171,32 @@ public:
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
 						player.setWeapon( btnID );
-						regSubState = regGameParamStates::IDLE;
+						regSubState = regGameParamStates::WAIT_ON_COMMAND;
+					}
+					break;
+				}
+				case regGameParamStates::WAIT_ON_COMMAND:{
+					hwlib::string<18> msg = "Wait for commands\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
+					auto event = wait(receiveChannel);
+					if (event == receiveChannel){
+						auto msg = receiveChannel.read();
+						if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
+							hwlib::string<14> msg = "Time recieved\n";
+							displayTask.writeDisplayPool(msg);
+							displayTask.setDisplayFlag();
+							hwlib::wait_ms(100);
+							runGameControl.setGameTime(commandTime);
+						} else if (msg == startBit && runGameControl.getTime()){
+							hwlib::string<16> msg = "Start received\n";
+							displayTask.writeDisplayPool(msg);
+							displayTask.setDisplayFlag();
+							hwlib::wait_ms(100);
+							regSubState = regGameParamStates::IDLE;
+							mainState = mainStates::RUN_GAME;
+						}
 					}
 					break;
 				}
