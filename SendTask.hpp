@@ -32,12 +32,14 @@ public:
     /// constructor
     ///\details
     /// the constructor only needs a hwlib pin out to be able to function.
-    SendTask(hwlib::target::d2_36kHz& p):
-    task(5,"Send task"),
-    comFlag(this,"send command flag"),
-    comPool("command pool"),
-    timer(this,"send timer"),
-    irDiode(p)
+    SendTask(
+		hwlib::target::d2_36kHz& p
+	):
+		task(5,"Send task"),
+		comFlag(this,"send command flag"),
+		comPool("command pool"),
+		timer(this,"send timer"),
+		irDiode(p)
     {};
 
     ///\brief
@@ -72,11 +74,11 @@ public:
                     uint8_t bit = message >> 15;
                     message <<= 1;
                     counter++;
-                    if (counter == 16){
+                    if (counter == 17){
                         state = states::idle;
                         break;
-                    }
-                    else{
+                    } else {
+						irDiode.setLow();
                         if (bit == 0){
                             state = states::send0;
                             break;
@@ -91,18 +93,18 @@ public:
 
                 case states::send0:{
                     irDiode.setHigh();
-                    timer.set(shortWait);
+					hwlib::wait_us(800);
                     irDiode.setLow();
-                    timer.set(longWait);
+					hwlib::wait_us(1600);
                     state = states::setBit;
                     break;
                 }
 
                 case states::send1:{
                     irDiode.setHigh();
-                    timer.set(longWait);
+					hwlib::wait_us(1600);
                     irDiode.setLow();
-                    timer.set(shortWait);
+					hwlib::wait_us(800);
                     state = states::setBit;
                     break;
                 }

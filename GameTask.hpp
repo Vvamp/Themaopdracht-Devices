@@ -39,7 +39,7 @@ private:
 	uint16_t commandTime = 0x00;
 	hwlib::string<16> commandString;
 	size_t second = 1'000'000;
-	size_t startBit = 0b1100'0000'0000'0000;
+	size_t startBit = 0b1000'0000'0000'0000;
 public:
 	GameTask(
 		Player<> playerInput,
@@ -216,7 +216,7 @@ public:
 				//We also gave the leader the option to press the * button
 				//to set the time to one minute for demo purposes.
 				case initGameStates::GET_TIME:{
-				 	hwlib::string<5> msg = "Tijd:";
+				 	hwlib::string<7> msg = "Tijd:";
 					msg += commandString;
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
@@ -265,7 +265,7 @@ public:
 						commandTime |= startBit;
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
-						//hwlib::wait_us(3'000);
+						// hwlib::wait_us(3'000);
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
 					}
