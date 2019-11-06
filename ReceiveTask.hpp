@@ -54,7 +54,25 @@ public:
 			switch(state){
 				case isLow:
 				{
-					interruptTimer.set(25);
+					interruptTimer.set(5);
+
+					auto event = wait(messageTimer + interruptTimer);
+					if(event == messageTimer){
+						recIRMsgControl.recBit(false, true);
+						break;
+					}
+
+					
+					if(irDetector.get() == 1){
+						state = isHigh;
+						eindPause = hwlib::now_us();
+					}
+					break;
+				}
+
+				case isHigh:
+				{
+					interruptTimer.set(5);
 
 					if(beginPause >= 0 && eindPause >= 0){
 						pause = eindPause - beginPause;
@@ -64,8 +82,8 @@ public:
 
 					if(pause >= 0){
 
-						if(pause >= 700 && pause <= 900){bit=1;}else
-						if(pause >= 1500 && pause <= 1700){bit=0;}
+						if(pause >= 700 && pause <= 900){bit=0;}else
+						if(pause >= 1500 && pause <= 1700){bit=1;}
 						pause=-1;
 					}
 
@@ -86,26 +104,10 @@ public:
 						break;
 					}
 
-					if(irDetector.get() == 1){
-						state = isHigh;
-						beginPause = hwlib::now_us();
-					}
-					break;
-				}
-
-				case isHigh:
-				{
-					interruptTimer.set(25);
-
-					auto event = wait(messageTimer + interruptTimer);
-					if(event == messageTimer){
-						recIRMsgControl.recBit(false, true);
-						break;
-					}
-
+				
 					if(irDetector.get() == 0){
 						state = isLow;
-						eindPause = hwlib::now_us();
+						beginPause = hwlib::now_us();
 					}
 					break;
 				}

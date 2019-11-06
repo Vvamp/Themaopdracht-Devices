@@ -19,5 +19,5 @@ SEARCH  :=
 
 # set REATIVE to the next higher directory
 # and defer to the Makefile.due there
-RELATIVE := $(RELATIVE)../../v2cpse1-examples/
+RELATIVE := $(RELATIVE)../v2cpse1-examples/
 include $(RELATIVE)Makefile.due

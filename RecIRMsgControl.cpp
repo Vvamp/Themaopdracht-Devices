@@ -4,7 +4,6 @@ bool RecIRMsgControl::recBit(bool bit, bool resetMessage){
 	// If the resetMessage bit is set, reset the messages and return false
 	if(resetMessage){
 		message = 0;
-		lastMsg = 0;
 		return false;
 	}
 
@@ -25,9 +24,12 @@ bool RecIRMsgControl::recBit(bool bit, bool resetMessage){
 }
 
 bool RecIRMsgControl::checkMessage(uint16_t & _message){
+	hwlib::cout << "> " << hwlib::bin << message << "\n";
 	// Check if the messages are the same, if they aren't: set lastMsg to message and reset message.
 	// Since the messages weren't valid, return false
 	if(!CMP()){
+		hwlib::cout << "+ " << hwlib::bin << message << "\n";
+
 		lastMsg = message;
 		message = 0;
 		return false;
@@ -37,6 +39,8 @@ bool RecIRMsgControl::checkMessage(uint16_t & _message){
 	// if it isn't set the lastMsg to message and reset message.
 	// Since the messages weren't valid, return false
 	if(!XOR()){
+		hwlib::cout << "^ " << hwlib::bin << message << "\n";
+
 		lastMsg = message;
 		message = 0;
 		return false;
@@ -57,16 +61,18 @@ bool RecIRMsgControl::XOR(){
 	// If one of those is incorrect, return false
 	// If they were all correct, return true
 	for(int i = 0; i < 5; i++){
-		uint8_t firstBit = message << (11+i); // clear bits left of the 12+i bit
-				firstBit = message >> 15;
+		uint16_t _firstBit = message << (11+i); // clear bits left of the 12+i bit
+		uint8_t	firstBit = _firstBit >> 15;
 
-		uint8_t bitToCheck1 = message << (1+i); // clear bits left of the 2+i bit
-				bitToCheck1 = bitToCheck1 >> 15; // shift it right
+		uint16_t _bitToCheck1 = message << (1+i); // clear bits left of the 2+i bit
+		uint8_t bitToCheck1 = _bitToCheck1 >> 15; // shift it right
 
-		uint8_t bitToCheck2 = message << (6+i); // clear bits left of the 7+i bit
-				bitToCheck2 = bitToCheck2 >> 15; // shift it right
+		uint16_t _bitToCheck2 = message << (6+i); // clear bits left of the 7+i bit
+		uint8_t bitToCheck2 = _bitToCheck2 >> 15; // shift it right
 
-		if( !(firstBit ^ (bitToCheck1 & bitToCheck2)) ){
+		auto result = bitToCheck1 ^ bitToCheck2;
+
+		if(firstBit != result){
 			return false;
 		}
 	}
