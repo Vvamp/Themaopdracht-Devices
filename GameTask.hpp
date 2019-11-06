@@ -39,7 +39,7 @@ private:
 	uint16_t commandTime = 0x00;
 	hwlib::string<16> commandString;
 	size_t second = 1'000'000;
-	size_t startBit = 0b1100'0000'0000'0000;
+	size_t startBit = 0b1000'0000'0000'0000;
 public:
 	GameTask(
 		Player<> playerInput,
@@ -113,7 +113,7 @@ public:
 				//If the settings are set the user will have to wait for
 				//the time and start commands from the leader.
 				case regGameParamStates::IDLE:{
-					hwlib::string<20> msg = "A: choose player\n";
+					hwlib::string<17> msg = "A: choose player\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					auto event = wait(buttonChannel + receiveChannel);
@@ -129,7 +129,7 @@ public:
 						if(player.getPlayerID()){
 							auto msg = receiveChannel.read();
 							if (msg !=0x00)	{
-								hwlib::string<20> msg = "time recieved\n";
+								hwlib::string<14> msg = "time recieved\n";
 								displayTask.writeDisplayPool(msg);
 								displayTask.setDisplayFlag();
 								hwlib::wait_ms(100);
@@ -146,7 +146,7 @@ public:
 				//the game leader. Otherwise he will be send to WAIT_ON_B
 				//to start the process of choosing a weapon.
 				case regGameParamStates::PLAYER_INPUT:{
-					hwlib::string<20> msg = "number 1/9\n";
+					hwlib::string<11> msg = "number 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					wait(buttonChannel);
@@ -163,7 +163,7 @@ public:
 				//In this state the user has to press the B button to
 				//move to the WEAPON_INPUT state.
 				case regGameParamStates::WAIT_ON_B:{
-					hwlib::string<20> msg = "B: choose weapon\n";
+					hwlib::string<17> msg = "B: choose weapon\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					wait(buttonChannel);
@@ -176,7 +176,7 @@ public:
 				//In this state the user has to choose a weapon and will be moved
 				//to the IDLE state to wait for the game leader's commands.
 				case regGameParamStates::WEAPON_INPUT:{
-					hwlib::string<20> msg = "weapon 1/9\n";
+					hwlib::string<11> msg = "weapon 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					wait(buttonChannel);
@@ -216,7 +216,7 @@ public:
 				//We also gave the leader the option to press the * button
 				//to set the time to one minute for demo purposes.
 				case initGameStates::GET_TIME:{
-				 	hwlib::string<32> msg = "Tijd:";
+				 	hwlib::string<7> msg = "Tijd:";
 					msg += commandString;
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
@@ -250,14 +250,14 @@ public:
 				//In this state the user will send the time to the players.
 				//When the user presses the * button he will move to SEND_START
 				case initGameStates::SEND_TIME:{
-					hwlib::string<64> msg = "#: send time\n*: send start";
+					hwlib::string<27> msg = "#: send time\n*: send start";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == Buttons::btnStar){
 						initSubState = initGameStates::SEND_START;
-						hwlib::string<64> msg = "send start...";
+						hwlib::string<13> msg = "send start...";
 						displayTask.writeDisplayPool(msg);
 						displayTask.setDisplayFlag();
 						hwlib::wait_ms(100);
@@ -265,13 +265,9 @@ public:
 						commandTime |= startBit;
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
-						//hwlib::wait_ms(1);
+						// hwlib::wait_us(3'000);
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
-						hwlib::string<64> msg = "send time...";
-						displayTask.writeDisplayPool(msg);
-						displayTask.setDisplayFlag();
-						hwlib::wait_ms(100);
 					}
 					break;
 				}
@@ -304,7 +300,7 @@ public:
 				//There will be a sound during the countdown and after
 				//3 seconds the user will move to the PLAYING state.
 				case runGameStates::STARTUP:{
-					hwlib::string<20> msg = "starting...\n";
+					hwlib::string<13> msg = "starting...\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					buzzerTask.makeSound(BuzzerTask::sounds::startEndSound);

@@ -7,7 +7,7 @@
 ///IrDiode class for setting the IR sender pin high or low.
 class IrDiode{
 private:
-    hwlib::pin_out& diodePin;//< member variable that holds the sender pin
+    hwlib::target::d2_36kHz& diodePin;//< member variable that holds the sender pin
 public:
     ///\brief
     /// constructor
@@ -15,8 +15,8 @@ public:
     ///this constructor only needs a reference to a hwlib::pin_out in his parameters to compile. The constructor also sets the pin low during start up
     IrDiode(hwlib::target::d2_36kHz& diodePin):
     diodePin(diodePin){
-        diodePin.write(0);
-        diodePin.flush();
+        // diodePin.write(0);
+        // diodePin.flush();
     };
 
     ///\brief

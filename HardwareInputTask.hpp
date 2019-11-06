@@ -30,7 +30,7 @@ public:
 	void main() override{
 		for(;;){
 			// Start the timer at 100ms, or 100.000us
-			period.set(100'000);
+			period.set(150'000);
 			
 			// Call the update function
 			keyboard.update();
