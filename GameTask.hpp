@@ -281,9 +281,6 @@ public:
 						commandTime |= startBit;
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
-						hwlib::wait_us(3'000);
-						sendTask.writeComPool(commandTime);
-						sendTask.setComFlag();
 					}
 					break;
 				}

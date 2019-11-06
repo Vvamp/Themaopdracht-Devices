@@ -56,6 +56,7 @@ public:
     void checkSum(uint16_t & _message);
 
     void main() override{
+		static uint16_t tmpMsg = 0x00;
         while(1){
             switch (state){
                 case states::idle:{
@@ -64,6 +65,7 @@ public:
                         message = comPool.read();
                         checkSum(message);
                         counter = 0;
+						tmpMsg = message;
                         state = states::setBit;
                         break;
                     }
@@ -74,9 +76,12 @@ public:
                     uint8_t bit = message >> 15;
                     message <<= 1;
                     counter++;
-                    if (counter == 17){
+                    if (counter == 34){
                         state = states::idle;
                         break;
+					} else if (counter == 17){
+						hwlib::wait_us(3'000);
+						message = tmpMsg;
                     } else {
 						irDiode.setLow();
                         if (bit == 0){
