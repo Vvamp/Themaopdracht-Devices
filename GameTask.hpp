@@ -85,7 +85,7 @@ public:
 	void setGameOverFlag();
 
 	enum class mainStates {REG_GAME_PARAM, INIT_GAME, RUN_GAME};
-	enum class regGameParamStates {IDLE,PLAYER_INPUT,WAIT_ON_B, WEAPON_INPUT};
+	enum class regGameParamStates {IDLE,PLAYER_INPUT,WAIT_ON_B, WEAPON_INPUT, WAIT_ON_COMMAND};
 	enum class initGameStates {IDLE,GET_TIME,SEND_TIME,SEND_START};
 	enum class runGameStates {STARTUP, PLAYING, SHOOT, GET_SHOT, GAME_OVER, EXPORTING};
 
@@ -108,6 +108,31 @@ public:
 			//by the game leader.
 			case mainStates::REG_GAME_PARAM:{
 				switch (regSubState){
+				case regGameParamStates::WAIT_ON_COMMAND:{
+					hwlib::string<18> msg = "Wait for commands\n";
+					displayTask.writeDisplayPool(msg);
+					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
+					auto event = wait(receiveChannel);
+					if (event == receiveChannel){
+						auto msg = receiveChannel.read();
+						if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
+							hwlib::string<14> msg = "Time recieved\n";
+							displayTask.writeDisplayPool(msg);
+							displayTask.setDisplayFlag();
+							hwlib::wait_ms(100);
+							runGameControl.setGameTime(commandTime);
+						} else if (msg == startBit && runGameControl.getTime()){
+							hwlib::string<16> msg = "Start received\n";
+							displayTask.writeDisplayPool(msg);
+							displayTask.setDisplayFlag();
+							hwlib::wait_ms(100);
+							regSubState = regGameParamStates::IDLE;
+							mainState = mainStates::RUN_GAME;
+						}
+					}
+					break;
+				}
 				//In this state the user will start configuring his settings
 				//once he has pressed the A button.
 				//If the settings are set the user will have to wait for
@@ -116,32 +141,13 @@ public:
 					hwlib::string<17> msg = "A: choose player\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					auto event = wait(buttonChannel + receiveChannel);
-					if (event == buttonChannel && !runGameControl.getTime()){
-						int btnID = buttonChannel.read();
-			
-						if(btnID == Buttons::btnA){
-							regSubState = regGameParamStates::PLAYER_INPUT;
-						}else{
-							break;
-						}
-					} else if (event == receiveChannel){
-						if(player.getPlayerID()){
-							auto msg = receiveChannel.read();
-							if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
-								hwlib::string<14> msg = "time recieved\n";
-								displayTask.writeDisplayPool(msg);
-								displayTask.setDisplayFlag();
-								hwlib::wait_ms(100);
-								runGameControl.setGameTime(commandTime);
-							} else if (msg == startBit && runGameControl.getTime()){
-								mainState = mainStates::RUN_GAME;
-							}
-						}
-						break;
-					}else{
-						break;	
+					hwlib::wait_ms(100);
+					wait(buttonChannel);
+					int btnID = buttonChannel.read();
+					if(btnID == Buttons::btnA){
+						regSubState = regGameParamStates::PLAYER_INPUT;
 					}
+					break;
 				}
 				//In this state the user chooses his player ID.
 				//If the player decides to choose player ID 0 he will me
@@ -153,6 +159,7 @@ public:
 					hwlib::string<11> msg = "number 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					int btnID = buttonChannel.read();
 					if(btnID == Buttons::btn0){
@@ -170,6 +177,7 @@ public:
 					hwlib::string<17> msg = "B: choose weapon\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if( btnID == Buttons::btnB){
@@ -183,6 +191,7 @@ public:
 					hwlib::string<11> msg = "weapon 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
@@ -208,6 +217,7 @@ public:
 					hwlib::string<20> msg = "Press C to set\ntime";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == Buttons::btnC){
@@ -224,6 +234,7 @@ public:
 					msg += commandString;
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					static size_t itterator = 1;
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
@@ -257,6 +268,7 @@ public:
 					hwlib::string<27> msg = "#: send time\n*: send start";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
+					hwlib::wait_ms(100);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == Buttons::btnStar){
@@ -269,7 +281,7 @@ public:
 						commandTime |= startBit;
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
-						// hwlib::wait_us(3'000);
+						hwlib::wait_us(3'000);
 						sendTask.writeComPool(commandTime);
 						sendTask.setComFlag();
 					}
@@ -328,6 +340,7 @@ public:
 						hwlib::string<200> msg;
 						runGameControl.toDisplay(msg);
 						displayTask.writeDisplayPool(msg);
+						hwlib::wait_ms(100);
 					} else if (event == buttonChannel){
 						auto btnID = buttonChannel.read();
 						if(btnID == Buttons::btnStar){
@@ -363,6 +376,7 @@ public:
 						hwlib::string<200> msg;
 						runGameControl.toDisplay(msg);
 						displayTask.writeDisplayPool(msg);
+						hwlib::wait_ms(100);
 					} else if (event == rateOfFireTimer){
 						runSubState = runGameStates::PLAYING;
 					} else if (event == gameOverFlag){
@@ -387,6 +401,8 @@ public:
 						hwlib::string<200> msg;
 						runGameControl.toDisplay(msg);
 						displayTask.writeDisplayPool(msg);
+						displayTask.setDisplayFlag();
+						hwlib::wait_ms(100);
 					} else if (event == invincibilityTimer){
 						if(!player.getScore()){
 							setGameOverFlag();
