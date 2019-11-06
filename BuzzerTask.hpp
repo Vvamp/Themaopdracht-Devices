@@ -1,6 +1,6 @@
 #ifndef BUZZERTASK_HPP
 #define BUZZERTASK_HPP
-// #include "../rtos/rtos.hpp"
+
 #include "rtos.hpp"
 #include "Buzzer.hpp"
 
@@ -10,20 +10,30 @@
 ///\details
 /// This task uses Rtos to switch tasks. It can use its own Buzzer to make different sounds calling the makeSound member function.
 class BuzzerTask : public rtos::task<>{
+private:
+	Buzzer buzzer; 								//< the boundary buzzer object	
+    sounds sound = sounds::START_END_SOUND;
+    rtos::flag buzzerFlag;						//< flag that is to be set when someone writes in the pool
+    rtos::pool<sounds> buzzerPool; 				//< pool that holds which sound has to be played
+    enum class states{IDLE, MAKE_SOUND}; 		//< enumerator that holds the sounds, one of these sounds need to be given as a paraamater to the makeSound function
+    states state = states::IDLE; 				//< this is the state on which the task switches
 public:
+
     ///\brief
     /// public class with sounds. When the memberfunction makeSound is called, you need to give an entry from this enumerator as its paramater.
-    enum class sounds{startEndSound,hitSound};
+    enum class sounds{START_END_SOUND,HIT_SOUND};
 
     ///\brief
     /// constructor for the BuzzerTask
     ///\details
     /// this constructor needs a reference to a hwlib pin_out
-    BuzzerTask(hwlib::target::pin_out& buzzerPin) :
-    task(200,"buzzer task"),
-    buzzerFlag(this,"buzzer flag"),
-    buzzerPool("buzzer pool"),
-    buzzer(buzzerPin)
+    BuzzerTask(
+		hwlib::target::pin_out& buzzerPin
+	):
+		task(200,"buzzer task"),
+		buzzerFlag(this,"buzzer flag"),
+		buzzerPool("buzzer pool"),
+		buzzer(buzzerPin)
     {};
 
     ///\brief
@@ -32,83 +42,73 @@ public:
     void makeSound(sounds sound);
 
     void main() override{
-        while(1){
+        while(true){
             switch(state){
-                case states::idle:{
+                case states::IDLE:{
                     auto ev = wait(buzzerFlag);
                     if (ev == buzzerFlag){
                         sound = buzzerPool.read();
-                        state = states::makeSound;
+                        state = states::MAKE_SOUND;
                         break;
                     }
                 }
-                case states::makeSound:{
+
+                case states::MAKE_SOUND:{
                     uint16_t counter = 0;
-                    if (sound == sounds::startEndSound)
-                    {
+                    if (sound == sounds::START_END_SOUND){
                         //long first beep
                         while (counter < 2000){
-                        buzzer.soundOn();
-                        hwlib::wait_ms(1);
-                        buzzer.soundOff();
-                        hwlib::wait_ms(1);
-                        counter++;
+							buzzer.soundOn();
+							hwlib::wait_ms(1);
+							buzzer.soundOff();
+							hwlib::wait_ms(1);
+							counter++;
                         }
                         counter = 0;
                         hwlib::wait_ms(500);
                         //short beep 1
                         while (counter < 2000){
-                        buzzer.soundOn();
-                        hwlib::wait_us(500000);
-                        buzzer.soundOff();
-                        hwlib::wait_us(500000);
-                        counter++;
+							buzzer.soundOn();
+							hwlib::wait_us(500000);
+							buzzer.soundOff();
+							hwlib::wait_us(500000);
+							counter++;
                         }
                         counter = 0;
                         hwlib::wait_ms(500);
                         //short beep 2
                         while (counter < 2000){
-                        buzzer.soundOn();
-                        hwlib::wait_us(500000);
-                        buzzer.soundOff();
-                        hwlib::wait_us(500000);
-                        counter++;
+							buzzer.soundOn();
+							hwlib::wait_us(500000);
+							buzzer.soundOff();
+							hwlib::wait_us(500000);
+							counter++;
                         }
                         counter = 0;
                         hwlib::wait_ms(500);
                         //short beep 3
                         while (counter < 2000){
-                        buzzer.soundOn();
-                        hwlib::wait_us(300000);
-                        buzzer.soundOff();
-                        hwlib::wait_us(300000);
-                        counter++;
+							buzzer.soundOn();
+							hwlib::wait_us(300000);
+							buzzer.soundOff();
+							hwlib::wait_us(300000);
+							counter++;
                         }
-                       
-                    }
-                    else if (sound == sounds::hitSound)
-                    {
+                    } else if (sound == sounds::HIT_SOUND){
                         uint16_t counter = 0;
-                        while (counter < 500)
-                        buzzer.soundOn();
-                        hwlib::wait_ms(2);
-                        buzzer.soundOff();
-                        hwlib::wait_ms(2);
-                        counter++;
+                        while (counter < 500){
+							buzzer.soundOn();
+							hwlib::wait_ms(2);
+							buzzer.soundOff();
+							hwlib::wait_ms(2);
+							counter++;
+						}							
                     }
-                    state = states::idle;
+                    state = states::IDLE;
                     break;
                 }
             }
         }
     }
-
-private:
-    sounds sound = sounds::startEndSound;
-    rtos::flag buzzerFlag; //< flag that is to be set when someone writes in the pool
-    rtos::pool<sounds> buzzerPool; //< pool that holds which sound has to be played
-    Buzzer buzzer; //< the boundary buzzer object
-    enum class states{idle, makeSound}; //< enumerator that holds the sounds, one of these sounds need to be given as a paraamater to the makeSound function
-    states state = states::idle; //< this is the state on which the task switches
 };
 #endif //BUZZERTASK_HPP

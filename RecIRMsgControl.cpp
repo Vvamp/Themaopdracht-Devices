@@ -7,8 +7,6 @@ bool RecIRMsgControl::recBit(bool bit, bool resetMessage){
 		return false;
 	}
 
-
-
 	// Shift a new bit into message and if the bit is supposed to be 1, set the bit to 1
 	message <<= 1;
 	if(bit){
@@ -46,7 +44,7 @@ bool RecIRMsgControl::checkMessage(uint16_t & _message){
 	_message = message;
 	lastMsg = message;
 	message = 0;
-	hwlib::cout << "+ >" << hwlib::bin << _message << "\n";
+	// hwlib::cout << "+ >" << hwlib::bin << _message << "\n";
 	return true;
 }
 
@@ -56,14 +54,14 @@ bool RecIRMsgControl::XOR(){
 	// If one of those is incorrect, return false
 	// If they were all correct, return true
 	for(int i = 0; i < 5; i++){
-		uint16_t _firstBit = message << (11+i); // clear bits left of the 12+i bit
+		uint16_t _firstBit = message << (11+i); 	// clear bits left of the 12+i bit
 		uint8_t	firstBit = _firstBit >> 15;
 
-		uint16_t _bitToCheck1 = message << (1+i); // clear bits left of the 2+i bit
-		uint8_t bitToCheck1 = _bitToCheck1 >> 15; // shift it right
+		uint16_t _bitToCheck1 = message << (1+i); 	// clear bits left of the 2+i bit
+		uint8_t bitToCheck1 = _bitToCheck1 >> 15;	// shift it right
 
-		uint16_t _bitToCheck2 = message << (6+i); // clear bits left of the 7+i bit
-		uint8_t bitToCheck2 = _bitToCheck2 >> 15; // shift it right
+		uint16_t _bitToCheck2 = message << (6+i); 	// clear bits left of the 7+i bit
+		uint8_t bitToCheck2 = _bitToCheck2 >> 15; 	// shift it right
 
 		auto result = bitToCheck1 ^ bitToCheck2;
 
