@@ -38,10 +38,10 @@ public:
 		hwlib::target::d2_36kHz& p
 	):
 		task(5,"Send task"),
+		irDiode(p),
 		comFlag(this,"send command flag"),
 		comPool("command pool"),
-		timer(this,"send timer"),
-		irDiode(p)
+		timer(this,"send timer")
     {};
 
     ///\brief

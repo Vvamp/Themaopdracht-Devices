@@ -10,18 +10,21 @@
 ///\details
 /// This task uses Rtos to switch tasks. It can use its own Buzzer to make different sounds calling the makeSound member function.
 class BuzzerTask : public rtos::task<>{
+public:
+    ///\brief
+    /// public class with sounds. When the memberfunction makeSound is called, you need to give an entry from this enumerator as its paramater.
+    enum class sounds{START_END_SOUND,HIT_SOUND};
+
+
+
 private:
 	Buzzer buzzer; 								//< the boundary buzzer object	
-    sounds sound = sounds::START_END_SOUND;
     rtos::flag buzzerFlag;						//< flag that is to be set when someone writes in the pool
+    sounds sound = sounds::START_END_SOUND;
     rtos::pool<sounds> buzzerPool; 				//< pool that holds which sound has to be played
     enum class states{IDLE, MAKE_SOUND}; 		//< enumerator that holds the sounds, one of these sounds need to be given as a paraamater to the makeSound function
     states state = states::IDLE; 				//< this is the state on which the task switches
 public:
-
-    ///\brief
-    /// public class with sounds. When the memberfunction makeSound is called, you need to give an entry from this enumerator as its paramater.
-    enum class sounds{START_END_SOUND,HIT_SOUND};
 
     ///\brief
     /// constructor for the BuzzerTask
@@ -31,9 +34,9 @@ public:
 		hwlib::target::pin_out& buzzerPin
 	):
 		task(200,"buzzer task"),
+		buzzer(buzzerPin),
 		buzzerFlag(this,"buzzer flag"),
-		buzzerPool("buzzer pool"),
-		buzzer(buzzerPin)
+		buzzerPool("buzzer pool")
     {};
 
     ///\brief

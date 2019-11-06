@@ -28,9 +28,9 @@ public:
 		hwlib::target::pin_oc & scl
 	):
 		task(100,"Display task"),
+		display(sda,scl),
 		displayFlag(this,"display flag"),
-		displayPool("display pool"),
-		display(sda,scl)
+		displayPool("display pool")
     {
 		hwlib::string<2> x = "\f";
 		// x.clear() << "\f";
