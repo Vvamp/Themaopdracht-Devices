@@ -60,9 +60,9 @@ template<int N1 = 5000, int N2 = 6>
 class Player {
 private:
 	Weapons<> weapons;
-	size_t playerID = 1;
-	size_t weaponIndex = 1;
-	size_t score = 5000;
+	size_t playerID = -1;
+	size_t weaponIndex = -1;
+	size_t score = N1;
 	int assailants[N1/N2] = {0};
 public:
 	///\brief

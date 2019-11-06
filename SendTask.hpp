@@ -60,16 +60,13 @@ public:
         while(1){
             switch (state){
                 case states::idle:{
-                    auto ev = wait(comFlag);
-                    if (ev == comFlag){
-                        message = comPool.read();
-                        checkSum(message);
-                        counter = 0;
-						tmpMsg = message;
-                        state = states::setBit;
-                        break;
-                    }
-                    break;
+                    wait(comFlag);
+					message = comPool.read();
+					checkSum(message);
+					counter = 0;
+					tmpMsg = message;
+					state = states::setBit;
+					break;
                 }
 
                 case states::setBit:{

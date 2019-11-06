@@ -183,7 +183,7 @@ public:
 					auto event = wait(receiveChannel);
 					if (event == receiveChannel){
 						auto msg = receiveChannel.read();
-						if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
+						if (msg < (startBit | lowestPlayerBit) && runGameControl.getTime() == 0){
 							hwlib::string<14> msg = "Time recieved\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
@@ -200,6 +200,9 @@ public:
 					}
 					break;
 				}
+				}
+				default:
+					break;
 				}
 				break;
 			}
