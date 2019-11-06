@@ -1,10 +1,11 @@
 #ifndef SENDTASK_HPP
 #define SENDTASK_HPP
-// #include "../hwlib/library/hwlib.hpp"
-#include "hwlib.hpp"
-// #include "../rtos/rtos.hpp"
-#include "rtos.hpp"
+
 #include "IrDiode.hpp"
+
+#include "hwlib.hpp"
+#include "rtos.hpp"
+
 ///@file
 ///\brief
 /// Send task class
@@ -13,21 +14,22 @@
 /// the command needs to be 16 bits.
 class SendTask : public rtos::task<>{
 private:
-    rtos::flag comFlag;//< flag that need to be set when something is written in the pool
-    rtos::pool<uint16_t> comPool; //< pool in which commands can be written
+	IrDiode irDiode; 								//< object from the IR diode class.
+
+    rtos::flag comFlag;								//< flag that need to be set when something is written in the pool
+    rtos::pool<uint16_t> comPool; 					//< pool in which commands can be written
     rtos::timer timer;
 
-    IrDiode irDiode; //< object from the IR diode class.
+    uint16_t shortWait = 795; 						//< the wait short wait time between turning on and off the IR sender
+    uint16_t longWait = 1595; 						//< the long wait time between turning on and off the IR sender
+    uint16_t message = 0; 							//< variable in which the message is set when the pool is read
+    uint8_t counter = 0;							//< counter that is used to count
 
-    uint16_t shortWait = 795; //< the wait short wait time between turning on and off the IR sender
-    uint16_t longWait = 1595; //< the long wait time between turning on and off the IR sender
-    uint16_t message = 0; //< variable in which the message is set when the pool is read
-    uint8_t counter = 0; //< counter that is used to count
-
-    enum class states{idle,setBit,send0,send1};//<enumerator that holds the names on which the task switches
-    states state = states::idle;//< member variable on which the task switches
+    enum class states{IDLE,SET_BIT,SEND_0,SEND_1};	//<enumerator that holds the names on which the task switches
+    states state = states::IDLE;					//< member variable on which the task switches
 
 public:
+
     ///\brief
     /// constructor
     ///\details
@@ -45,9 +47,11 @@ public:
     ///\brief
     /// this function sets the command flag
     void setComFlag();
+
     ///\brief
     /// this function sets the command pool
     void writeComPool(uint16_t command);
+
     ///\brief
     /// function to fill in the last 5 bits of the command with the XOR of other bits
     ///\details
@@ -57,9 +61,9 @@ public:
 
     void main() override{
 		static uint16_t tmpMsg = 0x00;
-        while(1){
+        while(true){
             switch (state){
-                case states::idle:{
+                case states::IDLE:{
                     auto ev = wait(comFlag);
                     if (ev == comFlag){
                         wait(comFlag);
@@ -67,19 +71,19 @@ public:
                         checkSum(message);
                         counter = 0;
 						tmpMsg = message;
-                        state = states::setBit;
+                        state = states::SET_BIT;
 						hwlib::wait_us(100);
                         break;
                     }
                     break;
                 }
 
-                case states::setBit:{
+                case states::SET_BIT:{
                     uint8_t bit = message >> 15;
                     message <<= 1;
                     counter++;
                     if (counter == 34){
-                        state = states::idle;
+                        state = states::IDLE;
                         break;
 					} else if (counter == 17){
 						hwlib::wait_us(3'000);
@@ -87,32 +91,32 @@ public:
                     } else {
 						irDiode.setLow();
                         if (bit == 0){
-                            state = states::send0;
+                            state = states::SEND_0;
                             break;
                         }
                         else{
-                            state = states::send1;
+                            state = states::SEND_1;
                             break;
                         }
                     }
                     break;
                 }
 
-                case states::send0:{
+                case states::SEND_0:{
                     irDiode.setHigh();
 					hwlib::wait_us(shortWait);
                     irDiode.setLow();
 					hwlib::wait_us(longWait);
-                    state = states::setBit;
+                    state = states::SET_BIT;
                     break;
                 }
 
-                case states::send1:{
+                case states::SEND_1:{
                     irDiode.setHigh();
 					hwlib::wait_us(longWait);
                     irDiode.setLow();
 					hwlib::wait_us(shortWait);
-                    state = states::setBit;
+                    state = states::SET_BIT;
                     break;
                 }
             }

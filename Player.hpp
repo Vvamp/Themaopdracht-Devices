@@ -1,5 +1,5 @@
-#ifndef Player_hpp
-#define Player_hpp
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
 
 #include "hwlib.hpp"
 
@@ -10,15 +10,6 @@
 ///This Weapon struct contains the name, damage, rateOfFire,
 ///magazine and reloadTime of a weapon.
 struct Weapon {
-	// Weapon(
-	// 	hwlib::string<32> nameInput,
-	// 	size_t damageInput,
-	// 	size_t rateOfFireInput,
-	// 	size_t magazineInput,
-	// 	size_t reloadTime
-	// ):
-	// 	name(nameInput)
-	// {}
 	hwlib::string<32> name;
 	size_t damage;
 	size_t rateOfFire;
@@ -36,6 +27,8 @@ template<int N = 9>
 struct Weapons {
 	Weapon allWeapons[N];
 
+	///\brief
+	///getMin returns the damage value of the weapin with the least amount of damage.
 	size_t getMin(){
 		size_t min = 99;
 		for (auto weapon : allWeapons){
@@ -65,6 +58,7 @@ private:
 	size_t score = N1;
 	int assailants[N1/N2] = {0};
 public:
+
 	///\brief
 	///The constructor of the Player class
 	///\details

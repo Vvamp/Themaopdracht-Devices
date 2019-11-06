@@ -1,5 +1,5 @@
-#ifndef KeyboardListener_hpp
-#define KeyboardListener_hpp
+#ifndef KEYBOARDLISTENER_HPP
+#define KEYBOARDLISTENER_HPP
 
 /// @file
 ///\brief
@@ -8,6 +8,7 @@
 ///Contains an enum of buttons, with their corresponding keycode values that the hwlib::keyboard object sends.
 class KeyboardListener{
 public:
+
 	///\brief
 	///The Buttons enum. '0' is btn0, 'A' is btnA, etc.
 	///\details
@@ -32,7 +33,6 @@ public:
 		btnStar = 14,
 		btnHashtag = 15
 	};
-
 
 	///\brief
 	///This virtual function gets called with the button called 'knopID'/

@@ -1,7 +1,8 @@
 #ifndef BUZZER_HPP
 #define BUZZER_HPP
-// #include "../hwlib/library/hwlib.hpp"
+
 #include "hwlib.hpp"
+
 /// @file
 ///\brief
 /// Buzzer boundary class
@@ -16,13 +17,16 @@ public:
     /// constructor for the buzzer class
     ///\details
     /// this constructor needs a reference to a hwlib::pin_out
-    Buzzer(hwlib::target::pin_out& buzzerPin) :
-    buzzerPin(buzzerPin)
+    Buzzer(
+		hwlib::target::pin_out& buzzerPin
+	):
+    	buzzerPin(buzzerPin)
     {};
 
     ///\brief
     /// set the buzzer pin on
     void soundOn();
+	
     ///\brief
     /// set the buzzer pin low
     void soundOff();

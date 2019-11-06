@@ -1,7 +1,8 @@
-#ifndef IrDetector_hpp
-#define IrDetector_hpp
+#ifndef IRDETECTOR_HPP
+#define IRDETECTOR_HPP
 
 #include "hwlib.hpp"
+
 ///@file
 ///\brief
 ///The IR receiver object
@@ -11,11 +12,13 @@
 class IrDetector{
 private:
 	hwlib::target::pin_in detectorPin;			//<The pin_in for the IR receiver
-
 public:
+
 	///\brief
 	///The IrDetector constructor, it takes no parameters and initializes the necessary members itself.
-	IrDetector(hwlib::target::pin_in irReceiverPin) :
+	IrDetector(
+		hwlib::target::pin_in irReceiverPin
+	):
 		detectorPin(irReceiverPin)
 	{};
 

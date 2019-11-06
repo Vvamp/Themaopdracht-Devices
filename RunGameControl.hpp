@@ -1,11 +1,13 @@
-#ifndef RunGameControl_hpp
-#define RunGameControl_hpp
+#ifndef RUNGAMECONTROL_HPP
+#define RUNGAMECONTROL_HPP
 
-#include "hwlib.hpp"
 #include "Player.hpp"
 #include "SendTask.hpp"
-// #include "KeyboardListener.hpp"
 
+#include "hwlib.hpp"
+
+///\brief
+///RungameControl tracks information for the player for the game.
 class RunGameControl {
 private:
 	Player<> & player;
@@ -20,9 +22,20 @@ public:
 		sendTask(sendTaskInput)
 	{}
 
+	///\brief
+	///setGameTime sets the gameTime.
 	void setGameTime(size_t time);
-	void toDisplay(hwlib::string<200> & msg);
+
+	///\brief
+	///toDisplay changes the parameter to contain Time, Player ID and Score.
+	void toDisplay(hwlib::string<128> & msg);
+
+	///\brief
+	///reduceTime reduces the gameTime varaible by 1 and return false when it has reached 0.
 	bool reduceTime();
+
+	///\brief
+	///getTime returns the gameTime parameter.
 	size_t getTime();
 	hwlib::string<4> numberToString(size_t n);
 };
