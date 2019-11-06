@@ -1,10 +1,10 @@
-#ifndef HardwareInputTask_hpp
-#define HardwareInputTask_hpp
+#ifndef HARDWAREINPUTTASK_HPP
+#define HARDWAREINPUTTASK_HPP
+
+#include "Keyboard.hpp"
 
 #include "hwlib.hpp"
 #include "rtos.hpp"
-
-#include "Keyboard.hpp"
 
 /// @file
 ///\brief
@@ -28,7 +28,7 @@ public:
 	///\brief
 	///The task main, calls the keyboard update function every 100ms.
 	void main() override{
-		for(;;){
+		while(true){
 			// Start the timer at 100ms, or 100.000us
 			period.set(150'000);
 			
@@ -40,6 +40,5 @@ public:
 		}
 	}
 };
-
 
 #endif // HardwareInputTask_hpp

@@ -9,10 +9,11 @@
 #include "rtos.hpp"
 
 int main(){
-
 	hwlib::wait_ms(500);
 
 	const unsigned int amountOfListeners = 1;
+
+	//Initializing all the weapons.
 
 	Weapon subGroot = 			Weapon({"Sub Groot", 6, 200'000, 40, 6'000'000});
 	Weapon subKlein = 			Weapon({"Sub Klein", 7, 250'000, 20, 4'000'000});
@@ -24,6 +25,8 @@ int main(){
 	Weapon grenadeLauncher = 	Weapon({"Grenade Launcher",20, 4'000'000, 5, 8'000'000});
 	Weapon rpg = 				Weapon({"RPG", 5000, 8'000'000, 1, 8'000'000});
 	Weapons allWeapons({subGroot,subKlein,volAuto,semi,pistol,lmg,sniper,grenadeLauncher,rpg});
+
+	//Initializing all the pins.
 
 	auto buzzerPin = hwlib::target::pin_out(hwlib::target::pins::d10);
 
@@ -46,7 +49,8 @@ int main(){
 	auto out_port = hwlib::port_oc_from(out0, out1, out2, out3);
 	auto in_port = hwlib::port_in_from(in0, in1, in2, in3);
 
-	// KeyboardListener henk = KeyboardListener();
+	//Initializing all the classes.
+
 	BuzzerTask buzzerTask = BuzzerTask(buzzerPin);
 	DisplayTask displayTask =DisplayTask(sda,scl);
 	SendTask sendTask = SendTask(iRDPin);
@@ -62,6 +66,8 @@ int main(){
 	);
 
 	ReceiveTask receiveTask = ReceiveTask(iRRPin,gameTask);
+
+	//Outputing all the info of the classes that inherit from rtos::task.
 
 	hwlib::cout << sendTask;
 	hwlib::cout << receiveTask;

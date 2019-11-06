@@ -1,7 +1,8 @@
-#ifndef RecIRMsgControl_hpp
-#define RecIRMsgControl_hpp
+#ifndef RECIRMSGCONTROL_HPP
+#define RECIRMSGCONTROL_HPP
 
 #include "hwlib.hpp"
+
 ///@file
 ///\brief
 ///The control object for the IR receiver
@@ -22,9 +23,6 @@ private:
 
 
 public:
-	// ///\brief
-	// ///Default constructor for the RecIRMsgcontrol class. It takes no parameters.
-	// RecIRMsgControl():{};
 
 	///\brief
 	///Receive a bit and add it to the IR message that's currently being composed
@@ -38,5 +36,4 @@ public:
 	bool checkMessage(uint16_t & _message);
 
 };
-
 #endif // RecIRMsgControl_hpp

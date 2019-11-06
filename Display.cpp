@@ -5,5 +5,4 @@ void Display::showMessage(const hwlib::string_base& message){
     terminal.cursor_set(hwlib::xy(0,0));
     terminal << message;
     terminal.flush();
-    //oled.flush();
 }

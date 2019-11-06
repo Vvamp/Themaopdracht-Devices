@@ -1,12 +1,12 @@
-#ifndef ReceiveTask_hpp
-#define ReceiveTask_hpp
-
-#include "hwlib.hpp"
-#include "rtos.hpp"
+#ifndef RECEIVETASK_HPP
+#define RECEIVETASK_HPP
 
 #include "RecIRMsgControl.hpp"
 #include "IrDetector.hpp"
 #include "GameTask.hpp"
+
+#include "hwlib.hpp"
+#include "rtos.hpp"
 
 ///@file
 ///\brief
@@ -15,15 +15,16 @@
 ///This rtos::task checks the incoming IR signals and translates it to IR messages.
 class ReceiveTask : public rtos::task<>{
 private:
-	GameTask & gameTask;					//<The GameTask 'uber' object, to write the received message to
-	RecIRMsgControl recIRMsgControl;	//<The IR Receiver control object, to check and compose the messages
-	IrDetector irDetector;				//<The IR detector boundary object
-	rtos::timer messageTimer;				//<The timer object that lets the system know that it's taken too long for a new bit and the next bit received should be for a new message
-	rtos::timer interruptTimer;			//<The timer that interrupts the wait for messageTimer
-	uint16_t message;					//<The correct, composed message to be sent to gameTask
-	enum states{isLow, isHigh};		//<The 2 states this task can be in, used to calculate pauses which get translated to bits
-	states state = isLow;				//<System starts at the isLow state
+	GameTask & gameTask;			//<The GameTask 'uber' object, to write the received message to
+	RecIRMsgControl recIRMsgControl;//<The IR Receiver control object, to check and compose the messages
+	IrDetector irDetector;			//<The IR detector boundary object
+	rtos::timer messageTimer;		//<The timer object that lets the system know that it's taken too long for a new bit and the next bit received should be for a new message
+	rtos::timer interruptTimer;		//<The timer that interrupts the wait for messageTimer
+	uint16_t message;				//<The correct, composed message to be sent to gameTask
+	enum states{IS_LOW, IS_HIGH};	//<The 2 states this task can be in, used to calculate pauses which get translated to bits
+	states state = IS_LOW;			//<System starts at the isLow state
 public:
+
 	///\brief
 	///The ReceiveTask constructor takes no parameters and initializes all of its objects itself.
 	ReceiveTask(
@@ -50,10 +51,8 @@ public:
 		int pause = -1;
 		int bit = -1;
 		for(;;){
-			// hwlib::cout << "loop receive\n";
 			switch(state){
-				case isLow:
-				{
+				case IS_LOW:{
 					interruptTimer.set(25);
 
 					auto event = wait(messageTimer + interruptTimer);
@@ -62,16 +61,14 @@ public:
 						break;
 					}
 
-					
 					if(irDetector.get() == 1){
-						state = isHigh;
+						state = IS_HIGH;
 						eindPause = hwlib::now_us();
 					}
 					break;
 				}
 
-				case isHigh:
-				{
+				case IS_HIGH:{
 					interruptTimer.set(25);
 
 					if(beginPause >= 0 && eindPause >= 0){
@@ -81,7 +78,6 @@ public:
 					}
 
 					if(pause >= 0){
-
 						if(pause >= 700 && pause <= 900){bit=0;}else
 						if(pause >= 1500 && pause <= 1700){bit=1;}
 						pause=-1;
@@ -104,18 +100,15 @@ public:
 						break;
 					}
 
-				
 					if(irDetector.get() == 0){
-						state = isLow;
+						state = IS_LOW;
 						beginPause = hwlib::now_us();
 					}
 					break;
 				}
-
 			}
 		}
 	}
-
 };
 
 #endif // Receive_Task.hpp
