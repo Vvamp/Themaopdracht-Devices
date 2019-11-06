@@ -50,9 +50,9 @@ hwlib::string<4> RunGameControl::numberToString(const size_t n){
     else if (n < 10){
         caseSwitcher = 3;
     }
-    
+
 	switch (caseSwitcher){
-		case 0:
+		case 0:{
 			//fish out the thousands
 			counter+=1000;
 			auto temp = originalNumber % 1000;
@@ -61,7 +61,8 @@ hwlib::string<4> RunGameControl::numberToString(const size_t n){
 				break;
 			}
 			thousandsNumber = originalNumber - temp;
-		case 1:
+		}
+		case 1:{
 			//fish out the hundreds
 			counter+=100;
 			hundredsNumber = originalNumber - thousandsNumber;
@@ -71,7 +72,8 @@ hwlib::string<4> RunGameControl::numberToString(const size_t n){
 				break;
 			}
 			hundredsNumber -= temp;
-		case 2:
+		}
+		case 2:{
 			//fish out the tens
 			counter+=10;
 			tensNumber = originalNumber - thousandsNumber - hundredsNumber;
@@ -81,12 +83,15 @@ hwlib::string<4> RunGameControl::numberToString(const size_t n){
 				break;
 			}
 			tensNumber -= temp;
-		case 3:
+		}
+		case 3:{
 			//fish out the lower number
 			counter+=1;
 			lowerNumber = originalNumber - thousandsNumber - hundredsNumber - tensNumber;
 			break;
+		}
 	}
+
 	switch (caseSwitcher){
 		case 0:
 			thousandsNumber /= 1000;
@@ -104,20 +109,19 @@ hwlib::string<4> RunGameControl::numberToString(const size_t n){
 			hundredsNumber += 48;
 			tensNumber += 48;
 			lowerNumber += 48;
-			returnString << (char)hundredsNumber << (char)tensNumber << (char)lowerNumber;
+			returnString << '0' << (char)hundredsNumber << (char)tensNumber << (char)lowerNumber;
 			break;
 		case 2:
 			tensNumber /= 10;
 			hundredsNumber += 48;
 			tensNumber += 48;
 			lowerNumber += 48;
-			returnString << (char)tensNumber << (char)lowerNumber;
+			returnString << '0' << '0' << (char)tensNumber << (char)lowerNumber;
 			break;
 		case 3:
 			lowerNumber += 48;
-			returnString << (char)lowerNumber;
+			returnString << '0' << '0' << '0' << (char)lowerNumber;
 			break;
 	}
 	return returnString;
-
 }
