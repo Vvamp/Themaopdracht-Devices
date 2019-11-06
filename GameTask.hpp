@@ -40,6 +40,7 @@ private:
 	hwlib::string<16> commandString;
 	size_t second = 1'000'000;
 	size_t startBit = 0b1000'0000'0000'0000;
+	size_t lowestPlayerBit = 0b000'0010'0000'0000;
 public:
 	GameTask(
 		Player<> playerInput,
@@ -117,7 +118,7 @@ public:
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
 					auto event = wait(buttonChannel + receiveChannel);
-					if (event == buttonChannel){
+					if (event == buttonChannel && !runGameControl.getTime()){
 						int btnID = buttonChannel.read();
 			
 						if(btnID == Buttons::btnA){
@@ -128,13 +129,13 @@ public:
 					} else if (event == receiveChannel){
 						if(player.getPlayerID()){
 							auto msg = receiveChannel.read();
-							if (msg !=0x00)	{
+							if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
 								hwlib::string<14> msg = "time recieved\n";
 								displayTask.writeDisplayPool(msg);
 								displayTask.setDisplayFlag();
 								hwlib::wait_ms(100);
 								runGameControl.setGameTime(commandTime);
-							} else if (msg == 0x00 && runGameControl.getTime()){
+							} else if (msg == startBit && runGameControl.getTime()){
 								mainState = mainStates::RUN_GAME;
 							}
 						}
