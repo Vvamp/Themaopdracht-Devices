@@ -54,7 +54,7 @@ public:
 			switch(state){
 				case isLow:
 				{
-					interruptTimer.set(5);
+					interruptTimer.set(25);
 
 					auto event = wait(messageTimer + interruptTimer);
 					if(event == messageTimer){
@@ -72,7 +72,7 @@ public:
 
 				case isHigh:
 				{
-					interruptTimer.set(5);
+					interruptTimer.set(25);
 
 					if(beginPause >= 0 && eindPause >= 0){
 						pause = eindPause - beginPause;

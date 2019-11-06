@@ -24,12 +24,9 @@ bool RecIRMsgControl::recBit(bool bit, bool resetMessage){
 }
 
 bool RecIRMsgControl::checkMessage(uint16_t & _message){
-	hwlib::cout << "> " << hwlib::bin << message << "\n";
 	// Check if the messages are the same, if they aren't: set lastMsg to message and reset message.
 	// Since the messages weren't valid, return false
 	if(!CMP()){
-		hwlib::cout << "+ " << hwlib::bin << message << "\n";
-
 		lastMsg = message;
 		message = 0;
 		return false;
@@ -39,8 +36,6 @@ bool RecIRMsgControl::checkMessage(uint16_t & _message){
 	// if it isn't set the lastMsg to message and reset message.
 	// Since the messages weren't valid, return false
 	if(!XOR()){
-		hwlib::cout << "^ " << hwlib::bin << message << "\n";
-
 		lastMsg = message;
 		message = 0;
 		return false;
@@ -51,7 +46,7 @@ bool RecIRMsgControl::checkMessage(uint16_t & _message){
 	_message = message;
 	lastMsg = message;
 	message = 0;
-	hwlib::cout << "CORRECT MESSAGE!!!! Message: " << hwlib::bin << _message << "\n";
+	hwlib::cout << "+ >" << hwlib::bin << _message << "\n";
 	return true;
 }
 
