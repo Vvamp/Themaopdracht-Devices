@@ -107,7 +107,6 @@ public:
 			//the program will wait for the time and start signal send
 			//by the game leader.
 			case mainStates::REG_GAME_PARAM:{
-
 				switch (regSubState){
 				//In this state the user will start configuring his settings
 				//once he has pressed the A button.
@@ -139,6 +138,9 @@ public:
 								mainState = mainStates::RUN_GAME;
 							}
 						}
+						break;
+					}else{
+						break;	
 					}
 				}
 				//In this state the user chooses his player ID.
@@ -147,6 +149,7 @@ public:
 				//the game leader. Otherwise he will be send to WAIT_ON_B
 				//to start the process of choosing a weapon.
 				case regGameParamStates::PLAYER_INPUT:{
+
 					hwlib::string<11> msg = "number 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
