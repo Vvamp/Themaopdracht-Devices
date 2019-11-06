@@ -188,14 +188,9 @@ public:
 									displayTask.writeDisplayPool(_msg);
 									displayTask.setDisplayFlag();
 									hwlib::wait_ms(10);
-
 									uint16_t clearData = incomingMsg << 7;
 									uint8_t readData = clearData >> 12;
 									size_t resultTimesSixty = readData*60;
-									hwlib::cout << hwlib::bin << "Resultx60: " << resultTimesSixty << "\n";
-									hwlib::cout << hwlib::bin << "ReadData: " << readData << "\n";
-									hwlib::cout << hwlib::bin << "clearData: " << clearData << "\n";
-									hwlib::cout << hwlib::bin << "incomingMsg: " << incomingMsg << "\n"; 
 									runGameControl.setGameTime(resultTimesSixty);
 								} else if (msg == startBit && runGameControl.getTime()){
 									hwlib::string<64> _msg = "Start received\n";

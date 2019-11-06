@@ -6,10 +6,12 @@
 
 /// @file
 /// \brief
-/// A keyboard object
+/// A keyboard class, representing a physical 16-key keypad.
 /// \details
 /// It calls the update() function in its private KeyboardListeners array.
-/// 3 of these keyboardlisteners can be added by the public addKeyboardListener() function.
+/// The class is templated, it takes 1 template argument of the integer.
+/// This argument represents the amount of keyboard listeners in the array.
+/// If no argument is given, it is 1.
 template<unsigned int N = 1 >
 class Keyboard{
 private:
@@ -18,16 +20,14 @@ private:
 	hwlib::keypad<16> keypadIn;				///<The keyboard object made up of 16 characters.
 
 	unsigned int pointer = 0;				///<The current object to be placed in the KeyboardListener array. Max of 3.
-	KeyboardListener * listeners[N];		///<An array of keyboardListeners. All listeners in this array get their update() function called every x ms.
+	KeyboardListener * listeners[N];		///<An array of 'N' keyboardListeners(N being the template argument, default 1). All listeners in this array get their update() function called every x ms.
 
 public:
 	///\brief
 	///The default constructor for the keyboard class.
 	///\details
-	///The constructor initializes a keyboard object with the Arduino Due pins a0-a7.
-	///These are put into their corresponding objects(a0 - a3 become pin_oc's, a4-a7 become pin_ins).
-	///The pin_oc's get put into the out_port and the pin_in's get put into the in_port.
-	///Finally, the matrix made from the out_port and in_port it used to initialize the keypad, along with the keyset '123A456B789C*0#D'
+	///The constructor initializes a keyboard object with a port_oc output port(4 port oc's) and a port_in input port(4 port_in's).
+	///These ports get put into a matrix, after which the keypadIn object gets initialized with 'D#0*C987B654A321'.
 	Keyboard(
 		hwlib::port_oc & out_port,
 		hwlib::port_in & in_port
@@ -111,9 +111,11 @@ public:
 	};
 
 	///\brief
-	///Add a KeyboardListener to the KeyboardListener array. Max of 3.
+	///Add a KeyboardListener to the KeyboardListener array. Max of 'N'. 
 	///\details
 	///When added, the listener gets their buttonPressed function called.
+	///N is the template argument, defaults to 1.
+	///If the array is already full, the listener given to the function gets thrown away.
 	void addKeyboardListener(KeyboardListener * listener){
 	// Return if the pointer points out-of-bounds of the array.
 	if(pointer > N){
