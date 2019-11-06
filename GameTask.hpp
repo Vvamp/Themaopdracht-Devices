@@ -116,7 +116,7 @@ public:
 					hwlib::string<17> msg = "A: choose player\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					wait(buttonChannel);
 					int btnID = buttonChannel.read();
 					if(btnID == Buttons::btnA){
@@ -130,11 +130,10 @@ public:
 				//the game leader. Otherwise he will be send to WAIT_ON_B
 				//to start the process of choosing a weapon.
 				case regGameParamStates::PLAYER_INPUT:{
-
 					hwlib::string<11> msg = "number 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					wait(buttonChannel);
 					int btnID = buttonChannel.read();
 					if(btnID == Buttons::btn0){
@@ -152,7 +151,7 @@ public:
 					hwlib::string<17> msg = "B: choose weapon\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if( btnID == Buttons::btnB){
@@ -166,7 +165,7 @@ public:
 					hwlib::string<11> msg = "weapon 1/9\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID <= 9){
@@ -179,30 +178,27 @@ public:
 					hwlib::string<18> msg = "Wait for commands\n";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					auto event = wait(receiveChannel);
 					if (event == receiveChannel){
 						auto msg = receiveChannel.read();
-						if (msg < (startBit | lowestPlayerBit) && runGameControl.getTime() == 0){
+						if (msg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
 							hwlib::string<14> msg = "Time recieved\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
-							hwlib::wait_ms(100);
+							hwlib::wait_ms(10);
 							runGameControl.setGameTime(commandTime);
 						} else if (msg == startBit && runGameControl.getTime()){
 							hwlib::string<16> msg = "Start received\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
-							hwlib::wait_ms(100);
+							hwlib::wait_ms(10);
 							regSubState = regGameParamStates::IDLE;
 							mainState = mainStates::RUN_GAME;
 						}
 					}
 					break;
 				}
-				}
-				default:
-					break;
 				}
 				break;
 			}
@@ -220,7 +216,7 @@ public:
 					hwlib::string<20> msg = "Press C to set\ntime";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == Buttons::btnC){
@@ -237,7 +233,7 @@ public:
 					msg += commandString;
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					static size_t itterator = 1;
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
@@ -271,7 +267,7 @@ public:
 					hwlib::string<27> msg = "#: send time\n*: send start";
 					displayTask.writeDisplayPool(msg);
 					displayTask.setDisplayFlag();
-					hwlib::wait_ms(100);
+					hwlib::wait_ms(10);
 					wait(buttonChannel);
 					auto btnID = buttonChannel.read();
 					if(btnID == Buttons::btnStar){
@@ -279,7 +275,7 @@ public:
 						hwlib::string<13> msg = "send start...";
 						displayTask.writeDisplayPool(msg);
 						displayTask.setDisplayFlag();
-						hwlib::wait_ms(100);
+						hwlib::wait_ms(10);
 					} else if(btnID == Buttons::btnHashtag){
 						commandTime |= startBit;
 						sendTask.writeComPool(commandTime);
@@ -340,7 +336,7 @@ public:
 						hwlib::string<200> msg;
 						runGameControl.toDisplay(msg);
 						displayTask.writeDisplayPool(msg);
-						hwlib::wait_ms(100);
+						hwlib::wait_ms(10);
 					} else if (event == buttonChannel){
 						auto btnID = buttonChannel.read();
 						if(btnID == Buttons::btnStar){
@@ -376,7 +372,7 @@ public:
 						hwlib::string<200> msg;
 						runGameControl.toDisplay(msg);
 						displayTask.writeDisplayPool(msg);
-						hwlib::wait_ms(100);
+						hwlib::wait_ms(10);
 					} else if (event == rateOfFireTimer){
 						runSubState = runGameStates::PLAYING;
 					} else if (event == gameOverFlag){
@@ -402,7 +398,7 @@ public:
 						runGameControl.toDisplay(msg);
 						displayTask.writeDisplayPool(msg);
 						displayTask.setDisplayFlag();
-						hwlib::wait_ms(100);
+						hwlib::wait_ms(10);
 					} else if (event == invincibilityTimer){
 						if(!player.getScore()){
 							setGameOverFlag();
@@ -437,8 +433,8 @@ public:
 				}
 				break;
 			}
-		}
+			}
+		};
 	};
-};
 };
 #endif

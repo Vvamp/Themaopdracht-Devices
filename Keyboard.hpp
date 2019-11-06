@@ -17,7 +17,7 @@ private:
 
 	hwlib::keypad<16> keypadIn;				///<The keyboard object made up of 16 characters.
 
-	unsigned int pointer = 0;					///<The current object to be placed in the KeyboardListener array. Max of 3.
+	unsigned int pointer = 0;				///<The current object to be placed in the KeyboardListener array. Max of 3.
 	KeyboardListener * listeners[N];		///<An array of keyboardListeners. All listeners in this array get their update() function called every x ms.
 
 public:
@@ -107,7 +107,7 @@ public:
 		for(KeyboardListener* iListener : listeners){
 			iListener->buttonPressed(buttonPressed);
 		}
-		hwlib::wait_ms(200);
+		hwlib::wait_ms(150);
 	};
 
 	///\brief
