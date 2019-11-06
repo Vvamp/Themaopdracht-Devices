@@ -15,11 +15,12 @@ class SendTask : public rtos::task<>{
 private:
     rtos::flag comFlag;//< flag that need to be set when something is written in the pool
     rtos::pool<uint16_t> comPool; //< pool in which commands can be written
+    rtos::timer timer;
 
     IrDiode irDiode; //< object from the IR diode class.
 
-    uint16_t shortWait = 800; //< the wait short wait time between turning on and off the IR sender
-    uint16_t longWait = 1600; //< the long wait time between turning on and off the IR sender
+    uint16_t shortWait = 795; //< the wait short wait time between turning on and off the IR sender
+    uint16_t longWait = 1595; //< the long wait time between turning on and off the IR sender
     uint16_t message = 0; //< variable in which the message is set when the pool is read
     uint8_t counter = 0; //< counter that is used to count
 
@@ -32,9 +33,10 @@ public:
     ///\details
     /// the constructor only needs a hwlib pin out to be able to function.
     SendTask(hwlib::target::d2_36kHz& p):
-    task(100,"Send task"),
+    task(5,"Send task"),
     comFlag(this,"send command flag"),
     comPool("command pool"),
+    timer(this,"send timer"),
     irDiode(p)
     {};
 
@@ -72,9 +74,6 @@ public:
                     counter++;
                     if (counter == 16){
                         state = states::idle;
-                        irDiode.setHigh();
-                        hwlib::wait_us(5);
-                        irDiode.setLow();
                         break;
                     }
                     else{
@@ -92,18 +91,18 @@ public:
 
                 case states::send0:{
                     irDiode.setHigh();
-                    hwlib::wait_us(800);
+                    timer.set(shortWait);
                     irDiode.setLow();
-                    hwlib::wait_us(1600);
+                    timer.set(longWait);
                     state = states::setBit;
                     break;
                 }
 
                 case states::send1:{
                     irDiode.setHigh();
-                    hwlib::wait_us(1600);
+                    timer.set(longWait);
                     irDiode.setLow();
-                    hwlib::wait_us(800);
+                    timer.set(shortWait);
                     state = states::setBit;
                     break;
                 }

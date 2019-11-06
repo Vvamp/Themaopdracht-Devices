@@ -23,7 +23,7 @@ public:
     /// \brief
     ///constructor for the display task, it needs a hwlib pin_oc sda and scl pin to construct
     DisplayTask(hwlib::target::pin_oc & sda, hwlib::target::pin_oc & scl):
-    task(150,"Display task"),
+    task(100,"Display task"),
     displayFlag(this,"display flag"),
     displayPool("display pool"),
     display(sda,scl)
