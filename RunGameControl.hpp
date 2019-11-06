@@ -24,6 +24,7 @@ public:
 	void toDisplay(hwlib::string<200> & msg);
 	bool reduceTime();
 	size_t getTime();
+	hwlib::string<4> numberToString(size_t n);
 };
 
 #endif
