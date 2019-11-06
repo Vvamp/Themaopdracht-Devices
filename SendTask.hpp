@@ -93,18 +93,18 @@ public:
 
                 case states::send0:{
                     irDiode.setHigh();
-					hwlib::wait_us(800);
+					hwlib::wait_us(shortWait);
                     irDiode.setLow();
-					hwlib::wait_us(1600);
+					hwlib::wait_us(longWait);
                     state = states::setBit;
                     break;
                 }
 
                 case states::send1:{
                     irDiode.setHigh();
-					hwlib::wait_us(1600);
+					hwlib::wait_us(longWait);
                     irDiode.setLow();
-					hwlib::wait_us(800);
+					hwlib::wait_us(shortWait);
                     state = states::setBit;
                     break;
                 }
