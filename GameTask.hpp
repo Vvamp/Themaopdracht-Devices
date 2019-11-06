@@ -182,7 +182,7 @@ public:
 					auto event = wait(receiveChannel);
 					if (event == receiveChannel){
 						auto incomingMsg = receiveChannel.read();
-						hwlib::cout << "%" << runGameControl.getTime() << "\n";
+						// hwlib::cout << "%" << (int)runGameControl.getTime() << "\n";
 						if (incomingMsg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
 							hwlib::string<64> _msg = "Time received\n";
 							displayTask.writeDisplayPool(_msg);
@@ -192,10 +192,10 @@ public:
 							uint16_t clearData = incomingMsg << 7;
 							uint8_t readData = clearData >> 12;
 							size_t resultTimesSixty = readData*60;
-							hwlib::cout << hwlib::bin << "Resultx60: " << resultTimesSixty << "\n";
-							hwlib::cout << hwlib::bin << "ReadData: " << readData << "\n";
-							hwlib::cout << hwlib::bin << "clearData: " << clearData << "\n";
-							hwlib::cout << hwlib::bin << "incomingMsg: " << incomingMsg << "\n"; 
+							// hwlib::cout << hwlib::bin << "Resultx60: " << (int)resultTimesSixty << "\n";
+							// hwlib::cout << hwlib::bin << "ReadData: " << (int)readData << "\n";
+							// hwlib::cout << hwlib::bin << "clearData: " << (int)clearData << "\n";
+							// hwlib::cout << hwlib::bin << "incomingMsg: " << (int)incomingMsg << "\n"; 
 							runGameControl.setGameTime(resultTimesSixty);
 						} else if (msg == startBit && runGameControl.getTime()){
 							hwlib::string<64> _msg = "Start received\n";
