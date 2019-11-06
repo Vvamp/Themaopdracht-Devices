@@ -11,14 +11,17 @@ void RunGameControl::toDisplay(hwlib::string_base & msg){
 		Dit in een string pleuren en dat in een strnig zetten
 		
 	*/
-	hwlib::string<30> timeMsg = "Tijd : " << numberToString(gameTime);
+	// hwlib::string<30> timeMsg = "Tijd : " << numberToString(gameTime);
 	
-	hwlib::string<30> playerMsg = "\nPlayer ID : " << numberToString(player.getPlayerID());
-	hwlib::string<30> scoreMsg = "\nScore : "  << numberToString(player.getScore());
+	// hwlib::string<30> playerMsg = "\nPlayer ID : " << numberToString(player.getPlayerID());
+	// hwlib::string<30> scoreMsg = "\nScore : "  << numberToString(player.getScore());
 
-	msg += timeMsg;
-	msg += playerMsg;
-	msg += scoreMsg;
+	// msg += timeMsg;
+	// msg += playerMsg;
+	// msg += scoreMsg
+	
+	return;
+
 };
 
 bool RunGameControl::reduceTime(){

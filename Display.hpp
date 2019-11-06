@@ -35,6 +35,10 @@ public:
 	
     ///\brief
     /// function to show the message. It writes its paramater on the screen.
-    void showMessage(const hwlib::string_base& message);
+    template<typename T>
+    void showMessage(T text){
+		  terminal << text;
+    	terminal.flush();
+	  };
 };
 #endif // DISPLAY_HPP

@@ -3,8 +3,8 @@
 void DisplayTask::setDisplayFlag(){
     displayFlag.set();
 }
-
-void DisplayTask::showMessage(){
-    auto message = displayPool.read();
-    display.showMessage(message);
+ 
+void DisplayTask::setDisplayFlag2(){
+    displayFlag2.set();
 }
+ 
