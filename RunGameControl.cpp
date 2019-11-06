@@ -4,20 +4,21 @@ void RunGameControl::setGameTime(size_t time){
 	gameTime = time;
 };
 
-void RunGameControl::toDisplay(hwlib::string<128> & msg){
+void RunGameControl::toDisplay(hwlib::string_base & msg){
 	msg.clear();
 	/*
 		Gametime gaan bitshfiten, de bit(s) naar een tijdchar casten
 		Dit in een string pleuren en dat in een strnig zetten
 		
 	*/
-	hwlib::string<10> timeMsg = "Tijd : ";
+	hwlib::string<30> timeMsg = "Tijd : " << numberToString(gameTime);
 	
-	hwlib::string<20> playerMsg = "\nPlayer ID : " + (char)player.getPlayerID();
-	hwlib::string<10> scoreMsg = "\nScore : ";
+	hwlib::string<30> playerMsg = "\nPlayer ID : " << numberToString(player.getPlayerID());
+	hwlib::string<30> scoreMsg = "\nScore : "  << numberToString(player.getScore());
 
 	msg += timeMsg;
-	msg += 
+	msg += playerMsg;
+	msg += scoreMsg;
 };
 
 bool RunGameControl::reduceTime(){

@@ -28,7 +28,7 @@ public:
 
 	///\brief
 	///toDisplay changes the parameter to contain Time, Player ID and Score.
-	void toDisplay(hwlib::string<128> & msg);
+	void toDisplay(hwlib::string_base & msg);
 
 	///\brief
 	///reduceTime reduces the gameTime varaible by 1 and return false when it has reached 0.

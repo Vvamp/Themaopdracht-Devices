@@ -113,7 +113,7 @@ public:
 						//If the settings are set the user will have to wait for
 						//the time and start commands from the leader.
 						case regGameParamStates::IDLE:{
-							hwlib::string<64> msg = "A: choose player\n";
+							const char* msg = "A: choose player\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -130,7 +130,7 @@ public:
 						//the game leader. Otherwise he will be send to WAIT_ON_B
 						//to start the process of choosing a weapon.
 						case regGameParamStates::PLAYER_INPUT:{
-							hwlib::string<64> msg = "number 1/9\n";
+							const char* msg = "number 1/9\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -148,7 +148,7 @@ public:
 						//In this state the user has to press the B button to
 						//move to the WEAPON_INPUT state.
 						case regGameParamStates::WAIT_ON_B:{
-							hwlib::string<64> msg = "B: choose weapon\n";
+							const char* msg = "B: choose weapon\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -162,7 +162,7 @@ public:
 						//In this state the user has to choose a weapon and will be moved
 						//to the IDLE state to wait for the game leader's commands.
 						case regGameParamStates::WEAPON_INPUT:{
-							hwlib::string<64> msg = "weapon 1/9\n";
+							const char* msg = "weapon 1/9\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -175,7 +175,7 @@ public:
 							break;
 						}
 						case regGameParamStates::WAIT_ON_COMMAND:{
-							hwlib::string<64> msg = "Wait for commands\n";
+							const char* msg = "Wait for commands\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -184,7 +184,7 @@ public:
 								auto incomingMsg = receiveChannel.read();
 								hwlib::cout << "%" << runGameControl.getTime() << "\n";
 								if (incomingMsg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
-									hwlib::string<64> _msg = "Time received\n";
+									const char* _msg = "Time received\n";
 									displayTask.writeDisplayPool(_msg);
 									displayTask.setDisplayFlag();
 									hwlib::wait_ms(10);
@@ -192,8 +192,8 @@ public:
 									uint8_t readData = clearData >> 12;
 									size_t resultTimesSixty = readData*60;
 									runGameControl.setGameTime(resultTimesSixty);
-								} else if (msg == startBit && runGameControl.getTime()){
-									hwlib::string<64> _msg = "Start received\n";
+								} else if (*msg == startBit && runGameControl.getTime()){
+									const char* _msg = "Start received\n";
 									displayTask.writeDisplayPool(_msg);
 									displayTask.setDisplayFlag();
 									hwlib::wait_ms(10);
@@ -217,7 +217,7 @@ public:
 						//settings the time. Once the C button is pressed the user
 						//moves to the GET_TIME state.
 						case initGameStates::IDLE:{
-							hwlib::string<64> msg = "Press C to set\ntime";
+							const char* msg = "Press C to set\ntime";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -233,8 +233,8 @@ public:
 						//We also gave the leader the option to press the * button
 						//to set the time to one minute for demo purposes.
 						case initGameStates::GET_TIME:{
-							hwlib::string<64> msg = "Tijd:";
-							msg += commandString;
+							char* msg [10] = {};
+							const char* msg = "Tijd:" + commandString;
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -268,7 +268,7 @@ public:
 						//In this state the user will send the time to the players.
 						//When the user presses the * button he will move to SEND_START
 						case initGameStates::SEND_TIME:{
-							hwlib::string<64> msg = "#: send time\n*: send start";
+							const char* msg = "#: send time\n*: send start";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							hwlib::wait_ms(10);
@@ -276,7 +276,7 @@ public:
 							auto btnID = buttonChannel.read();
 							if(btnID == Buttons::btnStar){
 								initSubState = initGameStates::SEND_START;
-								hwlib::string<64> _msg = "send start...";
+								const char* _msg = "send start...";
 								displayTask.writeDisplayPool(_msg);
 								displayTask.setDisplayFlag();
 								hwlib::wait_ms(10);
@@ -317,7 +317,7 @@ public:
 						//There will be a sound during the countdown and after
 						//3 seconds the user will move to the PLAYING state.
 						case runGameStates::STARTUP:{
-							hwlib::string<64> msg = "starting...\n";
+							const char* msg = "starting...\n";
 							displayTask.writeDisplayPool(msg);
 							displayTask.setDisplayFlag();
 							buzzerTask.makeSound(BuzzerTask::sounds::START_END_SOUND);

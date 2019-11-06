@@ -15,7 +15,7 @@ class DisplayTask : public rtos::task<>{
 private:
 	Display display; 							//< its own display class object
     rtos::flag displayFlag; 					//< flag to let the display know there is new information available in the pool
-    rtos::pool<hwlib::string<130>> displayPool; //< pool which holds strings
+    rtos::pool<const char*> displayPool; //< pool which holds strings
     enum class states{IDLE,write};				//< enumerator that holds the states in which the rtos task can be in
     states state = states::IDLE;				//< the state on which the task switches
 public:
@@ -32,7 +32,7 @@ public:
 		displayFlag(this,"display flag"),
 		displayPool("display pool")
     {
-		hwlib::string<2> x = "\f";
+		const char* x = "\f";
 		// x.clear() << "\f";
         display.showMessage(x);
 	};
@@ -43,8 +43,8 @@ public:
 
     /// \brief
     ///function to write in the display pool, it writes its paramater in the pool
-    template<unsigned int N>
-    void writeDisplayPool(hwlib::string<N>&message){
+    //template<unsigned int N>
+    void writeDisplayPool(const char * message){
         displayPool.write(message);
         setDisplayFlag();
     };
