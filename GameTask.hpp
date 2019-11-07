@@ -228,7 +228,7 @@ public:
 							displayTask.writeDisplayPool(output);
 							hwlib::wait_us(25);
 							displayTask.writeDisplayPoolNumber(commandTime);
-							displayTask.setDisplayFlagUint();
+							displayTask.setDisplayFlagNumber();
 							hwlib::wait_ms(10);
 							static size_t itterator = 1;
 							wait(buttonChannel);

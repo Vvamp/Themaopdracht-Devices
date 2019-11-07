@@ -59,7 +59,7 @@ public:
 		displayFlag.set();
 	};
 
-	void setDisplayFlagUint(){
+	void setDisplayFlagNumber(){
 		displayFlagNumber.set();
 	}
 
@@ -76,7 +76,7 @@ public:
 
 	void writeDisplayPoolNumber(uint16_t message){
 		displayPoolNumber.write(message);
-		setDisplayFlagUint();
+		setDisplayFlagNumber();
 	}
 
 	void writeDisplayPool(const gameDisplay & iStruct){
