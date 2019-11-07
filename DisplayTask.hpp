@@ -41,7 +41,7 @@ public:
 		hwlib::target::pin_oc & sda,
 		hwlib::target::pin_oc & scl
 	):
-		task("Display task"),
+		task(200,"Display task"),
 		display(sda,scl),
 		displayFlag(this,"display flag"),
 		displayFlagStruct(this, "display flag struct"),
