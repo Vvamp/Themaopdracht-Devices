@@ -6,6 +6,16 @@
 #include "rtos.hpp"
 #include "hwlib.hpp"
 
+struct gameDisplay{
+	size_t time;
+	size_t playerID;
+	size_t score;
+};
+
+struct textDisplay{
+	char message[32];
+};
+
 /// @file
 /// \brief
 /// Display task
@@ -15,10 +25,12 @@ class DisplayTask : public rtos::task<>{
 private:
 	Display display; 							//< its own display class object
     rtos::flag displayFlag; 					//< flag to let the display know there is new information available in the pool
-    rtos::flag displayFlag2;                    //< flag to let the display know there is new integer information available in the pool
-    rtos::pool<const char *> displayPool; //< pool which holds strings
-    rtos::pool<size_t> displayPool2;            //< pool that holds numbers
-    enum class states{IDLE,write1,write2};				//< enumerator that holds the states in which the rtos task can be in
+	rtos::flag displayFlagStruct;
+	rtos::flag displayFlagNumber;
+    rtos::pool<textDisplay> displayPool; //< pool which holds strings
+	rtos::pool<size_t> displayPoolNumber;
+	rtos::pool<gameDisplay> displayPoolStruct;
+    enum class states{IDLE,write1,write2,write3};				//< enumerator that holds the states in which the rtos task can be in
     states state = states::IDLE;				//< the state on which the task switches
 public:
     /// \details
@@ -32,69 +44,99 @@ public:
 		task(100,"Display task"),
 		display(sda,scl),
 		displayFlag(this,"display flag"),
-        displayFlag2(this,"display flag2"),
+		displayFlagStruct(this, "display flag struct"),
+		displayFlagNumber(this, "display flag uint16_t"),
 		displayPool("display pool"),
-        displayPool2("display pool 2")
+		displayPoolNumber("display pool uint16_t"),
+		displayPoolStruct("display pool struct")
     {
-		hwlib::string<2> x = "\f";
-		// x.clear() << "\f";
-        display.showMessage(x);
+        display.showMessage("\f");
 	};
 
     /// \brief
     ///function to set the display flag
-    void setDisplayFlag();
+    void setDisplayFlag(){
+		displayFlag.set();
+	};
 
-     /// \brief
-    ///function to set the display flag
-    void setDisplayFlag2();
+	void setDisplayFlagUint(){
+		displayFlagNumber.set();
+	}
+
+	void setDisplayFlagStruct(){
+		displayFlagStruct.set();
+	}
 
     /// \brief
     ///function to write in the display pool, it writes its paramater in the pool
-    void writeDisplayPool(char * message){
+    void writeDisplayPool(const textDisplay & message){
         displayPool.write(message);
         setDisplayFlag();
     };
 
-    void writeDisplayPool(size_t message){
-        displayPool2.write(message);
-        setDisplayFlag2();
-    };
+	void writeDisplayPoolNumber(uint16_t message){
+		displayPoolNumber.write(message);
+		setDisplayFlagUint();
+	}
+
+	void writeDisplayPool(const gameDisplay & iStruct){
+		displayPoolStruct.write(iStruct);
+		setDisplayFlagStruct();
+	}
 
     /// \brief
     ///function to cout the message
     template<typename T>
     void showMessage(T message){
+		hwlib::cout << message;
         display.showMessage(message);
     };
+
+	void showMessage(const gameDisplay & message){
+		display.showMessage("\fTijd : ");
+		display.showMessage(message.time);
+		display.showMessage("\nPlayer ID : ");
+		display.showMessage(message.playerID);
+		display.showMessage("\nScore : ");
+		display.showMessage(message.score);
+	}
 
 
     void main() override{
         while(true){
             switch(state){
                 case states::IDLE:{
-                    auto ev = wait(displayFlag + displayFlag2);
+                    auto ev = wait(displayFlag + displayFlagNumber + displayFlagStruct);
                     if (ev == displayFlag){
                         state = states::write1;
-                    } else if (ev == displayFlag2){
-                        state = states::write2;
-                    }
+                    } else if (ev == displayFlagNumber){
+						state = states::write2;
+					} else if (ev == displayFlagStruct){
+						state = states::write3;
+					}
                     break;
                 }
 
-                case states::write1:{
-                    auto message = displayPool.read();
-                    showMessage(message);
-                    state = states::IDLE;
-                    break;
-                }
+				case states::write1:{
+					auto message = displayPool.read();
+					showMessage(message.message);
+					state = states::IDLE;
+					break;
+				}
 
                 case states::write2:{
-                    auto message = displayPool2.read();
+                    auto message = displayPoolNumber.read();
                     showMessage(message);
                     state = states::IDLE;
                     break;
                 }
+
+				case states::write3:{
+					auto message = displayPoolStruct.read();
+					showMessage(message);
+					state = states::IDLE;
+					break;
+				}
             }
         }
     }

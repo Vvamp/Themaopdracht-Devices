@@ -37,7 +37,7 @@ public:
     /// function to show the message. It writes its paramater on the screen.
     template<typename T>
     void showMessage(T text){
-		  terminal << text;
+		terminal << text;
     	terminal.flush();
 	  };
 };
