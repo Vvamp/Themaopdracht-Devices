@@ -259,9 +259,9 @@ public:
 							auto btnID = buttonChannel.read();
 							if(btnID == Buttons::btnStar){
 								initSubState = initGameStates::SEND_START;
-								textDisplay output2 = {"\fsend start..."};
+								textDisplay output2 = {"\f*: start signal"};
 								displayTask.writeDisplayPool(output2);
-								hwlib::wait_ms(10);
+								break;
 							} else if(btnID == Buttons::btnHashtag){
 								commandTime |= startBit;
 								sendTask.writeComPool(commandTime);
@@ -279,8 +279,11 @@ public:
 								sendTask.writeComPool(commandStart);
 								sendTask.setComFlag();
 								break;
+							}else{
+								commandTime = 0;
+								initSubState = initGameStates::IDLE;
+								break;
 							}
-							initSubState = initGameStates::IDLE;
 						}
 						default:{
 							break;
