@@ -114,8 +114,8 @@ public:
 						//the time and start commands from the leader.
 						case regGameParamStates::IDLE:{
 							const char* msg = "\fA: choose player\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
+							
 							hwlib::wait_ms(10);
 							wait(buttonChannel);
 							int btnID = buttonChannel.read();
@@ -131,8 +131,8 @@ public:
 						//to start the process of choosing a weapon.
 						case regGameParamStates::PLAYER_INPUT:{
 							const char* msg = "\fnumber 1/9\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
+							
 							hwlib::wait_ms(10);
 							wait(buttonChannel);
 							int btnID = buttonChannel.read();
@@ -149,8 +149,8 @@ public:
 						//move to the WEAPON_INPUT state.
 						case regGameParamStates::WAIT_ON_B:{
 							const char* msg = "\fB: choose weapon\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
+							
 							hwlib::wait_ms(10);
 							wait(buttonChannel);
 							auto btnID = buttonChannel.read();
@@ -163,8 +163,8 @@ public:
 						//to the IDLE state to wait for the game leader's commands.
 						case regGameParamStates::WEAPON_INPUT:{
 							const char* msg = "\fweapon 1/9\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
+							
 							hwlib::wait_ms(10);
 							wait(buttonChannel);
 							auto btnID = buttonChannel.read();
@@ -176,8 +176,8 @@ public:
 						}
 						case regGameParamStates::WAIT_ON_COMMAND:{
 							const char* msg = "\fWait for commands\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
+							
 							hwlib::wait_ms(10);
 							auto event = wait(receiveChannel);
 							if (event == receiveChannel){
@@ -185,17 +185,15 @@ public:
 								hwlib::cout << "%" << runGameControl.getTime() << "\n";
 								if (incomingMsg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
 									const char*_msg = "\fTime received\n";
-									displayTask.writeDisplayPool(_msg);
-									displayTask.setDisplayFlag();
+									displayTask.writeDisplayPool(*_msg);
 									hwlib::wait_ms(10);
 									uint16_t clearData = incomingMsg << 7;
 									uint8_t readData = clearData >> 12;
 									size_t resultTimesSixty = readData*60;
 									runGameControl.setGameTime(resultTimesSixty);
-								} else if (msg == startBit && runGameControl.getTime()){
+								} else if (*msg == startBit && runGameControl.getTime()){
 									const char* _msg = "\fStart received\n";
-									displayTask.writeDisplayPool(_msg);
-									displayTask.setDisplayFlag();
+									displayTask.writeDisplayPool(*_msg);
 									hwlib::wait_ms(10);
 									regSubState = regGameParamStates::IDLE;
 									mainState = mainStates::RUN_GAME;
@@ -218,8 +216,7 @@ public:
 						//moves to the GET_TIME state.
 						case initGameStates::IDLE:{
 							const char* msg = "\fPress C to set\ntime";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
 							hwlib::wait_ms(10);
 							wait(buttonChannel);
 							auto btnID = buttonChannel.read();
@@ -235,11 +232,9 @@ public:
 						case initGameStates::GET_TIME:{
 							const char* msg = "\fTijd:";
 							
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
 							hwlib::wait_us(25);
-							displayTask.writeDisplayPool2(commandTime);
-							display.setDisplayFlag2();
+							displayTask.writeDisplayPool(commandTime);
 							hwlib::wait_ms(10);
 							static size_t itterator = 1;
 							wait(buttonChannel);
@@ -268,17 +263,17 @@ public:
 						//In this state the user will send the time to the players.
 						//When the user presses the * button he will move to SEND_START
 						case initGameStates::SEND_TIME:{
-							char * msg = "#: send time\n*: send start";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							const char * msg = "#: send time\n*: send start";
+							displayTask.writeDisplayPool(*msg);
+							
 							hwlib::wait_ms(10);
 							wait(buttonChannel);
 							auto btnID = buttonChannel.read();
 							if(btnID == Buttons::btnStar){
 								initSubState = initGameStates::SEND_START;
 								const char* _msg = "send start...";
-								displayTask.writeDisplayPool(_msg);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*_msg);
+								
 								hwlib::wait_ms(10);
 							} else if(btnID == Buttons::btnHashtag){
 								commandTime |= startBit;
@@ -318,8 +313,8 @@ public:
 						//3 seconds the user will move to the PLAYING state.
 						case runGameStates::STARTUP:{
 							const char* msg = "starting...\n";
-							displayTask.writeDisplayPool(msg);
-							displayTask.setDisplayFlag();
+							displayTask.writeDisplayPool(*msg);
+							
 							buzzerTask.makeSound(BuzzerTask::sounds::START_END_SOUND);
 							startTimer.set(3'000'000);
 							wait(startTimer);
@@ -344,23 +339,23 @@ public:
 								size_t msg3 = player.getPlayerID();
 								const char* msg4 = "\nScore: ";
 								size_t msg5 = player.getScore();
-								displayTask.writeDisplayPool(msg);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg1);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg1);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool(msg2);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg2);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg3);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg3);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool(msg4);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg4);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg5);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg5);
+								
 							} else if (event == buttonChannel){
 								auto btnID = buttonChannel.read();
 								if(btnID == Buttons::btnStar){
@@ -399,23 +394,23 @@ public:
 								size_t msg3 = player.getPlayerID();
 								const char* msg4 = "\nScore: ";
 								size_t msg5 = player.getScore();
-								displayTask.writeDisplayPool(msg);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg1);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg1);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool(msg2);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg2);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg3);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg3);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool(msg4);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg4);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg5);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg5);
+								
 							} else if (event == rateOfFireTimer){
 								runSubState = runGameStates::PLAYING;
 							} else if (event == gameOverFlag){
@@ -443,23 +438,23 @@ public:
 								size_t msg3 = player.getPlayerID();
 								const char* msg4 = "\nScore: ";
 								size_t msg5 = player.getScore();
-								displayTask.writeDisplayPool(msg);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg1);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg1);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool(msg2);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg2);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg3);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg3);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool(msg4);
-								displayTask.setDisplayFlag();
+								displayTask.writeDisplayPool(*msg4);
+								
 								hwlib::wait_us(25);
-								displayTask.writeDisplayPool2(msg5);
-								display.setDisplayFlag2();
+								displayTask.writeDisplayPool(msg5);
+								
 							} else if (event == invincibilityTimer){
 								if(!player.getScore()){
 									setGameOverFlag();
