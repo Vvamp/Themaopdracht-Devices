@@ -41,7 +41,7 @@ public:
 		hwlib::target::pin_oc & sda,
 		hwlib::target::pin_oc & scl
 	):
-		task(100,"Display task"),
+		task(4,"Display task"),
 		display(sda,scl),
 		displayFlag(this,"display flag"),
 		displayFlagStruct(this, "display flag struct"),
@@ -88,7 +88,6 @@ public:
     ///function to cout the message
     template<typename T>
     void showMessage(T message){
-		hwlib::cout << message;
         display.showMessage(message);
     };
 

@@ -49,7 +49,7 @@ public:
 		BuzzerTask & buzzerTaskInput,
 		Keyboard<> & keyboardInput
 	):
-		task(30,"GameTask"),
+		task(6,"GameTask"),
 		player(playerInput),
 		displayTask(displayTaskInput),
 		sendTask(sendTaskInput),
@@ -115,7 +115,7 @@ public:
 						case regGameParamStates::IDLE:{
 							textDisplay output = {"\fA: choose player\n"};
 							displayTask.writeDisplayPool(output);
-							hwlib::wait_ms(10);
+							hwlib::wait_ms(5);
 							wait(buttonChannel);
 							int btnID = buttonChannel.read();
 							if(btnID == Buttons::btnA){
