@@ -333,6 +333,7 @@ public:
 									runSubState = runGameStates::SHOOT;
 								}
 							} else if(event == receiveChannel){
+								hwlib::cout << "ik ontvang iets\n";
 								auto msg = receiveChannel.read();
 								if(msg > startBit){
 									hitMessage = msg;
@@ -353,6 +354,7 @@ public:
 							message |= playerBits;
 							message |= weaponBits;
 							sendTask.writeComPool( message );
+							sendTask.setComFlag();
 							rateOfFireTimer.set( player.getWeaponFireRate());
 							auto event = wait(clock1S + rateOfFireTimer + gameOverFlag);
 							if(event == clock1S){
