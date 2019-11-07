@@ -33,7 +33,7 @@ public:
     BuzzerTask(
 		hwlib::target::pin_out& buzzerPin
 	):
-		task(200,"buzzer task"),
+		task("buzzer task"),
 		buzzer(buzzerPin),
 		buzzerFlag(this,"buzzer flag"),
 		buzzerPool("buzzer pool")

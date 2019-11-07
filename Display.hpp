@@ -39,6 +39,12 @@ public:
     void showMessage(T text){
 		terminal << text;
     	terminal.flush();
-	  };
+	};
+
+	// template<typename T=size_t>
+	// void showMessage(T text){
+	// 	terminal << hwlib::dec << text;
+	// 	terminal.flush();
+	// }
 };
 #endif // DISPLAY_HPP

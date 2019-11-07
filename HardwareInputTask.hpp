@@ -20,7 +20,7 @@ public:
 	HardwareInputTask(
 		Keyboard<> & keyboardInput
 	):
-		task(7,"Hardware Input Task"),
+		task("Hardware Input Task"),
 		keyboard(keyboardInput),
 		period(this, "Period Timer")
 	{};
