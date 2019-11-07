@@ -69,7 +69,7 @@ public:
 				}
 
 				case IS_HIGH:{
-					interruptTimer.set(25);
+					interruptTimer.set(30);
 
 					if(beginPause >= 0 && eindPause >= 0){
 						pause = eindPause - beginPause;
