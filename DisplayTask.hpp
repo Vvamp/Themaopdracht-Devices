@@ -41,7 +41,7 @@ public:
 		hwlib::target::pin_oc & sda,
 		hwlib::target::pin_oc & scl
 	):
-		task(20,"Display task"),
+		task(2,"Display task"),
 		display(sda,scl),
 		displayFlag(this,"display flag"),
 		displayFlagStruct(this, "display flag struct"),
@@ -74,13 +74,13 @@ public:
         setDisplayFlag();
     };
 
-	void writeDisplayPoolNumber(const uint16_t & message){
+	void writeDisplayPool(const uint16_t & message){
 		displayPoolNumber.write(message);
 		setDisplayFlagNumber();
 	}
 
-	void writeDisplayPool(const gameDisplay & iStruct){
-		displayPoolStruct.write(iStruct);
+	void writeDisplayPool(const gameDisplay & message){
+		displayPoolStruct.write(message);
 		setDisplayFlagStruct();
 	}
 

@@ -49,7 +49,7 @@ public:
 		BuzzerTask & buzzerTaskInput,
 		Keyboard<> & keyboardInput
 	):
-		task(50,"GameTask"),
+		task(5,"GameTask"),
 		player(playerInput),
 		displayTask(displayTaskInput),
 		sendTask(sendTaskInput),
@@ -227,7 +227,7 @@ public:
 							textDisplay output = {"\fTijd:"};
 							displayTask.writeDisplayPool(output);
 							hwlib::wait_us(25);
-							displayTask.writeDisplayPoolNumber(commandTime);
+							displayTask.writeDisplayPool(commandTime);
 							displayTask.setDisplayFlagNumber();
 							hwlib::wait_ms(10);
 							static size_t itterator = 1;
