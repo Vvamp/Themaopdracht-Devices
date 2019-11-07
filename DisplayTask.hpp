@@ -74,7 +74,7 @@ public:
         setDisplayFlag();
     };
 
-	void writeDisplayPoolNumber(uint16_t message){
+	void writeDisplayPoolNumber(const uint16_t & message){
 		displayPoolNumber.write(message);
 		setDisplayFlagNumber();
 	}
