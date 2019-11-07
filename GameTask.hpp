@@ -40,7 +40,7 @@ private:
 	char commandString[16];
 	//size_t second = 1'000'000;
 	size_t startBit = 0b1000'0000'0000'0000;
-	size_t lowestPlayerBit = 0b000'0010'0000'0000;
+	size_t lowestPlayerBit = 0b0000'0010'0000'0000;
 public:
 	GameTask(
 		Player<> playerInput,
