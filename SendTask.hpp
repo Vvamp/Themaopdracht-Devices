@@ -37,7 +37,7 @@ public:
     SendTask(
 		hwlib::target::d2_36kHz& p
 	):
-		task("Send task"),
+		task(30,"Send task"),
 		irDiode(p),
 		comFlag(this,"send command flag"),
 		comPool("command pool"),
