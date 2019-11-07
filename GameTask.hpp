@@ -115,7 +115,6 @@ public:
 						case regGameParamStates::IDLE:{
 							textDisplay output = {"\fA: choose player\n"};
 							displayTask.writeDisplayPool(output);
-							hwlib::wait_ms(5);
 							wait(buttonChannel);
 							int btnID = buttonChannel.read();
 							if(btnID == Buttons::btnA){
