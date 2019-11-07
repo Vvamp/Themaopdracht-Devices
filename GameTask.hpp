@@ -38,7 +38,7 @@ private:
 	const uint16_t commandStart = 0b1000000000000000;
 	uint16_t commandTime = 0x00;
 	char commandString[16];
-	size_t second = 1'000'000;
+	//size_t second = 1'000'000;
 	size_t startBit = 0b1000'0000'0000'0000;
 	size_t lowestPlayerBit = 0b000'0010'0000'0000;
 public:
@@ -56,7 +56,7 @@ public:
 		buzzerTask(buzzerTaskInput),
 		runGameControl(RunGameControl(player,sendTask)),
 		transferHitsControl(TransferHitsControl(player)),
-		clock1S(this, second, "1 second clock"),
+		clock1S(this, 1'000'000, "1 second clock"),
 		invincibilityTimer(this, "Invicibility Timer"),
 		rateOfFireTimer(this, "Rate of Fire Timer"),
 		startTimer(this,"Countdown on startup"),

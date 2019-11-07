@@ -38,8 +38,11 @@ public:
     template<typename T>
     void showMessage(T text){
 		terminal << text;
-    	terminal.flush();
 	};
+
+	void flush(){
+		terminal.flush();
+	}
 
 	// template<typename T=size_t>
 	// void showMessage(T text){

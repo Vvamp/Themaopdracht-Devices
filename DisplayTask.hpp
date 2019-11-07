@@ -89,6 +89,7 @@ public:
     template<typename T>
     void showMessage(T message){
         display.showMessage(message);
+		display.flush();
     };
 
 	void showMessage(const gameDisplay & message){
@@ -98,6 +99,7 @@ public:
 		display.showMessage(message.playerID);
 		display.showMessage("\nScore : ");
 		display.showMessage(message.score);
+		display.flush();
 	}
 
 
