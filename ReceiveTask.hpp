@@ -53,7 +53,7 @@ public:
 		for(;;){
 			switch(state){
 				case IS_LOW:{
-					interruptTimer.set(25);
+					interruptTimer.set(30);
 
 					auto event = wait(messageTimer + interruptTimer);
 					if(event == messageTimer){
