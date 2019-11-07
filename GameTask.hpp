@@ -176,7 +176,6 @@ public:
 							auto event = wait(receiveChannel);
 							if (event == receiveChannel){
 								auto incomingMsg = receiveChannel.read();
-								hwlib::cout << "%" << runGameControl.getTime() << "\n";
 								if (incomingMsg < (startBit | lowestPlayerBit) && !runGameControl.getTime()){
 									textDisplay output2 = {"\fTime received\n"};
 									displayTask.writeDisplayPool(output2);
@@ -334,7 +333,6 @@ public:
 								}
 							} else if(event == receiveChannel){
 								auto msg = receiveChannel.read();
-								hwlib::cout << hwlib::bin << msg << "\n";
 								if(msg > startBit){
 									hitMessage = msg;
 									runSubState = runGameStates::GET_SHOT;
@@ -348,7 +346,6 @@ public:
 						//After shooting we wait for the rateOfFireTimer to have finished.
 						//Here too we listen to the clock1S and gameOverFlag events.
 						case runGameStates::SHOOT:{
-							hwlib::cout << "im shooting!\n";
 							runSubState = runGameStates::PLAYING;
 							uint16_t message = 0x01 << 15;
 							uint16_t playerBits = player.getPlayerID() << 10;
@@ -380,7 +377,6 @@ public:
 						//the user.
 						case runGameStates::GET_SHOT:{
 							runSubState = runGameStates::PLAYING;
-							hwlib::cout << "i'm hit!!!\n";
 							uint16_t playerBits = hitMessage << 1;
 							playerBits >>= 11;
 							uint16_t weaponBits = hitMessage << 6;

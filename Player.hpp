@@ -88,7 +88,6 @@ public:
 	///with which the player is left after getting hit. And also to save
 	///the playerID of the attacker using a static counter to remember the index.
 	void reportHit(size_t _playerID, size_t _weaponIndex){
-		hwlib::cout << "PLAYER_ID:" << hwlib::dec << _playerID << "\t WEAPON_INDEX" << hwlib::dec << _weaponIndex << "\n"; 
 		static size_t counter = 0;
 		score -= weapons.allWeapons[_weaponIndex].damage;
 		assailants[counter] = _playerID;
