@@ -27,16 +27,12 @@ public:
 	void setGameTime(size_t time);
 
 	///\brief
-	///toDisplay changes the parameter to contain Time, Player ID and Score.
-
-	///\brief
 	///reduceTime reduces the gameTime varaible by 1 and return false when it has reached 0.
 	bool reduceTime();
 
 	///\brief
 	///getTime returns the gameTime parameter.
 	size_t getTime();
-	hwlib::string<4> numberToString(size_t n);
 };
 
 #endif

@@ -333,8 +333,8 @@ public:
 									runSubState = runGameStates::SHOOT;
 								}
 							} else if(event == receiveChannel){
-								hwlib::cout << "ik ontvang iets\n";
 								auto msg = receiveChannel.read();
+								hwlib::cout << hwlib::bin << msg << "\n";
 								if(msg > startBit){
 									hitMessage = msg;
 									runSubState = runGameStates::GET_SHOT;
@@ -376,6 +376,8 @@ public:
 						//In this state you have been shot and we will change the score of
 						//the user.
 						case runGameStates::GET_SHOT:{
+							runSubState = runGameStates::PLAYING;
+							hwlib::cout << "i'm hit!!!\n";
 							uint16_t playerBits = hitMessage << 1;
 							playerBits >>= 11;
 							uint16_t weaponBits = hitMessage << 6;
@@ -386,6 +388,7 @@ public:
 							if(event == clock1S){
 								if(!runGameControl.reduceTime()){
 									setGameOverFlag();
+									runSubState = runGameStates::GAME_OVER;
 								}
 								gameDisplay message = gameDisplay({
 									runGameControl.getTime(),
@@ -395,6 +398,7 @@ public:
 							} else if (event == invincibilityTimer){
 								if(!player.getScore()){
 									setGameOverFlag();
+									runSubState = runGameStates::GAME_OVER;
 								}
 							} else if (event == gameOverFlag){
 								runSubState = runGameStates::GAME_OVER;
