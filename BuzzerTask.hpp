@@ -33,7 +33,7 @@ public:
     BuzzerTask(
 		hwlib::target::pin_out& buzzerPin
 	):
-		task(450,"buzzer task"),
+		task(600,"buzzer task"),
 		buzzer(buzzerPin),
 		buzzerFlag(this,"buzzer flag"),
 		buzzerPool("buzzer pool")
@@ -101,9 +101,9 @@ public:
                         uint16_t counter = 0;
                         while (counter < 500){
 							buzzer.soundOn();
-							hwlib::wait_ms(1);
+							hwlib::wait_ms(2);
 							buzzer.soundOff();
-							hwlib::wait_ms(1);
+							hwlib::wait_ms(2);
 							counter++;
 						}							
                     }

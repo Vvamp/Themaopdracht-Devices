@@ -228,7 +228,7 @@ public:
 							hwlib::wait_us(25);
 							displayTask.writeDisplayPool(commandTime);
 							displayTask.setDisplayFlagNumber();
-							hwlib::wait_ms(300);
+							hwlib::wait_ms(10);
 							static size_t itterator = 1;
 							wait(buttonChannel);
 							auto btnID = buttonChannel.read();
