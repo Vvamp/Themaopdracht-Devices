@@ -53,7 +53,7 @@ public:
 		for(;;){
 			switch(state){
 				case IS_LOW:{
-					interruptTimer.set(30);
+					interruptTimer.set(25);
 
 					auto event = wait(messageTimer + interruptTimer);
 					if(event == messageTimer){
@@ -69,7 +69,7 @@ public:
 				}
 
 				case IS_HIGH:{
-					interruptTimer.set(30);
+					interruptTimer.set(25);
 
 					if(beginPause >= 0 && eindPause >= 0){
 						pause = eindPause - beginPause;
