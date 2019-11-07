@@ -348,6 +348,8 @@ public:
 						//After shooting we wait for the rateOfFireTimer to have finished.
 						//Here too we listen to the clock1S and gameOverFlag events.
 						case runGameStates::SHOOT:{
+							hwlib::cout << "im shooting!\n";
+							runSubState = runGameStates::PLAYING;
 							uint16_t message = 0x01 << 15;
 							uint16_t playerBits = player.getPlayerID() << 10;
 							uint16_t weaponBits = player.getWeaponIndex() << 5;
@@ -360,6 +362,7 @@ public:
 							if(event == clock1S){
 								if(!runGameControl.reduceTime()){
 									setGameOverFlag();
+									runSubState = runGameStates::GAME_OVER;
 								}
 								gameDisplay message = gameDisplay({
 									runGameControl.getTime(),
