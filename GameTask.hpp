@@ -49,7 +49,7 @@ public:
 		BuzzerTask & buzzerTaskInput,
 		Keyboard<> & keyboardInput
 	):
-		task(100,"GameTask"),
+		task(300,"GameTask"),
 		player(playerInput),
 		displayTask(displayTaskInput),
 		sendTask(sendTaskInput),
