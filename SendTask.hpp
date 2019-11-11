@@ -66,7 +66,6 @@ public:
                 case states::IDLE:{
                     auto ev = wait(comFlag);
                     if (ev == comFlag){
-                        wait(comFlag);
                         message = comPool.read();
                         checkSum(message);
                         counter = 0;
